@@ -1,0 +1,19 @@
+services:
+  ollama:
+    deploy:
+      resources:
+        reservations:
+          devices: [{driver: nvidia, count: all, capabilities: [gpu]}]
+  backend:
+    environment: {EMBEDDING_DEVICE: cuda}
+    deploy:
+      resources:
+        reservations:
+          devices: [{driver: nvidia, count: all, capabilities: [gpu]}]
+  data-loader:
+    environment: {EMBEDDING_DEVICE: cuda}
+    deploy:
+      resources:
+        reservations:
+          devices: [{driver: nvidia, count: all, capabilities: [gpu]}]
+

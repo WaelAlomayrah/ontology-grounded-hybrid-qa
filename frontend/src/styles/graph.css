@@ -1,0 +1,32 @@
+.layout-controls {
+  display: flex;
+  padding: 2px;
+  background: #081519;
+  border: 1px solid #1d3940;
+  border-radius: 7px;
+}
+
+.layout-controls button {
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: #789399;
+  font-size: 9px;
+}
+
+.layout-controls button:hover {
+  background: #17343a;
+  color: #7ce8d8;
+}
+
+@media (max-width: 760px) {
+  .layout-controls { order: 3; }
+  .layout-controls button { padding: 7px 10px; }
+}
+
+.graph-exports { display: flex; gap: 4px; margin-left: auto; margin-right: 12px; }
+.graph-exports button,.legend button { border: 0; background: transparent; color: #789399; font-size: 9px; }
+.graph-exports button:hover,.legend button:hover { color: #7ce8d8; }
+.legend button { display: inline-flex; align-items: center; gap: 5px; }
+.legend button i { width: 7px; height: 7px; border-radius: 50%; }

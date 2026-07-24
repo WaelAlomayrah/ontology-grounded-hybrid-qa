@@ -1,0 +1,23 @@
+{
+  "title": "Ontology AI Pilot — Full Stack",
+  "uid": "ontology-pilot",
+  "schemaVersion": 39,
+  "version": 2,
+  "refresh": "10s",
+  "time": {"from": "now-1h", "to": "now"},
+  "panels": [
+    {"type":"stat","title":"Containers reporting","gridPos":{"x":0,"y":0,"w":6,"h":4},"targets":[{"expr":"count(container_last_seen{name=~\".+\"})","legendFormat":"containers"}],"fieldConfig":{"defaults":{"color":{"mode":"thresholds"},"thresholds":{"mode":"absolute","steps":[{"color":"red","value":0},{"color":"green","value":1}]}}}},
+    {"type":"stat","title":"Prometheus targets up","gridPos":{"x":6,"y":0,"w":6,"h":4},"targets":[{"expr":"sum(up)","legendFormat":"up"},{"expr":"count(up)","legendFormat":"total"}]},
+    {"type":"stat","title":"Chat requests","gridPos":{"x":12,"y":0,"w":6,"h":4},"targets":[{"expr":"sum(ontology_chat_requests_total)","legendFormat":"requests"}]},
+    {"type":"stat","title":"Ingestion failures","gridPos":{"x":18,"y":0,"w":6,"h":4},"targets":[{"expr":"sum(ontology_ingestion_failures_total)","legendFormat":"failures"}],"fieldConfig":{"defaults":{"color":{"mode":"thresholds"},"thresholds":{"mode":"absolute","steps":[{"color":"green","value":0},{"color":"red","value":1}]}}}},
+    {"type":"timeseries","title":"Request rate","gridPos":{"x":0,"y":4,"w":12,"h":7},"targets":[{"expr":"sum(rate(http_requests_total[5m])) by (handler)","legendFormat":"{{handler}}"}]},
+    {"type":"timeseries","title":"API latency percentiles","gridPos":{"x":12,"y":4,"w":12,"h":7},"targets":[{"expr":"histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket[5m])) by (le))","legendFormat":"p95"},{"expr":"histogram_quantile(0.50, sum(rate(http_request_duration_seconds_bucket[5m])) by (le))","legendFormat":"p50"}]},
+    {"type":"timeseries","title":"Container CPU cores","gridPos":{"x":0,"y":11,"w":12,"h":8},"targets":[{"expr":"sum(rate(container_cpu_usage_seconds_total{name=~\".+\"}[2m])) by (name)","legendFormat":"{{name}}"}]},
+    {"type":"timeseries","title":"Container memory working set","gridPos":{"x":12,"y":11,"w":12,"h":8},"targets":[{"expr":"sum(container_memory_working_set_bytes{name=~\".+\"}) by (name)","legendFormat":"{{name}}"}],"fieldConfig":{"defaults":{"unit":"bytes"}}},
+    {"type":"timeseries","title":"Container network receive","gridPos":{"x":0,"y":19,"w":12,"h":8},"targets":[{"expr":"sum(rate(container_network_receive_bytes_total{name=~\".+\"}[2m])) by (name)","legendFormat":"{{name}}"}],"fieldConfig":{"defaults":{"unit":"Bps"}}},
+    {"type":"timeseries","title":"Container network transmit","gridPos":{"x":12,"y":19,"w":12,"h":8},"targets":[{"expr":"sum(rate(container_network_transmit_bytes_total{name=~\".+\"}[2m])) by (name)","legendFormat":"{{name}}"}],"fieldConfig":{"defaults":{"unit":"Bps"}}},
+    {"type":"timeseries","title":"Container filesystem usage","gridPos":{"x":0,"y":27,"w":12,"h":8},"targets":[{"expr":"sum(container_fs_usage_bytes{name=~\".+\"}) by (name)","legendFormat":"{{name}}"}],"fieldConfig":{"defaults":{"unit":"bytes"}}},
+    {"type":"timeseries","title":"Retrieval component latency","gridPos":{"x":12,"y":27,"w":12,"h":8},"targets":[{"expr":"rate(ontology_fuseki_query_duration_seconds_sum[5m]) / rate(ontology_fuseki_query_duration_seconds_count[5m])","legendFormat":"Fuseki"},{"expr":"rate(ontology_milvus_search_duration_seconds_sum[5m]) / rate(ontology_milvus_search_duration_seconds_count[5m])","legendFormat":"Milvus"},{"expr":"rate(ontology_ollama_generation_duration_seconds_sum[5m]) / rate(ontology_ollama_generation_duration_seconds_count[5m])","legendFormat":"Ollama"}],"fieldConfig":{"defaults":{"unit":"s"}}},
+    {"type":"table","title":"Container last seen","gridPos":{"x":0,"y":35,"w":24,"h":8},"targets":[{"expr":"time() - container_last_seen{name=~\".+\"}","legendFormat":"{{name}}","format":"table","instant":true}],"transformations":[{"id":"organize","options":{"excludeByName":{"Time":true},"renameByName":{"Metric":"Container","Value":"Seconds since report"}}}]}
+  ]
+}

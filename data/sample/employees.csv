@@ -1,0 +1,17 @@
+id,label,description,email,department_id,manages_department_id,location_id
+emp-amal,Amal Nasser,Finance director,amal@example.org,dept-fin,dept-fin,loc-riyadh
+emp-omar,Omar Haddad,Solutions architect,omar@example.org,dept-it,dept-it,loc-riyadh
+emp-lina,Lina Kareem,Operations director,lina@example.org,dept-ops,dept-ops,loc-jeddah
+emp-sara,Sara Mansour,People director,sara@example.org,dept-hr,dept-hr,loc-dammam
+emp-yousef,Yousef Rahman,General counsel,yousef@example.org,dept-legal,dept-legal,loc-riyadh
+emp-noura,Noura Saleh,Financial analyst,noura@example.org,dept-fin,,loc-riyadh
+emp-faisal,Faisal Noor,Accountant,faisal@example.org,dept-fin,,loc-jeddah
+emp-huda,Huda Aziz,Data engineer,huda@example.org,dept-it,,loc-riyadh
+emp-tariq,Tariq Sami,Security engineer,tariq@example.org,dept-it,,loc-dammam
+emp-maya,Maya Faris,Project coordinator,maya@example.org,dept-ops,,loc-jeddah
+emp-rami,Rami Adel,Facilities specialist,rami@example.org,dept-ops,,loc-tabuk
+emp-dana,Dana Ali,Recruiter,dana@example.org,dept-hr,,loc-dammam
+emp-khalid,Khalid Zaid,Learning specialist,khalid@example.org,dept-hr,,loc-riyadh
+emp-reem,Reem Taha,Legal analyst,reem@example.org,dept-legal,,loc-riyadh
+emp-sami,Sami Qadir,Compliance specialist,sami@example.org,dept-legal,,loc-jeddah
+

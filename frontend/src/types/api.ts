@@ -1,0 +1,25 @@
+export type Node = { id: string; label: string; type: string; properties: Record<string, unknown> };
+export type Edge = { id: string; source: string; target: string; predicate: string; label: string };
+export type Graph = { nodes: Node[]; edges: Edge[]; paths: { nodes: string[]; predicates: string[]; text: string }[] };
+export type Result = {
+  question: string;
+  answer: string;
+  answer_status: 'answered' | 'partial' | 'insufficient_evidence' | 'error';
+  confidence: number;
+  intent: string[];
+  entities: { label: string; entity_uri: string; source: string; score: number }[];
+  graph: Graph;
+  sources: string[];
+  retrieval: { vector_results: unknown[]; graph_facts: Record<string, string>[]; timings_ms: Record<string, number> };
+  warnings: string[];
+};
+export type OntologyClass = { class: string; label?: string; parent?: string; instances?: string };
+export type OntologyProperty = { property: string; label?: string; kind: string; domain?: string; range?: string };
+export type Ontology = { classes: OntologyClass[]; properties: OntologyProperty[] };
+export type DatasetInfo = { id: string; name: string; files: number; data_files: number; archives: number; archive_preview: string[]; supported_for_ingestion: boolean };
+export type ContainerLoad = { name: string; service?: string; state?: string; health?: string; status?: string; running?: boolean; cpu_percent?: number; memory_bytes?: number; memory_limit_bytes?: number; network_receive_bps?: number; network_transmit_bps?: number; network_receive_bytes?: number; network_transmit_bytes?: number };
+export type Monitoring = { available: boolean; containers: ContainerLoad[]; targets: { job: string; instance: string; up: boolean }[]; load_scope?: string; error?: string };
+export type ObjectMapping = { dataset: string; source: string; target_class: string; mapping_kind: 'entity' | 'relationship'; columns: { source: string; target: string; role: string }[] };
+export type User = { username: string; role: 'viewer' | 'labeler' | 'analyst' | 'admin'; token: string };
+export type IngestionJob = { id: string; dataset: string; status: string; phase: string; progress: number; report?: Record<string, any> };
+export type CsvConnector = { id: string; dataset: string; name: string; filename: string; size_bytes: number; row_count: number; column_count: number; columns: string[]; delimiter: string; created_at: string; status: string; preview?: Record<string, string>[]; mapping?: ObjectMapping };

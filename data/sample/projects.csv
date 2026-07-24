@@ -1,0 +1,10 @@
+id,label,description,sponsor_department_id,system_id
+proj-atlas,Project Atlas,Financial planning modernization,dept-fin,sys-doc
+proj-horizon,Project Horizon,Cloud operations improvement,dept-it,sys-service
+proj-beacon,Project Beacon,Workforce analytics initiative,dept-hr,sys-hr
+proj-civic,Project Civic,Case workflow modernization,dept-legal,sys-case
+proj-orbit,Project Orbit,Facilities optimization,dept-ops,sys-asset
+proj-nova,Project Nova,Cybersecurity uplift,dept-it,sys-security
+proj-safeguard,Project Safeguard,Compliance controls improvement,dept-legal,sys-doc
+proj-bridge,Project Bridge,Cross-department onboarding,dept-hr,sys-service
+

@@ -1,0 +1,127 @@
+name: ontology-ai-pilot
+services:
+  frontend:
+    build: {context: ./frontend}
+    ports: ["${FRONTEND_PORT:-3000}:8080"]
+    depends_on: {backend: {condition: service_healthy}}
+    networks: [app-network]
+    healthcheck: {test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8080/healthz"], interval: 15s, timeout: 5s, retries: 5}
+  backend:
+    build: {context: ., dockerfile: backend/Dockerfile}
+    env_file: [.env]
+    ports: ["${BACKEND_PORT:-8000}:8000"]
+    volumes: ["hf-models:/models/huggingface", "./data:/app/data"]
+    depends_on:
+      fuseki: {condition: service_healthy}
+      hf-model-init: {condition: service_completed_successfully}
+      milvus: {condition: service_healthy}
+      ollama: {condition: service_healthy}
+      docker-proxy: {condition: service_started}
+    networks: [app-network, data-network, monitoring-network]
+    healthcheck: {test: ["CMD", "curl", "-fsS", "http://localhost:8000/health"], interval: 20s, timeout: 10s, retries: 5, start_period: 30s}
+  docker-proxy:
+    image: tecnativa/docker-socket-proxy:0.3.0
+    environment: {CONTAINERS: "1", POST: "0", LOG_LEVEL: "warning"}
+    volumes: ["/var/run/docker.sock:/var/run/docker.sock:ro"]
+    networks: [monitoring-network]
+    restart: unless-stopped
+  data-loader:
+    build: {context: ., dockerfile: backend/Dockerfile}
+    entrypoint: ["python", "-m", "app.ingestion.loader"]
+    env_file: [.env]
+    volumes: ["hf-models:/models/huggingface", "./data:/app/data"]
+    depends_on: {fuseki: {condition: service_healthy}, hf-model-init: {condition: service_completed_successfully}, milvus: {condition: service_healthy}}
+    networks: [data-network]
+    profiles: [tools]
+  hf-model-init:
+    build: {context: ., dockerfile: backend/Dockerfile}
+    user: "0"
+    entrypoint: ["sh", "-c"]
+    command: ["mkdir -p /models/huggingface && chown -R app:app /models/huggingface"]
+    volumes: ["hf-models:/models/huggingface"]
+    restart: "no"
+  fuseki:
+    image: stain/jena-fuseki:5.1.0
+    environment: {ADMIN_PASSWORD: "${FUSEKI_PASSWORD:-change-me-fuseki}"}
+    command: ["sh", "-c", "mkdir -p /fuseki/databases/ontology && exec /jena-fuseki/fuseki-server --update --loc=/fuseki/databases/ontology /ontology"]
+    ports: ["${FUSEKI_HOST_PORT:-3030}:3030"]
+    volumes: ["fuseki-data:/fuseki"]
+    networks: [data-network]
+    healthcheck: {test: ["CMD-SHELL", "wget -qO- http://localhost:3030/$/ping || exit 1"], interval: 15s, timeout: 5s, retries: 10}
+  etcd:
+    image: quay.io/coreos/etcd:v3.5.16
+    command: ["etcd", "--advertise-client-urls=http://etcd:2379", "--listen-client-urls=http://0.0.0.0:2379", "--data-dir=/etcd"]
+    volumes: ["etcd-data:/etcd"]
+    networks: [data-network]
+    healthcheck: {test: ["CMD", "etcdctl", "endpoint", "health"], interval: 15s, timeout: 5s, retries: 10}
+  minio:
+    image: minio/minio:RELEASE.2024-12-18T13-15-44Z
+    command: ["minio", "server", "/data", "--console-address", ":9001"]
+    environment: {MINIO_ROOT_USER: "${MINIO_ROOT_USER:-minioadmin}", MINIO_ROOT_PASSWORD: "${MINIO_ROOT_PASSWORD:-change-me-minio}"}
+    volumes: ["minio-data:/data"]
+    networks: [data-network]
+    healthcheck: {test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"], interval: 15s, timeout: 5s, retries: 10}
+  milvus:
+    image: milvusdb/milvus:v2.5.3
+    command: ["milvus", "run", "standalone"]
+    environment: {ETCD_ENDPOINTS: "etcd:2379", MINIO_ADDRESS: "minio:9000", MINIO_ACCESS_KEY_ID: "${MINIO_ROOT_USER:-minioadmin}", MINIO_SECRET_ACCESS_KEY: "${MINIO_ROOT_PASSWORD:-change-me-minio}"}
+    volumes: ["milvus-data:/var/lib/milvus"]
+    ports: ["${MILVUS_HOST_PORT:-19530}:19530"]
+    depends_on: {etcd: {condition: service_healthy}, minio: {condition: service_healthy}}
+    networks: [data-network, monitoring-network]
+    healthcheck: {test: ["CMD", "curl", "-f", "http://localhost:9091/healthz"], interval: 15s, timeout: 5s, retries: 15, start_period: 30s}
+  attu:
+    image: zilliz/attu:v2.5.0
+    environment: {MILVUS_URL: "milvus:19530"}
+    ports: ["${ATTU_HOST_PORT:-8001}:3000"]
+    depends_on: {milvus: {condition: service_healthy}}
+    networks: [data-network]
+  ollama:
+    image: ollama/ollama:0.5.4
+    volumes: ["ollama-models:/root/.ollama"]
+    ports: ["${OLLAMA_HOST_PORT:-11434}:11434"]
+    networks: [data-network]
+    healthcheck: {test: ["CMD", "ollama", "list"], interval: 15s, timeout: 10s, retries: 10}
+  ollama-init:
+    image: curlimages/curl:8.11.1
+    environment: {OLLAMA_MODEL: "${OLLAMA_MODEL:-qwen2.5:7b}"}
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["until curl -fsS http://ollama:11434/api/tags >/tmp/tags; do sleep 3; done; grep -q \"$${OLLAMA_MODEL}\" /tmp/tags || curl -f http://ollama:11434/api/pull -d '{\"name\":\"'$${OLLAMA_MODEL}'\",\"stream\":false}' || true"]
+    depends_on: {ollama: {condition: service_healthy}}
+    networks: [data-network]
+    restart: "no"
+  prometheus:
+    image: prom/prometheus:v3.0.1
+    command: ["--config.file=/etc/prometheus/prometheus.yml", "--storage.tsdb.path=/prometheus"]
+    volumes: ["./monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro", "prometheus-data:/prometheus"]
+    ports: ["${PROMETHEUS_HOST_PORT:-9090}:9090"]
+    networks: [monitoring-network]
+    healthcheck: {test: ["CMD", "wget", "-qO-", "http://localhost:9090/-/healthy"], interval: 15s, timeout: 5s, retries: 5}
+  grafana:
+    image: grafana/grafana:11.4.0
+    environment: {GF_SECURITY_ADMIN_USER: "${GRAFANA_ADMIN_USER:-admin}", GF_SECURITY_ADMIN_PASSWORD: "${GRAFANA_ADMIN_PASSWORD:-change-me-grafana}"}
+    volumes: ["grafana-data:/var/lib/grafana", "./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro", "./monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro"]
+    ports: ["${GRAFANA_HOST_PORT:-3001}:3000"]
+    depends_on: {prometheus: {condition: service_healthy}}
+    networks: [monitoring-network]
+    healthcheck: {test: ["CMD-SHELL", "wget -qO- http://localhost:3000/api/health | grep -q ok"], interval: 15s, timeout: 5s, retries: 10}
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:v0.49.2
+    privileged: true
+    volumes: ["/:/rootfs:ro", "/var/run:/var/run:ro", "/sys:/sys:ro", "/var/lib/docker:/var/lib/docker:ro"]
+    ports: ["${CADVISOR_HOST_PORT:-8080}:8080"]
+    networks: [monitoring-network]
+    healthcheck: {test: ["CMD", "wget", "-qO-", "http://localhost:8080/healthz"], interval: 30s, timeout: 5s, retries: 5}
+networks:
+  app-network: {}
+  data-network: {internal: false}
+  monitoring-network: {}
+volumes:
+  fuseki-data: {}
+  etcd-data: {}
+  minio-data: {}
+  milvus-data: {}
+  ollama-models: {}
+  hf-models: {}
+  grafana-data: {}
+  prometheus-data: {}

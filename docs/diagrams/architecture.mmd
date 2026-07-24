@@ -1,0 +1,8 @@
+flowchart LR
+User -->|HTTP/JSON| Frontend -->|HTTP/JSON| Backend
+Backend -->|SPARQL HTTP| Fuseki
+Backend -->|pymilvus gRPC| Milvus
+Backend -->|HTTP/JSON| Ollama
+Milvus --> etcd
+Milvus --> MinIO
+

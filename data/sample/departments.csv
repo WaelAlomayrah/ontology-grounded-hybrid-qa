@@ -1,0 +1,7 @@
+id,label,description,location_id
+dept-fin,Finance Department,Budgeting and financial oversight,loc-riyadh
+dept-it,Information Technology Department,Enterprise technology services,loc-riyadh
+dept-ops,Operations Department,Operational delivery and facilities,loc-jeddah
+dept-hr,People and Culture Department,Workforce services and development,loc-dammam
+dept-legal,Legal Affairs Department,Legal advice and case governance,loc-riyadh
+

@@ -1,0 +1,2 @@
+Extract only entity mentions present in the question. Return a JSON list of strings.
+

@@ -1,0 +1,2 @@
+Return only validated JSON containing intent, entity_mentions, relationship_hints, requested_fields, and max_hops (1-3). Never emit SPARQL.
+

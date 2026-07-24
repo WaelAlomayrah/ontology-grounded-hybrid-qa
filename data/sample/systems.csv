@@ -1,0 +1,8 @@
+id,label,description,owner_department_id,vendor_id
+sys-doc,Document Management System,Controlled enterprise document repository,dept-fin,vendor-alpha
+sys-service,Service Management Platform,IT request and service operations,dept-it,vendor-beta
+sys-hr,Workforce Analytics System,Workforce reporting and analysis,dept-hr,vendor-gamma
+sys-case,Case Management System,Legal matter and case workflow,dept-legal,vendor-delta
+sys-asset,Asset Operations System,Facilities and asset management,dept-ops,vendor-epsilon
+sys-security,Security Monitoring System,Security detection and response,dept-it,vendor-alpha
+

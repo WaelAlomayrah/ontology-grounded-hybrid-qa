@@ -1,0 +1,35 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+frontend/node_modules/
+frontend/dist/
+data/evaluation-results/
+data/runtime/
+data/KG2QA_ontology_dataset/
+data/Northwind_dataset/
+.tools-pptx/
+*.log
+.DS_Store
+~$*.pptx
+
+# Academic reports, proposals, posters, and presentation artifacts
+README.pdf
+docs/README_system_report.md
+docs/final_report.*
+docs/masters_proposal.*
+docs/project_overview_presentation.*
+docs/final_project_presentation.pptx
+docs/final_project_academic_poster.pptx
+docs/ontology_grounded_qa_poster_template.pptx
+docs/poster_preview/
+
+# Academic report/poster/presentation generation code
+scripts/build_final_academic_materials.py
+scripts/build_project_overview_pptx.py
+scripts/build_template_poster.py

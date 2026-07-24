@@ -1,0 +1,31 @@
+@prefix org: <http://example.org/org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+org:Ontology a owl:Ontology ; rdfs:label "Organizational demonstration ontology" .
+org:Person a owl:Class ; rdfs:label "Person" .
+org:Employee a owl:Class ; rdfs:subClassOf org:Person ; rdfs:label "Employee" .
+org:OrganizationalUnit a owl:Class ; rdfs:label "Organizational Unit" .
+org:Department a owl:Class ; rdfs:subClassOf org:OrganizationalUnit ; rdfs:label "Department" .
+org:Project a owl:Class ; rdfs:label "Project" .
+org:InformationSystem a owl:Class ; rdfs:label "Information System" .
+org:Vendor a owl:Class ; rdfs:label "Vendor" .
+org:Location a owl:Class ; rdfs:label "Location" .
+
+org:worksIn a owl:ObjectProperty ; rdfs:label "works in" ; rdfs:domain org:Employee ; rdfs:range org:Department ; owl:inverseOf org:hasEmployee .
+org:hasEmployee a owl:ObjectProperty ; rdfs:label "has employee" .
+org:manages a owl:ObjectProperty ; rdfs:label "manages" ; rdfs:domain org:Employee ; rdfs:range org:Department ; owl:inverseOf org:managedBy .
+org:managedBy a owl:ObjectProperty ; rdfs:label "managed by" .
+org:assignedTo a owl:ObjectProperty ; rdfs:label "assigned to" ; rdfs:domain org:Employee ; rdfs:range org:Project .
+org:owns a owl:ObjectProperty ; rdfs:label "owns" ; rdfs:domain org:Department ; rdfs:range org:InformationSystem ; owl:inverseOf org:ownedBy .
+org:ownedBy a owl:ObjectProperty ; rdfs:label "owned by" .
+org:sponsoredBy a owl:ObjectProperty ; rdfs:label "sponsored by" ; rdfs:domain org:Project ; rdfs:range org:Department .
+org:usesSystem a owl:ObjectProperty ; rdfs:label "uses system" ; rdfs:domain org:Project ; rdfs:range org:InformationSystem .
+org:suppliedBy a owl:ObjectProperty ; rdfs:label "supplied by" ; rdfs:domain org:InformationSystem ; rdfs:range org:Vendor .
+org:locatedAt a owl:ObjectProperty ; rdfs:label "located at" ; rdfs:range org:Location .
+org:name a owl:DatatypeProperty ; rdfs:label "name" ; rdfs:range xsd:string .
+org:description a owl:DatatypeProperty ; rdfs:label "description" ; rdfs:range xsd:string .
+org:email a owl:DatatypeProperty ; rdfs:label "email" ; rdfs:domain org:Employee ; rdfs:range xsd:string .
+

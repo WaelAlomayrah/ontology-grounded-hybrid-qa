@@ -1,0 +1,3 @@
+# The authoritative ontology is loaded idempotently from /app/data/sample/ontology.ttl.
+# Fuseki dataset assembly is configured by command-line dataset creation in compose.yaml.
+

@@ -1,6 +1,8 @@
 export type Node = { id: string; label: string; type: string; properties: Record<string, unknown> };
 export type Edge = { id: string; source: string; target: string; predicate: string; label: string };
 export type Graph = { nodes: Node[]; edges: Edge[]; paths: { nodes: string[]; predicates: string[]; text: string }[] };
+export type GraphFact = { id: string; subject: string; subject_label: string; predicate: string; predicate_label: string; object: string; object_label: string };
+export type SupportingGraph = { graph: Graph; facts: GraphFact[]; question: string };
 export type Result = {
   question: string;
   answer: string;
@@ -10,16 +12,37 @@ export type Result = {
   entities: { label: string; entity_uri: string; source: string; score: number }[];
   graph: Graph;
   sources: string[];
-  retrieval: { vector_results: unknown[]; graph_facts: Record<string, string>[]; timings_ms: Record<string, number> };
+  retrieval: { vector_results: unknown[]; graph_facts: GraphFact[]; timings_ms: Record<string, number> };
   warnings: string[];
 };
 export type OntologyClass = { class: string; label?: string; parent?: string; instances?: string };
 export type OntologyProperty = { property: string; label?: string; kind: string; domain?: string; range?: string };
 export type Ontology = { classes: OntologyClass[]; properties: OntologyProperty[] };
-export type DatasetInfo = { id: string; name: string; files: number; data_files: number; archives: number; archive_preview: string[]; supported_for_ingestion: boolean };
+export type DatasetInfo = { id: string; name: string; files: number; data_files: number; archives: number; archive_preview: string[]; supported_for_ingestion: boolean; exportable?: boolean };
 export type ContainerLoad = { name: string; service?: string; state?: string; health?: string; status?: string; running?: boolean; cpu_percent?: number; memory_bytes?: number; memory_limit_bytes?: number; network_receive_bps?: number; network_transmit_bps?: number; network_receive_bytes?: number; network_transmit_bytes?: number };
 export type Monitoring = { available: boolean; containers: ContainerLoad[]; targets: { job: string; instance: string; up: boolean }[]; load_scope?: string; error?: string };
 export type ObjectMapping = { dataset: string; source: string; target_class: string; mapping_kind: 'entity' | 'relationship'; columns: { source: string; target: string; role: string }[] };
 export type User = { username: string; role: 'viewer' | 'labeler' | 'analyst' | 'admin'; token: string };
-export type IngestionJob = { id: string; dataset: string; status: string; phase: string; progress: number; report?: Record<string, any> };
+export type EmbeddingModelOption = { id: string; label: string; dimension: number; recommended_batch_size: number; cpu_suitable: boolean };
+export type IngestionOptions = {
+  models: EmbeddingModelOption[];
+  devices: { id: 'cpu' | 'cuda'; label: string }[];
+  batch_sizes: number[];
+  scopes: { id: 'incremental' | 'graph_only' | 'vectors_only' | 'full_rebuild'; label: string }[];
+  indexes: { dataset: string; embedding_model: string; collection: string; vectors: number }[];
+  active: { active_dataset: string; embedding_model: string };
+};
+export type IngestionConfig = {
+  dataset: string;
+  mode: 'reset' | 'append';
+  load_graph: boolean;
+  load_vectors: boolean;
+  embedding_model: string;
+  embedding_device: 'cpu' | 'cuda';
+  embedding_batch_size: number;
+  incremental: boolean;
+  use_precomputed: boolean;
+  save_precomputed: boolean;
+};
+export type IngestionJob = { id: string; dataset: string; status: string; phase: string; progress: number; error?: string; report?: { entities_processed?: number; relationships_processed?: number; vectors_generated?: number; vectors_reused?: number; skipped_records?: number; embedding_model?: string; embedding_device?: string; collection?: string; errors?: string[]; warnings?: string[] } };
 export type CsvConnector = { id: string; dataset: string; name: string; filename: string; size_bytes: number; row_count: number; column_count: number; columns: string[]; delimiter: string; created_at: string; status: string; preview?: Record<string, string>[]; mapping?: ObjectMapping };

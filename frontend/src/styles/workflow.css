@@ -26,6 +26,20 @@
 .publish-panel p { margin-top: .35rem; color: var(--muted); }
 .publish-mode { display: grid; gap: .45rem; font-size: .85rem; }
 .publish-mode label { display: flex; gap: .45rem; align-items: center; }
+.ingestion-config { display: grid; grid-template-columns: minmax(260px,1.4fr) repeat(4,minmax(145px,.7fr)); gap: .9rem; align-items: end; margin-top: 1.2rem; padding: 1.2rem; border: 1px solid #315276; border-radius: 12px; background: linear-gradient(135deg,#10263a,#111d2b); }
+.ingestion-config h3,.ingestion-config p { margin: .2rem 0; }
+.ingestion-config p { color: var(--muted); font-size: .82rem; }
+.ingestion-config > label { display: grid; gap: .4rem; color: #cfe0ee; font-size: .76rem; font-weight: 700; }
+.ingestion-config select { min-width: 0; width: 100%; }
+.ingestion-config .cache-choice { display: flex; align-items: center; gap: .6rem; grid-column: 2 / span 2; }
+.cache-choice span { display: grid; gap: .15rem; }
+.cache-choice small,.index-summary small,.index-summary span { color: var(--muted); font-weight: 400; }
+.ingestion-config .publish-mode { grid-column: 4 / span 2; }
+.index-summary { display: grid; gap: .2rem; min-width: 190px; }
+.workflow-notice.success { border-color: #287c5d; background: #14372c; color: #8ce5bd; }
+.job-error-detail { margin-top: .85rem; padding: .85rem 1rem; border: 1px solid #a94b50; border-radius: 9px; background: #3a191c; color: #ffd6d8; }
+.job-error-detail p { margin: .35rem 0 0; overflow-wrap: anywhere; }
+.job-warning { margin: .65rem 0 0; color: #ffd084; }
 .labeler-guide { display: grid; gap: 1.2rem; }
 .guide-hero { padding: 1.5rem; border: 1px solid #315276; border-radius: 14px; background: linear-gradient(135deg,#102b43,#151d2b); }
 .guide-hero h2 { margin: .35rem 0; font-size: 1.8rem; }
@@ -42,9 +56,12 @@
 @media (max-width: 1000px) {
   .guide-steps { grid-template-columns: 1fr 1fr; }
   .row-kind,.publish-panel { grid-template-columns: 1fr; }
+  .ingestion-config { grid-template-columns: 1fr 1fr; }
+  .ingestion-config > div:first-child,.ingestion-config .cache-choice,.ingestion-config .publish-mode { grid-column: 1 / -1; }
 }
 @media (max-width: 650px) {
   .guide-steps,.guide-grid,.row-kind fieldset { grid-template-columns: 1fr; }
+  .ingestion-config { grid-template-columns: 1fr; }
   .friendly-mappings .mapping-head { grid-template-columns: 18px 1fr auto; }
   .friendly-mappings .mapping-head > div:nth-of-type(2) { display: none; }
 }

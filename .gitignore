@@ -11,12 +11,18 @@ frontend/node_modules/
 frontend/dist/
 data/evaluation-results/
 data/runtime/
+data/*/precomputed_vectors/
 data/KG2QA_ontology_dataset/
 data/Northwind_dataset/
 .tools-pptx/
+.tools/
 *.log
 .DS_Store
 ~$*.pptx
+data/Arabic_enterprise_dataset/
+presentations/
+reports/
+tools/
 
 # Academic reports, proposals, posters, and presentation artifacts
 README.pdf

@@ -18,7 +18,15 @@ class EmbeddingService:
             self._model = SentenceTransformer(
                 self.settings.embedding_model, device=self.settings.embedding_device
             )
-            self.dimension = int(self._model.get_sentence_embedding_dimension())
+            self._model.max_seq_length = 512
+            transformer = self._model[0]
+            auto_model = getattr(transformer, "auto_model", None)
+            if auto_model is not None and hasattr(auto_model.config, "reference_compile"):
+                auto_model.config.reference_compile = False
+            reported_dimension = self._model.get_sentence_embedding_dimension()
+            if reported_dimension is None:
+                raise ValueError("Embedding model did not report an output dimension")
+            self.dimension = int(reported_dimension)
             if self.dimension != self.settings.milvus_vector_dimension:
                 raise ValueError(
                     f"Embedding dimension {self.dimension} differs from configured "
@@ -37,8 +45,8 @@ class EmbeddingService:
 
     def _encode(self, texts: list[str]) -> list[list[float]]:
         vectors = self._get_model().encode(
-            texts, batch_size=self.settings.embedding_batch_size,
+            texts,
+            batch_size=self.settings.embedding_batch_size,
             normalize_embeddings=self.settings.embedding_normalize,
         )
         return vectors.tolist()
-

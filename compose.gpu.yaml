@@ -5,15 +5,28 @@ services:
         reservations:
           devices: [{driver: nvidia, count: all, capabilities: [gpu]}]
   backend:
-    environment: {EMBEDDING_DEVICE: cuda}
+    image: ontology-ai-pilot-backend-gpu:latest
+    build:
+      context: .
+      dockerfile: backend/Dockerfile.gpu
+    environment:
+      EMBEDDING_DEVICE: cuda
+      TRITON_CACHE_DIR: /tmp/triton
+      TORCHINDUCTOR_CACHE_DIR: /tmp/torchinductor
     deploy:
       resources:
         reservations:
           devices: [{driver: nvidia, count: all, capabilities: [gpu]}]
   data-loader:
-    environment: {EMBEDDING_DEVICE: cuda}
+    image: ontology-ai-pilot-data-loader-gpu:latest
+    build:
+      context: .
+      dockerfile: backend/Dockerfile.gpu
+    environment:
+      EMBEDDING_DEVICE: cuda
+      TRITON_CACHE_DIR: /tmp/triton
+      TORCHINDUCTOR_CACHE_DIR: /tmp/torchinductor
     deploy:
       resources:
         reservations:
           devices: [{driver: nvidia, count: all, capabilities: [gpu]}]
-

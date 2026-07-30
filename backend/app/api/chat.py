@@ -51,7 +51,25 @@ async def chat(request: QuestionRequest, settings: Settings = Depends(get_settin
     if not result.retrieval.graph_facts and not result.retrieval.vector_results:
         ANSWER_STATUS.labels("insufficient_evidence").inc()
         return ChatResponse(**result.model_dump(), answer=localized_message(request.question, "insufficient"), answer_status="insufficient_evidence", confidence=0)
-    context = build_context(result.entities, result.retrieval.graph_facts, result.retrieval.vector_results, result.sources, settings.max_context_items, settings.max_context_characters)
+    ambiguity_answer = OntologyService.ambiguity_answer(result)
+    if ambiguity_answer:
+        result.retrieval.timings_ms["generation"] = 0.0
+        ANSWER_STATUS.labels("answered").inc()
+        return ChatResponse(
+            **result.model_dump(),
+            answer=ambiguity_answer,
+            answer_status="answered",
+            confidence=confidence,
+        )
+    context = build_context(
+        result.entities,
+        result.retrieval.graph_facts,
+        result.retrieval.vector_results,
+        result.sources,
+        settings.max_context_items,
+        settings.max_context_characters,
+        request.question,
+    )
     started = time.perf_counter()
     try:
         history_context = "\n".join(f"{turn.role.title()}: {turn.content}" for turn in request.history[-6:])

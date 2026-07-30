@@ -7,7 +7,7 @@ type View = 'connectors' | 'mapping' | 'ontology' | 'guide';
 type ColumnRole = ObjectMapping['columns'][number]['role'];
 
 const localName = (uri = '') => decodeURIComponent(uri.split(/[#/]/).pop() || '—').replaceAll('_', ' ');
-const ingestionName = (dataset: string) => dataset.startsWith('csv:') ? dataset : dataset === 'KG2QA_ontology_dataset' ? 'kg2qa' : dataset === 'Northwind_dataset' ? 'northwind' : 'sample';
+const ingestionName = (dataset: string) => dataset.startsWith('csv:') ? dataset : dataset === 'KG2QA_ontology_dataset' ? 'kg2qa' : dataset === 'Northwind_dataset' ? 'northwind' : dataset === 'Arabic_enterprise_dataset' ? 'arabic_enterprise' : 'sample';
 const roleOptions: { value: ColumnRole; label: string; help: string }[] = [
   { value: 'identifier', label: 'Unique ID', help: 'A stable value that distinguishes each item.' },
   { value: 'label', label: 'Display name', help: 'The name people should see.' },
@@ -35,9 +35,17 @@ export default function ModelingPage({ role }: { role: User['role'] }) {
   const [expanded, setExpanded] = useState<string>();
   const [drafts, setDrafts] = useState<ObjectMapping[]>([]);
   const [validation, setValidation] = useState<string[]>([]);
+  const [actionError, setActionError] = useState('');
+  const [actionMessage, setActionMessage] = useState('');
   const [jobId, setJobId] = useState<string>();
   const [mode, setMode] = useState<'reset' | 'append'>('append');
+  const [embeddingModel, setEmbeddingModel] = useState('e5-large');
+  const [embeddingDevice, setEmbeddingDevice] = useState<'cpu' | 'cuda'>('cpu');
+  const [batchSize, setBatchSize] = useState(16);
+  const [scope, setScope] = useState<'incremental' | 'graph_only' | 'vectors_only' | 'full_rebuild'>('incremental');
+  const [savePrecomputed, setSavePrecomputed] = useState(false);
   const mappings = useQuery({ queryKey: ['object-mappings'], queryFn: api.mappings });
+  const ingestionOptions = useQuery({ queryKey: ['ingestion-options'], queryFn: api.ingestionOptions });
   const ontology = useQuery({ queryKey: ['ontology'], queryFn: api.ontology });
   const active = useQuery({ queryKey: ['active-dataset'], queryFn: api.activeDataset });
   const job = useQuery({ queryKey: ['ingestion-job', jobId], queryFn: () => api.ingestionJob(jobId!), enabled: Boolean(jobId), refetchInterval: query => ['complete', 'failed'].includes(query.state.data?.status ?? '') ? false : 1200 });
@@ -46,6 +54,7 @@ export default function ModelingPage({ role }: { role: User['role'] }) {
   useEffect(() => { if (job.data?.status === 'complete') void client.invalidateQueries({ queryKey: ['active-dataset'] }); }, [client, job.data?.status]);
 
   const editable = role !== 'viewer';
+  const nativeFolderDataset = dataset === 'Arabic_enterprise_dataset';
   function updateMapping(source: string, change: Partial<ObjectMapping>) {
     setDrafts(items => items.map(item => item.source === source ? { ...item, ...change } : item));
   }
@@ -56,13 +65,38 @@ export default function ModelingPage({ role }: { role: User['role'] }) {
     } as ObjectMapping));
   }
   async function save() {
-    const result = await api.saveMappings(dataset, drafts);
-    setValidation(result.errors);
-    if (result.saved) await client.invalidateQueries({ queryKey: ['object-mappings'] });
+    setActionError(''); setActionMessage('');
+    try {
+      const result = await api.saveMappings(dataset, drafts);
+      setValidation(result.errors);
+      if (result.saved) {
+        setActionMessage('Mapping checked and saved successfully.');
+        await client.invalidateQueries({ queryKey: ['object-mappings'] });
+      }
+    } catch (reason) {
+      setActionError(reason instanceof Error ? reason.message : 'The mapping could not be saved.');
+    }
   }
   async function ingest() {
-    const started = await api.startIngestion(ingestionName(dataset), mode);
-    setJobId(started.id);
+    setActionError(''); setActionMessage('');
+    try {
+      const fullRebuild = scope === 'full_rebuild';
+      const started = await api.startIngestion({
+        dataset: ingestionName(dataset),
+        mode: fullRebuild ? 'reset' : mode,
+        load_graph: scope !== 'vectors_only',
+        load_vectors: scope !== 'graph_only',
+        embedding_model: embeddingModel,
+        embedding_device: embeddingDevice,
+        embedding_batch_size: batchSize,
+        incremental: scope === 'incremental',
+        use_precomputed: true,
+        save_precomputed: savePrecomputed,
+      });
+      setJobId(started.id);
+    } catch (reason) {
+      setActionError(reason instanceof Error ? reason.message : 'The knowledge graph build could not be started.');
+    }
   }
 
   return <section className="modeling-page">
@@ -82,7 +116,7 @@ export default function ModelingPage({ role }: { role: User['role'] }) {
         <div><h2>Describe your file</h2><p>Tell the system what one row represents, then give every useful column a meaning.</p></div>
         <label className="dataset-picker">File or dataset<select value={dataset} onChange={event => { setDataset(event.target.value); setValidation([]); setJobId(undefined); }}>{datasetNames.map(name => <option key={name} value={name}>{name.startsWith('csv:') ? `CSV · ${mappings.data?.find(item => item.dataset === name)?.source ?? name.slice(4, 12)}` : name.replaceAll('_', ' ')}</option>)}</select></label>
       </div>
-      <div className="plain-tip"><strong>Start with a list of things.</strong> For example, upload customers and products before uploading a file that connects customers to orders. Use the same IDs in every file.</div>
+      <div className="plain-tip">{nativeFolderDataset ? <><strong>Complete Arabic dataset detected.</strong> Its validated RDF graph, 3,000 Arabic documents, ontology, and 400 evaluation questions will be ingested together. CSV mapping is not required for this prepared dataset.</> : <><strong>Start with a list of things.</strong> For example, upload customers and products before uploading a file that connects customers to orders. Use the same IDs in every file.</>}</div>
       <div className="mapping-summary">
         <span><b>{drafts.length}</b> file objects</span>
         <span><b>{drafts.filter(item => readiness(item).length === 0).length}</b> ready</span>
@@ -90,6 +124,8 @@ export default function ModelingPage({ role }: { role: User['role'] }) {
         <div className="mapping-actions"><button className="button secondary" disabled={!editable} onClick={() => void save()}>Check and save</button></div>
       </div>
       {!editable && <div className="warning workflow-notice">Your account is read-only. Ask for a labeler account to describe data.</div>}
+      {actionMessage && <div className="success workflow-notice"><strong>{actionMessage}</strong></div>}
+      {actionError && <div className="error workflow-notice"><strong>Action failed</strong><p>{actionError}</p><p>Check your choices and try again. If the message names an unavailable service, ask an administrator to check Operations.</p></div>}
       {validation.length > 0 && <div className="error workflow-notice"><strong>Please fix these choices</strong>{validation.map(error => <p key={error}>{error}</p>)}</div>}
       <div className="mapping-list friendly-mappings">{drafts.map(mapping => {
         const issues = readiness(mapping);
@@ -121,12 +157,21 @@ export default function ModelingPage({ role }: { role: User['role'] }) {
         </article>;
       })}</div>
       {drafts.length === 0 && <div className="connector-empty"><strong>No description is available</strong><span>Go to “Add data” and upload a CSV file first.</span></div>}
-      <div className="publish-panel">
-        <div><h3>Publish to the knowledge graph</h3><p>Only an administrator can publish reviewed mappings. Labelers can safely prepare and save them.</p></div>
-        <div className="publish-mode"><label><input type="radio" checked={mode === 'append'} onChange={() => setMode('append')} /> Add this file to the current graph</label><label><input type="radio" checked={mode === 'reset'} onChange={() => setMode('reset')} /> Start a new graph (replaces current data)</label></div>
-        <button className="button" disabled={role !== 'admin' || validation.length > 0 || drafts.some(item => readiness(item).length > 0)} onClick={() => void ingest()}>Build knowledge graph</button>
+      <div className="ingestion-config">
+        <div><span className="eyebrow">Ingestion configuration</span><h3>Choose how this dataset is indexed</h3><p>Indexes are isolated by dataset and embedding model, so experiments cannot overwrite each other.</p></div>
+        <label>Operation<select value={scope} onChange={event => setScope(event.target.value as typeof scope)}>{ingestionOptions.data?.scopes.map(item => <option key={item.id} value={item.id}>{item.label}</option>)}</select></label>
+        <label>Embedding model<select value={embeddingModel} onChange={event => { const id = event.target.value; setEmbeddingModel(id); const selected = ingestionOptions.data?.models.find(item => item.id === id); if (selected) setBatchSize(selected.recommended_batch_size); }}>{ingestionOptions.data?.models.map(item => <option key={item.id} value={item.id}>{item.label} · {item.dimension}d</option>)}</select></label>
+        <label>Processor<select value={embeddingDevice} onChange={event => setEmbeddingDevice(event.target.value as 'cpu' | 'cuda')}>{ingestionOptions.data?.devices.map(item => <option key={item.id} value={item.id}>{item.label}</option>)}</select></label>
+        <label>Embedding batch<select value={batchSize} onChange={event => setBatchSize(Number(event.target.value))}>{ingestionOptions.data?.batch_sizes.map(item => <option key={item} value={item}>{item} records</option>)}</select></label>
+        <label className="cache-choice"><input type="checkbox" checked={savePrecomputed} onChange={event => setSavePrecomputed(event.target.checked)} /><span><b>Save reusable vectors</b><small>Include validated precomputed vectors in future dataset exports.</small></span></label>
+        {scope !== 'full_rebuild' && scope !== 'vectors_only' && <div className="publish-mode"><label><input type="radio" checked={mode === 'append'} onChange={() => setMode('append')} /> Add to the graph</label><label><input type="radio" checked={mode === 'reset'} onChange={() => setMode('reset')} /> Replace the graph</label></div>}
       </div>
-      {job.data && <div className={`job-progress ${job.data.status}`}><div><strong>{job.data.status === 'complete' ? 'Knowledge graph built' : job.data.status === 'failed' ? 'Build failed' : `Working: ${job.data.phase.replaceAll('_', ' ')}`}</strong><span>{job.data.progress}%</span></div><div className="progress-track"><i style={{ width: `${job.data.progress}%` }} /></div>{job.data.report && <small>{String(job.data.report.entities_processed ?? 0)} items · {String(job.data.report.relationships_processed ?? 0)} connections · {String(job.data.report.vectors_generated ?? 0)} searchable records</small>}</div>}
+      <div className="publish-panel">
+        <div><h3>Publish selected configuration</h3><p>{scope === 'incremental' ? 'Only new or changed searchable text will be embedded.' : scope === 'full_rebuild' ? 'The graph and selected model index will be rebuilt.' : 'Only the selected storage layer will be updated.'}</p></div>
+        <div className="index-summary"><small>Target index</small><b>{ingestionName(dataset)} / {embeddingModel}</b><span>{embeddingDevice.toUpperCase()} · batch {batchSize}</span></div>
+        <button className="button" disabled={role !== 'admin' || (!nativeFolderDataset && (validation.length > 0 || drafts.some(item => readiness(item).length > 0)))} onClick={() => void ingest()}>{nativeFolderDataset ? 'Run Arabic dataset ingestion' : 'Build knowledge graph'}</button>
+      </div>
+      {job.data && <div className={`job-progress ${job.data.status}`}><div><strong>{job.data.status === 'complete' ? 'Knowledge graph built' : job.data.status === 'failed' ? 'Build failed' : `Working: ${job.data.phase.replaceAll('_', ' ')}`}</strong><span>{job.data.progress}%</span></div><div className="progress-track"><i style={{ width: `${job.data.progress}%` }} /></div>{job.data.report && <small>{String(job.data.report.entities_processed ?? 0)} items · {String(job.data.report.relationships_processed ?? 0)} connections · {String(job.data.report.vectors_generated ?? 0)} newly embedded · {String(job.data.report.vectors_reused ?? 0)} reused</small>}{job.data.status === 'failed' && <div className="job-error-detail"><strong>Why it failed</strong>{job.data.error ? <p>{job.data.error}</p> : job.data.report?.errors?.length ? job.data.report.errors.map((error, index) => <p key={`${index}-${error}`}>{error}</p>) : <p>The backend did not provide a reason. Check the Operations page and backend logs.</p>}</div>}{job.data.report?.warnings?.map((warning, index) => <p className="job-warning" key={`${index}-${warning}`}>Warning: {warning}</p>)}</div>}
     </div>}
     {view === 'ontology' && <OntologyViewer ontology={ontology.data} />}
     {view === 'guide' && <LabelerGuide />}

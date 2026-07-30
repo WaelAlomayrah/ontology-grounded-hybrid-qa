@@ -43,7 +43,9 @@ services:
   fuseki:
     image: stain/jena-fuseki:5.1.0
     environment: {ADMIN_PASSWORD: "${FUSEKI_PASSWORD:-change-me-fuseki}"}
-    command: ["sh", "-c", "mkdir -p /fuseki/databases/ontology && exec /jena-fuseki/fuseki-server --update --loc=/fuseki/databases/ontology /ontology"]
+    # The image only applies ADMIN_PASSWORD when /fuseki is first initialized.
+    # Refresh the persisted Shiro credential on every start so .env remains authoritative.
+    command: ["sh", "-c", "mkdir -p /fuseki/databases/ontology && sed -i \"s/^admin=.*/admin=$${ADMIN_PASSWORD}/\" /fuseki/shiro.ini && exec /jena-fuseki/fuseki-server --update --loc=/fuseki/databases/ontology /ontology"]
     ports: ["${FUSEKI_HOST_PORT:-3030}:3030"]
     volumes: ["fuseki-data:/fuseki"]
     networks: [data-network]
@@ -77,14 +79,14 @@ services:
     depends_on: {milvus: {condition: service_healthy}}
     networks: [data-network]
   ollama:
-    image: ollama/ollama:0.5.4
+    image: ollama/ollama:0.6.5
     volumes: ["ollama-models:/root/.ollama"]
     ports: ["${OLLAMA_HOST_PORT:-11434}:11434"]
     networks: [data-network]
     healthcheck: {test: ["CMD", "ollama", "list"], interval: 15s, timeout: 10s, retries: 10}
   ollama-init:
     image: curlimages/curl:8.11.1
-    environment: {OLLAMA_MODEL: "${OLLAMA_MODEL:-qwen2.5:7b}"}
+    environment: {OLLAMA_MODEL: "${OLLAMA_MODEL:-gemma3:4b}"}
     entrypoint: ["/bin/sh", "-c"]
     command: ["until curl -fsS http://ollama:11434/api/tags >/tmp/tags; do sleep 3; done; grep -q \"$${OLLAMA_MODEL}\" /tmp/tags || curl -f http://ollama:11434/api/pull -d '{\"name\":\"'$${OLLAMA_MODEL}'\",\"stream\":false}' || true"]
     depends_on: {ollama: {condition: service_healthy}}

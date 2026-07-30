@@ -2,9 +2,28 @@ import { FormEvent, useEffect, useRef, useState } from 'react';
 import { useMutation, useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
 import { api } from '../api/client';
-import type { Result } from '../types/api';
+import type { Result, SupportingGraph } from '../types/api';
 
-const samples = ['Which vendor supplies the system used by Project Atlas?', 'Who manages the owner of the Case Management System?', 'Which projects involve employees in Riyadh?'];
+const samplesByDataset: Record<string, string[]> = {
+  arabic_enterprise: [
+    'في أي إدارة يعمل الموظف سعود العمري؟',
+    'ما المورد الذي يورد نظام الموارد البشرية المؤسسية 1؟',
+    'من هو مورد النظام المستخدم في مشروع تطوير الخدمات الرقمية 1؟',
+    'من أعد المستند «إجراء إدارة البيانات رقم 1»؟',
+    'كم عدد الموظفين في الإدارة التنفيذية؟',
+    'ما الأنظمة التي تستخدمها مشاريع إدارة البيانات؟',
+  ],
+  kg2qa: [
+    'What is "fitting procedures" relevant to?',
+    'What is "DCE-to-DCE signalling" relevant to?',
+    'What does "dense wavelength division multiplexing (DWDM) systems" limit?',
+  ],
+  sample: [
+    'Which vendor supplies the system used by Project Atlas?',
+    'Who manages the owner of the Case Management System?',
+    'Which projects involve employees in Riyadh?',
+  ],
+};
 type Turn = { question: string; result?: Result; pending?: boolean; error?: string };
 type Session = { id: string; title: string; turns: Turn[]; updated: number };
 
@@ -15,6 +34,7 @@ export default function ChatPage() {
   const [sessionId, setSessionId] = useState<string>(() => sessions[0]?.id ?? crypto.randomUUID());
   const [turns, setTurns] = useState<Turn[]>(() => sessions[0]?.turns ?? []);
   const active = useQuery({ queryKey: ['active-dataset'], queryFn: api.activeDataset });
+  const samples = samplesByDataset[active.data?.dataset ?? 'sample'] ?? samplesByDataset.sample;
   const bottom = useRef<HTMLDivElement>(null);
   const mutation = useMutation({ mutationFn: ({ text, selectedMode, history }: { text: string; selectedMode: string; history: { role: 'user' | 'assistant'; content: string }[] }) => api.chat(text, selectedMode, history) });
   useEffect(() => bottom.current?.scrollIntoView({ behavior: 'smooth' }), [turns]);
@@ -34,7 +54,6 @@ export default function ChatPage() {
     try {
       const history = turns.flatMap(turn => turn.result ? [{ role: 'user' as const, content: turn.question }, { role: 'assistant' as const, content: turn.result.answer }] : []).slice(-8);
       const result = await mutation.mutateAsync({ text: clean, selectedMode: mode, history });
-      sessionStorage.setItem('supportingGraph', JSON.stringify(result.graph));
       setTurns(previous => previous.map((turn, i) => i === index ? { question: clean, result } : turn));
     } catch (error) {
       setTurns(previous => previous.map((turn, i) => i === index ? { question: clean, error: error instanceof Error ? error.message : 'Request failed' } : turn));
@@ -50,7 +69,7 @@ export default function ChatPage() {
 
     {turns.length === 0 && <div className="welcome-panel">
       <div className="orb">✦</div><h2>Start with a question about your data</h2><p>I’ll combine semantic retrieval with explicit graph relationships and show you why the answer is supported.</p>
-      <div className="suggestion-grid">{samples.map((sample, index) => <button key={sample} onClick={() => void ask(sample)}><span>0{index + 1}</span>{sample}</button>)}</div>
+      <div className="suggestion-grid">{samples.map((sample, index) => <button dir={active.data?.dataset === 'arabic_enterprise' ? 'rtl' : 'ltr'} key={sample} onClick={() => void ask(sample)}><span>{String(index + 1).padStart(2, '0')}</span>{sample}</button>)}</div>
     </div>}
 
     <div className="conversation">
@@ -74,6 +93,14 @@ function Answer({ result }: { result: Result }) {
   const [comparison, setComparison] = useState<{ graph?: Result; vector?: Result; loading?: boolean }>();
   async function compare() { setComparison({ loading: true }); const [graph, vector] = await Promise.all([api.chat(result.question, 'graph_only'), api.chat(result.question, 'vector_only')]); setComparison({ graph, vector }); }
   function openEntity(label: string) { sessionStorage.setItem('graphSearch', label); window.location.href = '/graph'; }
+  function openSupportingGraph() {
+    const payload: SupportingGraph = {
+      graph: result.graph,
+      facts: result.retrieval.graph_facts,
+      question: result.question,
+    };
+    sessionStorage.setItem('supportingGraph', JSON.stringify(payload));
+  }
   return <article className="assistant-message answer-card">
     <div className="answer-top"><div className="assistant-avatar">O</div><div><strong>Ontology assistant</strong><span>Grounded response</span></div><span className={`status-badge ${result.answer_status}`}>{result.answer_status.replaceAll('_', ' ')}</span></div>
     <p className="answer-text">{result.answer}</p>
@@ -87,6 +114,6 @@ function Answer({ result }: { result: Result }) {
     <div className="entity-chips">{result.entities.slice(0, 8).map(entity => <button onClick={() => openEntity(entity.label)} key={entity.entity_uri}>{entity.label}<small>{entity.source}</small></button>)}</div>
     <details><summary>Inspect supporting evidence</summary><pre>{JSON.stringify(result.retrieval.graph_facts, null, 2)}</pre></details>
     {comparison && <div className="comparison">{comparison.loading ? <p>Running baseline comparison…</p> : <><article><small>Graph only · {Math.round((comparison.graph?.confidence ?? 0) * 100)}%</small><p>{comparison.graph?.answer}</p></article><article><small>Vector only · {Math.round((comparison.vector?.confidence ?? 0) * 100)}%</small><p>{comparison.vector?.answer}</p></article></>}</div>}
-    <div className="answer-actions"><Link className="button secondary" to="/graph">Open supporting graph</Link><button className="button secondary" onClick={() => void compare()}>Compare retrieval</button><span>Sources: {result.sources.join(', ') || 'none'}</span></div>
+    <div className="answer-actions"><Link className="button secondary" to="/graph" onClick={openSupportingGraph}>Open supporting graph</Link><button className="button secondary" onClick={() => void compare()}>Compare retrieval</button><span>Sources: {result.sources.join(', ') || 'none'}</span></div>
   </article>;
 }

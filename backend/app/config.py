@@ -26,7 +26,7 @@ class Settings(BaseSettings):
     milvus_vector_dimension: int = 1024
     milvus_metric_type: str = "COSINE"
     ollama_base_url: str = "http://ollama:11434"
-    ollama_model: str = "qwen2.5:7b"
+    ollama_model: str = "gemma3:4b"
     ollama_timeout_seconds: float = 120
     prometheus_base_url: str = "http://prometheus:9090"
     docker_proxy_base_url: str = "http://docker-proxy:2375"
@@ -36,6 +36,7 @@ class Settings(BaseSettings):
     embedding_normalize: bool = True
     dataset_path: Path = Path("/app/data/KG2QA_ontology_dataset")
     northwind_dataset_path: Path = Path("/app/data/Northwind_dataset")
+    arabic_enterprise_dataset_path: Path = Path("/app/data/Arabic_enterprise_dataset")
     ontology_file: Path = Path("/app/data/sample/ontology.ttl")
     vector_top_k: int = Field(8, ge=1, le=100)
     graph_result_limit: int = Field(100, ge=1, le=1000)

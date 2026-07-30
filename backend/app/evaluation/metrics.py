@@ -23,7 +23,8 @@ def coverage(text: str, expected: list[str]) -> float:
 def entity_recall(retrieved: list[str], expected: list[str]) -> float: return coverage(" | ".join(retrieved), expected)
 
 
-def graph_path_recall(facts: list[str], expected_path: list[str]) -> float: return coverage(" | ".join(facts), expected_path)
+def graph_path_recall(facts: list[str], expected_path: list[str]) -> float:
+    return coverage(" | ".join(facts), expected_path) if expected_path else 0.0
 
 
 def evidence_precision(answer: str, evidence: list[str]) -> float:
@@ -34,4 +35,3 @@ def evidence_precision(answer: str, evidence: list[str]) -> float:
 
 def unsupported_claim_heuristic(answer: str, evidence: list[str]) -> float:
     return round(1.0 - evidence_precision(answer, evidence), 4)
-

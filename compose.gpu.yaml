@@ -11,6 +11,7 @@ services:
       dockerfile: backend/Dockerfile.gpu
     environment:
       EMBEDDING_DEVICE: cuda
+      EMBEDDING_BATCH_SIZE: 64
       TRITON_CACHE_DIR: /tmp/triton
       TORCHINDUCTOR_CACHE_DIR: /tmp/torchinductor
     deploy:
@@ -24,6 +25,7 @@ services:
       dockerfile: backend/Dockerfile.gpu
     environment:
       EMBEDDING_DEVICE: cuda
+      EMBEDDING_BATCH_SIZE: 64
       TRITON_CACHE_DIR: /tmp/triton
       TORCHINDUCTOR_CACHE_DIR: /tmp/torchinductor
     deploy:

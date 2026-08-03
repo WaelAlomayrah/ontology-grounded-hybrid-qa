@@ -12,9 +12,8 @@ from app.services.ollama_service import OllamaService
 from app.services.workspace_state import active_dataset, active_embedding_model
 
 
-@lru_cache
 def get_fuseki() -> FusekiService:
-    return FusekiService(get_settings())
+    return FusekiService(get_settings(), active_dataset())
 
 
 @lru_cache

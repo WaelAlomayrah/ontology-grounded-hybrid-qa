@@ -56,6 +56,23 @@ docker compose --profile tools run --rm data-loader --dataset kg2qa --reset --lo
 
 Omit `--reset` for deterministic upserts. See [ingestion details](docs/ingestion.md) and [ontology](docs/ontology.md).
 
+### Public-safety demonstration
+
+The additive `policeuk` pipeline connects official Police.uk crime, exact-linked
+outcomes, stop/search, force/neighbourhood/boundary metadata, and official ONS
+2021-LSOA population estimates. It produces provenance-rich RDF, descriptive
+aggregates and rates, and graph-backed multilingual E5 passages without personal
+risk profiling.
+
+```bash
+docker compose --profile tools run --rm data-loader --dataset policeuk \
+  --reset --download --load-graph --load-vectors \
+  --force "Thames Valley Police" --months 12
+```
+
+After the first download, use `--no-download` for offline reprocessing. See the
+[Police.uk dataset guide](docs/policeuk-dataset.md).
+
 ## API and example usage
 
 OpenAPI is at `http://localhost:8000/docs`. Retrieval continues without Ollama; chat returns `partial` if generation fails. Graph-only survives Milvus failure, vector-only survives Fuseki failure, and two failed retrievers produce structured 503 output.
@@ -114,4 +131,3 @@ The heuristic entity extractor and bounded templates do not replace a full seman
 ## Repository map
 
 `backend/` contains API, retrieval, ingestion, evaluation, and tests; `frontend/` contains the four-page client; `data/` sample and KG2QA mount; `fuseki/` ontology notes; `monitoring/` provisioned Prometheus/Grafana; `scripts/` cross-platform workflows; `docs/` design references. Commands are summarized by `make help`.
-

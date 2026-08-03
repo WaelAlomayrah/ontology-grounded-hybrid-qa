@@ -5,7 +5,7 @@ requires-python = ">=3.12"
 dependencies = [
   "fastapi==0.115.6", "uvicorn[standard]==0.34.0", "pydantic==2.10.4",
   "pydantic-settings==2.7.0", "httpx==0.28.1", "rdflib==7.1.1",
-  "pymilvus==2.5.3", "sentence-transformers==3.3.1", "pandas==2.2.3",
+  "pymilvus==2.5.3", "sentence-transformers==3.3.1", "pandas==2.2.3", "openpyxl==3.1.5",
   "python-multipart==0.0.20", "prometheus-fastapi-instrumentator==7.0.0",
   "prometheus-client==0.21.1"
 ]
@@ -29,3 +29,4 @@ ignore = ["B008", "E501", "E701", "E702"]
 python_version = "3.12"
 ignore_missing_imports = true
 check_untyped_defs = true
+plugins = ["pydantic.mypy"]

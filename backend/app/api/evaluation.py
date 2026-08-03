@@ -24,6 +24,7 @@ QUESTION_PATHS = {
     "sample": Path("/app/data/sample/evaluation_questions.json"),
     "kg2qa": Path("/app/data/KG2QA_ontology_dataset/evaluation_questions.json"),
     "arabic_enterprise": Path("/app/data/Arabic_enterprise_dataset/evaluation_questions_ar.json"),
+    "policeuk": Path("/app/data/policeuk/evaluation_questions_ar.json"),
 }
 
 
@@ -71,7 +72,7 @@ async def _execute_evaluation(
             detail=f"No {request.embedding_model} vector index exists for {request.dataset}. Ingest it first.",
         )
     retriever = HybridRetriever(
-        settings, FusekiService(settings), milvus, EmbeddingService(settings)
+        settings, FusekiService(settings, request.dataset), milvus, EmbeddingService(settings)
     )
 
     async def ask(question: str, mode: str) -> dict:

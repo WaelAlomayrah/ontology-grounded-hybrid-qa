@@ -28,7 +28,6 @@ async def run_evaluation(
         for index, item in enumerate(questions, start=1):
             response = await ask(item["question"], mode)
             labels = [entity["label"] for entity in response.get("entities", [])]
-            entities = response.get("entities", [])
             graph_nodes = response.get("graph", {}).get("nodes", [])
             facts = [
                 f"{f['subject_label']} {f['predicate_label']} {f['object_label']}"

@@ -76,12 +76,15 @@ class IngestionJobRequest(IngestionRequest):
     dataset: str = Field(
         min_length=1,
         max_length=80,
-        pattern=r"^(sample|kg2qa|northwind|arabic_enterprise|csv:[0-9a-f-]{36})$",
+        pattern=r"^(sample|kg2qa|northwind|arabic_enterprise|policeuk|csv:[0-9a-f-]{36})$",
     )
+    download: bool | None = None
+    force: str | None = Field(default=None, max_length=120)
+    months: int | None = Field(default=None, ge=1, le=36)
 
 
 class EvaluationRunRequest(BaseModel):
-    dataset: Literal["sample", "kg2qa", "arabic_enterprise"]
+    dataset: Literal["sample", "kg2qa", "arabic_enterprise", "policeuk"]
     embedding_model: Literal["e5-large", "granite-311m-r2", "granite-97m-r2"]
 
 
@@ -100,6 +103,7 @@ class IngestionReport(BaseModel):
     elapsed_time: float = 0
     errors: list[str] = Field(default_factory=list)
     warnings: list[str] = Field(default_factory=list)
+    details: dict[str, Any] = Field(default_factory=dict)
 
 
 class ErrorBody(BaseModel):

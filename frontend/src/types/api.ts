@@ -30,6 +30,7 @@ export type IngestionOptions = {
   batch_sizes: number[];
   scopes: { id: 'incremental' | 'graph_only' | 'vectors_only' | 'full_rebuild'; label: string }[];
   indexes: { dataset: string; embedding_model: string; collection: string; vectors: number }[];
+  graph_datasets: string[];
   active: { active_dataset: string; embedding_model: string };
 };
 export type IngestionConfig = {

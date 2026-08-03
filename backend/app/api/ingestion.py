@@ -21,6 +21,7 @@ from app.models.api import (
     IngestionRequest,
     MappingProfileRequest,
 )
+from app.services.fuseki_service import FusekiService
 from app.services.milvus_service import MilvusService
 from app.services.workspace_state import (
     active_dataset,
@@ -98,6 +99,7 @@ async def datasets() -> list[dict[str, object]]:
                     "KG2QA_ontology_dataset",
                     "Northwind_dataset",
                     "Arabic_enterprise_dataset",
+                    "policeuk",
                 },
                 "exportable": directory.name not in NON_EXPORTABLE_DATASETS,
             }
@@ -224,37 +226,80 @@ async def get_active() -> dict[str, str]:
 @router.put("/active", dependencies=[Depends(require_role("analyst"))])
 async def put_active(value: dict[str, str]) -> dict[str, str]:
     dataset = value.get("dataset", "").lower()
-    if dataset not in {"sample", "kg2qa", "northwind", "arabic_enterprise"}:
+    if dataset not in {"sample", "kg2qa", "northwind", "arabic_enterprise", "policeuk"}:
         raise HTTPException(status_code=422, detail="Unsupported dataset")
     model = value.get("embedding_model", active_embedding_model())
     if model not in MODELS:
         raise HTTPException(status_code=422, detail="Unsupported embedding model")
+    settings = get_settings()
+    current = active_dataset()
+    # Preserve the graph created by older releases before the first switch.
+    await FusekiService(settings, current).preserve_legacy_default_graph()
+    graph_available = await FusekiService(settings, dataset).exists()
+    index_settings = settings_for_index(settings, dataset, model)
+    vectors = MilvusService(index_settings)
+    try:
+        vector_available = vectors.client.has_collection(index_settings.milvus_collection)
+    except Exception as exc:
+        raise HTTPException(status_code=503, detail=f"Milvus availability check failed: {exc}") from exc
+    if not graph_available or not vector_available:
+        missing = [
+            name
+            for name, available in (("Fuseki named graph", graph_available), ("Milvus collection", vector_available))
+            if not available
+        ]
+        raise HTTPException(
+            status_code=409,
+            detail=f"Cannot activate {dataset}: missing {' and '.join(missing)}. Ingest it once first.",
+        )
     set_active_dataset(dataset, model)
-    return {"dataset": dataset, "embedding_model": model}
+    return {
+        "dataset": dataset,
+        "embedding_model": model,
+        "graph_uri": FusekiService(settings, dataset).graph_uri,
+    }
 
 
 @router.get("/options")
 async def ingestion_options() -> dict[str, object]:
     settings = get_settings()
+    # Upgrade the graph loaded by pre-named-graph releases in place. This is a
+    # server-side COPY and does not parse source files or regenerate vectors.
+    try:
+        await FusekiService(settings, active_dataset()).preserve_legacy_default_graph()
+    except Exception:
+        pass
     indexes = []
     milvus = MilvusService(settings)
     try:
         available = set(milvus.client.list_collections())
-        for dataset in ("sample", "kg2qa", "northwind", "arabic_enterprise"):
+        for dataset in ("sample", "kg2qa", "northwind", "arabic_enterprise", "policeuk"):
             for model_id in MODELS:
                 name = collection_name(dataset, model_id)
                 if name in available:
-                    indexed = MilvusService(settings_for_index(settings, dataset, model_id))
-                    indexes.append(
-                        {
-                            "dataset": dataset,
-                            "embedding_model": model_id,
-                            "collection": name,
-                            "vectors": indexed.count(),
-                        }
-                    )
+                    try:
+                        indexed = MilvusService(settings_for_index(settings, dataset, model_id))
+                        indexes.append(
+                            {
+                                "dataset": dataset,
+                                "embedding_model": model_id,
+                                "collection": name,
+                                "vectors": indexed.count(),
+                            }
+                        )
+                    except Exception:
+                        # A single collection may still be loading after Milvus
+                        # restarts. Keep every other usable index discoverable.
+                        continue
     except Exception:
         indexes = []
+    graph_datasets: list[str] = []
+    for dataset in ("sample", "kg2qa", "northwind", "arabic_enterprise", "policeuk"):
+        try:
+            if await FusekiService(settings, dataset).exists():
+                graph_datasets.append(dataset)
+        except Exception:
+            break
     return {
         "models": [
             {
@@ -275,6 +320,7 @@ async def ingestion_options() -> dict[str, object]:
             {"id": "full_rebuild", "label": "Full graph and vector rebuild"},
         ],
         "indexes": indexes,
+        "graph_datasets": graph_datasets,
         "active": workspace(),
     }
 
@@ -298,6 +344,9 @@ async def _run_job(job_id: str, request: IngestionJobRequest) -> None:
             incremental=request.incremental,
             use_precomputed=request.use_precomputed,
             save_precomputed=request.save_precomputed,
+            policeuk_download=request.download,
+            policeuk_force=request.force,
+            policeuk_months=request.months,
         )
         jobs[job_id].update(
             {
@@ -425,6 +474,21 @@ async def arabic_enterprise(
 ) -> IngestionReport:
     return await loader.ingest(
         "arabic_enterprise", request.mode == "reset", request.load_graph, request.load_vectors
+    )
+
+
+@router.post("/policeuk", response_model=IngestionReport)
+async def policeuk(
+    request: IngestionJobRequest, _: dict[str, str] = Depends(require_role("admin"))
+) -> IngestionReport:
+    return await loader.ingest(
+        "policeuk",
+        request.mode == "reset",
+        request.load_graph,
+        request.load_vectors,
+        policeuk_download=request.download,
+        policeuk_force=request.force,
+        policeuk_months=request.months,
     )
 
 

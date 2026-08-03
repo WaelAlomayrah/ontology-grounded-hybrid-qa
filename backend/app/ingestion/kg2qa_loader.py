@@ -1,7 +1,7 @@
 import json
-from zipfile import ZipFile
 from pathlib import Path
 from urllib.parse import quote
+from zipfile import ZipFile
 
 import pandas as pd
 from rdflib import RDF, RDFS, Graph, Literal, Namespace, URIRef

@@ -20,6 +20,10 @@ data/Northwind_dataset/
 .DS_Store
 ~$*.pptx
 data/Arabic_enterprise_dataset/
+data/policeuk/raw/
+data/policeuk/processed/
+data/policeuk/reports/
+data/policeuk/manifest.json
 presentations/
 reports/
 tools/

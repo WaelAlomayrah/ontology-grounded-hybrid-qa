@@ -5,6 +5,12 @@ import { api } from '../api/client';
 import type { Result, SupportingGraph } from '../types/api';
 
 const samplesByDataset: Record<string, string[]> = {
+  policeuk: [
+    'ما المناطق التي سجلت أعلى معدل لجرائم المركبات لكل ألف نسمة؟',
+    'ما النتائج المسجلة لجرائم المركبات في المناطق ذات أعلى معدل؟',
+    'اعرض الأدلة والعلاقات التي استخدمتها للوصول إلى هذه الإجابة.',
+    'Which LSOAs recorded the highest vehicle-crime rate per 1,000 residents?',
+  ],
   arabic_enterprise: [
     'في أي إدارة يعمل الموظف سعود العمري؟',
     'ما المورد الذي يورد نظام الموارد البشرية المؤسسية 1؟',

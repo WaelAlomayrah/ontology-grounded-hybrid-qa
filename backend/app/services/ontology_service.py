@@ -1,6 +1,6 @@
 import re
 
-from app.models.retrieval import RetrievalResult
+from app.models.retrieval import GraphFact, RetrievalResult
 from app.services.language_service import detect_language
 
 
@@ -57,7 +57,7 @@ class OntologyService:
             return None
 
         # Keep one direct assertion per record and preserve its evidence identifier.
-        by_subject = {}
+        by_subject: dict[str, GraphFact] = {}
         for fact in facts:
             by_subject.setdefault(fact.subject, fact)
         facts = list(by_subject.values())

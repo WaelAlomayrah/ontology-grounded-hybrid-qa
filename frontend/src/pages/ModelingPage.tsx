@@ -7,7 +7,8 @@ type View = 'connectors' | 'mapping' | 'ontology' | 'guide';
 type ColumnRole = ObjectMapping['columns'][number]['role'];
 
 const localName = (uri = '') => decodeURIComponent(uri.split(/[#/]/).pop() || '—').replaceAll('_', ' ');
-const ingestionName = (dataset: string) => dataset.startsWith('csv:') ? dataset : dataset === 'KG2QA_ontology_dataset' ? 'kg2qa' : dataset === 'Northwind_dataset' ? 'northwind' : dataset === 'Arabic_enterprise_dataset' ? 'arabic_enterprise' : 'sample';
+const ingestionName = (dataset: string) => dataset.startsWith('csv:') ? dataset : dataset === 'KG2QA_ontology_dataset' ? 'kg2qa' : dataset === 'Northwind_dataset' ? 'northwind' : dataset === 'Arabic_enterprise_dataset' ? 'arabic_enterprise' : dataset.toLowerCase() === 'policeuk' ? 'policeuk' : 'sample';
+const preparedDatasets = ['KG2QA_ontology_dataset', 'Northwind_dataset', 'Arabic_enterprise_dataset', 'policeuk'];
 const roleOptions: { value: ColumnRole; label: string; help: string }[] = [
   { value: 'identifier', label: 'Unique ID', help: 'A stable value that distinguishes each item.' },
   { value: 'label', label: 'Display name', help: 'The name people should see.' },
@@ -49,12 +50,37 @@ export default function ModelingPage({ role }: { role: User['role'] }) {
   const ontology = useQuery({ queryKey: ['ontology'], queryFn: api.ontology });
   const active = useQuery({ queryKey: ['active-dataset'], queryFn: api.activeDataset });
   const job = useQuery({ queryKey: ['ingestion-job', jobId], queryFn: () => api.ingestionJob(jobId!), enabled: Boolean(jobId), refetchInterval: query => ['complete', 'failed'].includes(query.state.data?.status ?? '') ? false : 1200 });
-  const datasetNames = useMemo(() => [...new Set(mappings.data?.map(item => item.dataset) ?? [])], [mappings.data]);
+  const datasetNames = useMemo(
+    () => [...new Set([...preparedDatasets, ...(mappings.data?.map(item => item.dataset) ?? [])])],
+    [mappings.data],
+  );
   useEffect(() => setDrafts((mappings.data ?? []).filter(item => item.dataset === dataset)), [mappings.data, dataset]);
   useEffect(() => { if (job.data?.status === 'complete') void client.invalidateQueries({ queryKey: ['active-dataset'] }); }, [client, job.data?.status]);
 
   const editable = role !== 'viewer';
-  const nativeFolderDataset = dataset === 'Arabic_enterprise_dataset';
+  const nativeFolderDataset = preparedDatasets.includes(dataset);
+  const policeUkDataset = dataset === 'policeuk';
+  const switchableDatasets = [...new Set(
+    (ingestionOptions.data?.indexes ?? [])
+      .filter(index => ingestionOptions.data?.graph_datasets.includes(index.dataset))
+      .map(index => index.dataset),
+  )];
+  async function activateDataset(nextDataset: string) {
+    if (!nextDataset || nextDataset === active.data?.dataset) return;
+    setActionError('');
+    try {
+      const matchingIndex = ingestionOptions.data?.indexes.find(index => index.dataset === nextDataset);
+      await api.setActiveDataset(nextDataset, matchingIndex?.embedding_model);
+      await Promise.all([
+        client.invalidateQueries({ queryKey: ['active-dataset'] }),
+        client.invalidateQueries({ queryKey: ['ingestion-options'] }),
+        client.invalidateQueries({ queryKey: ['evaluation-options'] }),
+      ]);
+      setActionMessage(`${nextDataset.replaceAll('_', ' ')} is now active.`);
+    } catch (reason) {
+      setActionError(reason instanceof Error ? reason.message : 'Dataset activation failed');
+    }
+  }
   function updateMapping(source: string, change: Partial<ObjectMapping>) {
     setDrafts(items => items.map(item => item.source === source ? { ...item, ...change } : item));
   }
@@ -102,7 +128,12 @@ export default function ModelingPage({ role }: { role: User['role'] }) {
   return <section className="modeling-page">
     <div className="page-heading">
       <div><span className="eyebrow">Guided knowledge modeling</span><h1>Build a knowledge model</h1><p>No ontology or coding experience is needed. Describe what each row and column means in everyday language.</p></div>
-      <div className="active-dataset">Published graph <b>{active.data?.dataset ?? 'checking'}</b></div>
+      <label className="active-dataset">Active graph and vectors
+        <select value={active.data?.dataset ?? ''} disabled={role === 'viewer'} onChange={event => void activateDataset(event.target.value)}>
+          <option value={active.data?.dataset ?? ''}>{active.data?.dataset ?? 'checking'}</option>
+          {switchableDatasets.filter(item => item !== active.data?.dataset).map(item => <option key={item} value={item}>{item.replaceAll('_', ' ')}</option>)}
+        </select>
+      </label>
     </div>
     <div className="layer-tabs modeling-tabs">
       <button className={view === 'connectors' ? 'active' : ''} onClick={() => setView('connectors')}>1. Add data</button>
@@ -116,7 +147,7 @@ export default function ModelingPage({ role }: { role: User['role'] }) {
         <div><h2>Describe your file</h2><p>Tell the system what one row represents, then give every useful column a meaning.</p></div>
         <label className="dataset-picker">File or dataset<select value={dataset} onChange={event => { setDataset(event.target.value); setValidation([]); setJobId(undefined); }}>{datasetNames.map(name => <option key={name} value={name}>{name.startsWith('csv:') ? `CSV · ${mappings.data?.find(item => item.dataset === name)?.source ?? name.slice(4, 12)}` : name.replaceAll('_', ' ')}</option>)}</select></label>
       </div>
-      <div className="plain-tip">{nativeFolderDataset ? <><strong>Complete Arabic dataset detected.</strong> Its validated RDF graph, 3,000 Arabic documents, ontology, and 400 evaluation questions will be ingested together. CSV mapping is not required for this prepared dataset.</> : <><strong>Start with a list of things.</strong> For example, upload customers and products before uploading a file that connects customers to orders. Use the same IDs in every file.</>}</div>
+      <div className="plain-tip">{nativeFolderDataset ? <><strong>{policeUkDataset ? 'Police.uk public-safety source selected.' : 'Prepared dataset detected.'}</strong> {policeUkDataset ? 'The loader downloads or reuses cached official Police.uk and ONS data, then builds the RDF graph, aggregates, provenance, and semantic index. CSV mapping is not required.' : 'Its validated graph, documents, ontology, and evaluation questions will be ingested together. CSV mapping is not required for this prepared dataset.'}</> : <><strong>Start with a list of things.</strong> For example, upload customers and products before uploading a file that connects customers to orders. Use the same IDs in every file.</>}</div>
       <div className="mapping-summary">
         <span><b>{drafts.length}</b> file objects</span>
         <span><b>{drafts.filter(item => readiness(item).length === 0).length}</b> ready</span>
@@ -169,7 +200,7 @@ export default function ModelingPage({ role }: { role: User['role'] }) {
       <div className="publish-panel">
         <div><h3>Publish selected configuration</h3><p>{scope === 'incremental' ? 'Only new or changed searchable text will be embedded.' : scope === 'full_rebuild' ? 'The graph and selected model index will be rebuilt.' : 'Only the selected storage layer will be updated.'}</p></div>
         <div className="index-summary"><small>Target index</small><b>{ingestionName(dataset)} / {embeddingModel}</b><span>{embeddingDevice.toUpperCase()} · batch {batchSize}</span></div>
-        <button className="button" disabled={role !== 'admin' || (!nativeFolderDataset && (validation.length > 0 || drafts.some(item => readiness(item).length > 0)))} onClick={() => void ingest()}>{nativeFolderDataset ? 'Run Arabic dataset ingestion' : 'Build knowledge graph'}</button>
+        <button className="button" disabled={role !== 'admin' || (!nativeFolderDataset && (validation.length > 0 || drafts.some(item => readiness(item).length > 0)))} onClick={() => void ingest()}>{nativeFolderDataset ? `Run ${policeUkDataset ? 'Police.uk' : 'dataset'} ingestion` : 'Build knowledge graph'}</button>
       </div>
       {job.data && <div className={`job-progress ${job.data.status}`}><div><strong>{job.data.status === 'complete' ? 'Knowledge graph built' : job.data.status === 'failed' ? 'Build failed' : `Working: ${job.data.phase.replaceAll('_', ' ')}`}</strong><span>{job.data.progress}%</span></div><div className="progress-track"><i style={{ width: `${job.data.progress}%` }} /></div>{job.data.report && <small>{String(job.data.report.entities_processed ?? 0)} items · {String(job.data.report.relationships_processed ?? 0)} connections · {String(job.data.report.vectors_generated ?? 0)} newly embedded · {String(job.data.report.vectors_reused ?? 0)} reused</small>}{job.data.status === 'failed' && <div className="job-error-detail"><strong>Why it failed</strong>{job.data.error ? <p>{job.data.error}</p> : job.data.report?.errors?.length ? job.data.report.errors.map((error, index) => <p key={`${index}-${error}`}>{error}</p>) : <p>The backend did not provide a reason. Check the Operations page and backend logs.</p>}</div>}{job.data.report?.warnings?.map((warning, index) => <p className="job-warning" key={`${index}-${warning}`}>Warning: {warning}</p>)}</div>}
     </div>}

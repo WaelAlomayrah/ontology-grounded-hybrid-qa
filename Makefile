@@ -11,6 +11,7 @@ logs: ; docker compose logs -f
 ps: ; docker compose ps
 ingest-sample: ; docker compose --profile tools run --rm data-loader --dataset sample --reset --load-graph --load-vectors
 ingest-kg2qa: ; docker compose --profile tools run --rm data-loader --dataset kg2qa --reset --load-graph --load-vectors
+ingest-policeuk: ; docker compose --profile tools run --rm data-loader --dataset policeuk --reset --download --load-graph --load-vectors --force "Thames Valley Police" --months 12
 test: ; cd backend && pytest tests/unit tests/api
 test-integration: ; cd backend && pytest -m integration tests/integration
 lint: ; cd backend && ruff check .

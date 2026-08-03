@@ -60,6 +60,25 @@ Milvus index exists. The selected dataset must also be the active Fuseki graph
 so graph, vector, hybrid, and ontology comparisons use the same evidence.
 
 The loader discovers external formats, maps tolerant CSV columns, merges RDF graphs, serializes one upload to Fuseki, builds descriptive entity passages, adds E5 passage prefixes, and deterministically upserts Milvus documents. Reset clears graph data and replaces vectors from that source. Reports contain counts, elapsed seconds, failures, skips, warnings, and errors.
+
+## Police.uk and ONS
+
+The `policeuk` adapter uses the same graph/document contract and the same
+Fuseki/Milvus writers as existing datasets:
+
+```bash
+docker compose --profile tools run --rm data-loader --dataset policeuk \
+  --reset --download --load-graph --load-vectors \
+  --force "Thames Valley Police" --months 12
+
+docker compose --profile tools run --rm data-loader --dataset policeuk \
+  --reset --no-download --load-graph --load-vectors \
+  --force "Thames Valley Police" --months 12
+```
+
+ZIP contents are inspected and filtered by force, available month, and record
+type. Exact Crime ID and LSOA-code joins are enforced. See
+[Police.uk dataset](policeuk-dataset.md).
 # Arabic Enterprise full-folder ingestion
 
 `Arabic_enterprise_dataset` is a native prepared dataset. Its ingestion job:

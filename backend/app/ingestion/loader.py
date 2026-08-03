@@ -4,7 +4,7 @@ import hashlib
 import json
 import logging
 import time
-from collections.abc import Callable
+from collections.abc import Callable, Iterator
 from pathlib import Path
 from typing import Any
 
@@ -16,6 +16,7 @@ from app.ingestion.arabic_enterprise_loader import load_arabic_enterprise
 from app.ingestion.csv_loader import load_csv_connector
 from app.ingestion.kg2qa_loader import discover_files, load_kg2qa
 from app.ingestion.northwind_loader import load_northwind
+from app.ingestion.policeuk_loader import load_policeuk
 from app.ingestion.sample_loader import build_sample_graph
 from app.metrics import INGESTION_ENTITIES, INGESTION_FAILURES, INGESTION_RELATIONSHIPS
 from app.models.api import IngestionReport
@@ -111,6 +112,121 @@ def _save_vector_cache(path: Path, documents: list[dict[str, Any]]) -> None:
     temporary.replace(path)
 
 
+def _document_batches(
+    path: Path, batch_size: int, *, skip_documents: int = 0
+) -> Iterator[list[dict[str, Any]]]:
+    batch: list[dict[str, Any]] = []
+    seen = 0
+    with path.open(encoding="utf-8") as handle:
+        for line in handle:
+            if not line.strip():
+                continue
+            if seen < skip_documents:
+                seen += 1
+                continue
+            seen += 1
+            batch.append(json.loads(line))
+            if len(batch) == batch_size:
+                yield batch
+                batch = []
+    if batch:
+        yield batch
+
+
+async def _stream_policeuk_vectors(
+    path: Path,
+    selected: str,
+    index_settings: Settings,
+    reset: bool,
+    report: IngestionReport,
+    progress: Callable[[str, int], None] | None,
+) -> None:
+    embeddings = EmbeddingService(index_settings)
+    milvus = MilvusService(index_settings)
+    await asyncio.to_thread(milvus.ensure_collection, index_settings.milvus_vector_dimension)
+    if reset:
+        await asyncio.to_thread(milvus.drop_collection)
+        await asyncio.to_thread(milvus.ensure_collection, index_settings.milvus_vector_dimension)
+    total = sum(1 for line in path.open(encoding="utf-8") if line.strip())
+    checkpoint_path = path.parent / "vector-checkpoint.json"
+    processed = 0
+    first_batch_number = 1
+    pending_since_flush = 0
+    if checkpoint_path.exists() and not reset:
+        try:
+            checkpoint = json.loads(checkpoint_path.read_text(encoding="utf-8"))
+            checkpoint_processed = int(checkpoint.get("processed_documents", 0))
+            checkpoint_matches = (
+                checkpoint.get("dataset") == selected
+                and checkpoint.get("collection") == index_settings.milvus_collection
+                and int(checkpoint.get("total_documents", -1)) == total
+                and int(checkpoint.get("evidence_size", path.stat().st_size))
+                == path.stat().st_size
+                and 0 <= checkpoint_processed <= total
+            )
+            if checkpoint_matches:
+                processed = checkpoint_processed
+                first_batch_number = int(checkpoint.get("last_batch", 0)) + 1
+                report.vectors_generated = int(checkpoint.get("vectors_generated", 0))
+                report.vectors_reused = int(checkpoint.get("vectors_reused", 0))
+                report.warnings.append(
+                    f"Resumed Police.uk vectors after {processed} persisted documents"
+                )
+        except (OSError, TypeError, ValueError, json.JSONDecodeError):
+            report.warnings.append("Ignored invalid Police.uk vector checkpoint")
+    for batch_number, batch in enumerate(
+        _document_batches(
+            path,
+            index_settings.embedding_batch_size,
+            skip_documents=processed,
+        ),
+        start=first_batch_number,
+    ):
+        for document in batch:
+            document["content_hash"] = hashlib.sha256(document["text"].encode()).hexdigest()
+        existing = await asyncio.to_thread(
+            milvus.existing_hashes_for_ids, [str(document["id"]) for document in batch]
+        )
+        changed = [
+            document for document in batch
+            if existing.get(str(document["id"])) != document["content_hash"]
+        ]
+        report.vectors_reused += len(batch) - len(changed)
+        if changed:
+            vectors = await asyncio.to_thread(
+                embeddings.encode_passages, [document["text"] for document in changed]
+            )
+            for document, vector in zip(changed, vectors, strict=True):
+                document["embedding"] = vector
+            await asyncio.to_thread(milvus.upsert_documents, changed, len(changed))
+            pending_since_flush += len(changed)
+            if pending_since_flush >= index_settings.milvus_flush_interval:
+                await asyncio.to_thread(milvus.flush)
+                pending_since_flush = 0
+            report.vectors_generated += len(changed)
+        processed += len(batch)
+        checkpoint = {
+            "dataset": selected,
+            "collection": index_settings.milvus_collection,
+            "processed_documents": processed,
+            "total_documents": total,
+            "last_batch": batch_number,
+            "vectors_generated": report.vectors_generated,
+            "vectors_reused": report.vectors_reused,
+            "last_document_id": str(batch[-1]["id"]),
+            "last_document_hash": str(batch[-1]["content_hash"]),
+            "evidence_size": path.stat().st_size,
+            "updated_at": time.time(),
+        }
+        temporary = checkpoint_path.with_suffix(".tmp")
+        temporary.write_text(json.dumps(checkpoint, indent=2), encoding="utf-8")
+        temporary.replace(checkpoint_path)
+        if progress:
+            progress("embedding_batches", 25 + round(70 * processed / max(total, 1)))
+    if pending_since_flush:
+        await asyncio.to_thread(milvus.flush)
+
+
 async def ingest(
     dataset: str,
     reset: bool,
@@ -124,6 +240,9 @@ async def ingest(
     incremental: bool = True,
     use_precomputed: bool = True,
     save_precomputed: bool = False,
+    policeuk_download: bool | None = None,
+    policeuk_force: str | None = None,
+    policeuk_months: int | None = None,
 ) -> IngestionReport:
     global latest_report
     settings = settings or get_settings()
@@ -132,6 +251,7 @@ async def ingest(
     warnings: list[str] = []
     sample_dir = settings.ontology_file.parent
     prepared_documents: list[dict[str, Any]] | None = None
+    report_details: dict[str, Any] = {}
     dataset_directory = sample_dir
     if selected == "kg2qa" and not (
         any(discover_files(settings.dataset_path).values())
@@ -163,6 +283,30 @@ async def ingest(
         )
         warnings.extend(detected_warnings)
         rdf_count = 2
+    elif selected == "policeuk":
+        if not settings.policeuk_enabled:
+            raise ValueError("Police.uk ingestion is disabled")
+        dataset_directory = settings.policeuk_raw_dir.parent
+        evidence_path = dataset_directory / "processed" / "evidence-documents.jsonl"
+        persisted_graph_path = dataset_directory / "processed" / "policeuk-graph.nt"
+        if load_vectors and not load_graph and evidence_path.is_file():
+            graph, entities, relationships, rdf_count = Graph(), 0, 0, 0
+            warnings.append("Streaming persisted Police.uk evidence documents")
+        elif load_graph and not load_vectors and persisted_graph_path.is_file():
+            graph, entities, relationships, rdf_count = Graph(), 0, 0, 1
+            warnings.append("Loading persisted Police.uk N-Triples")
+        else:
+            graph, entities, relationships, detected_warnings, prepared_documents, police_stats = (
+                load_policeuk(
+                    settings,
+                    download=policeuk_download,
+                    force_name=policeuk_force,
+                    months_count=policeuk_months,
+                )
+            )
+            warnings.extend(detected_warnings)
+            report_details = police_stats.as_dict()
+            rdf_count = 1
     elif selected.startswith("csv:"):
         connector_id = selected.removeprefix("csv:")
         if len(connector_id) != 36 or any(
@@ -180,7 +324,7 @@ async def ingest(
         rdf_count = 0
     else:
         raise ValueError(
-            "dataset must be sample, kg2qa, northwind, arabic_enterprise, or a CSV connector"
+            "dataset must be sample, kg2qa, northwind, arabic_enterprise, policeuk, or a CSV connector"
         )
     index_settings = settings_for_index(
         settings,
@@ -198,6 +342,7 @@ async def ingest(
         embedding_model=embedding_model,
         embedding_device=index_settings.embedding_device,
         collection=index_settings.milvus_collection,
+        details=report_details,
     )
     if progress:
         progress("mapped", 25)
@@ -205,14 +350,42 @@ async def ingest(
     try:
         if load_graph:
             stage = "resetting Fuseki graph" if reset else "uploading Fuseki graph"
-            fuseki = FusekiService(settings)
+            fuseki = FusekiService(settings, selected)
+            persisted_graph_path: Path | None = None
+            if selected == "policeuk":
+                persisted_graph_path = dataset_directory / "processed" / "policeuk-graph.nt"
+                if len(graph):
+                    stage = "persisting Police.uk N-Triples"
+                    persisted_graph_path.parent.mkdir(parents=True, exist_ok=True)
+                    await asyncio.to_thread(
+                        graph.serialize, destination=str(persisted_graph_path), format="nt"
+                    )
             if reset:
+                stage = "resetting Fuseki graph"
                 await fuseki.delete_all()
                 stage = "uploading Fuseki graph"
-            await fuseki.upload_rdf(graph.serialize(format="turtle", encoding="utf-8"))
+            # Persist the large Police.uk graph and upload from disk so graph
+            # serialization and HTTP payloads never coexist as giant byte arrays.
+            if selected == "policeuk":
+                assert persisted_graph_path is not None
+                await fuseki.upload_rdf_file(persisted_graph_path)
+            else:
+                await fuseki.upload_rdf(
+                    graph.serialize(format="nt", encoding="utf-8"),
+                    content_type="application/n-triples",
+                )
             if progress:
                 progress("graph_loaded", 55)
         if load_vectors:
+            evidence_path = dataset_directory / "processed" / "evidence-documents.jsonl"
+            if selected == "policeuk" and not load_graph and evidence_path.is_file():
+                stage = "streaming persisted Police.uk vectors"
+                await _stream_policeuk_vectors(
+                    evidence_path, selected, index_settings, reset, report, progress
+                )
+                if progress:
+                    progress("indexed", 95)
+                raise StopAsyncIteration
             stage = "preparing vector documents"
             embeddings, milvus = EmbeddingService(index_settings), MilvusService(index_settings)
             graph_documents = entity_documents(graph, selected)
@@ -313,6 +486,8 @@ async def ingest(
             await asyncio.to_thread(milvus.wait_until_source_visible, selected, expected_hashes)
             if progress:
                 progress("indexed", 95)
+    except StopAsyncIteration:
+        pass
     except Exception as exc:
         INGESTION_FAILURES.labels(selected).inc()
         message = _failure_message(stage, exc)
@@ -339,7 +514,7 @@ async def ingest(
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Idempotent ontology pilot data loader")
     parser.add_argument(
-        "--dataset", choices=("sample", "kg2qa", "northwind", "arabic_enterprise"), default="sample"
+        "--dataset", choices=("sample", "kg2qa", "northwind", "arabic_enterprise", "policeuk"), default="sample"
     )
     parser.add_argument("--reset", action="store_true")
     parser.add_argument("--load-graph", action="store_true")
@@ -353,6 +528,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--embedding-batch-size", type=int, choices=(16, 32, 64, 128), default=16)
     parser.add_argument("--full-vector-rebuild", action="store_true")
     parser.add_argument("--save-precomputed", action="store_true")
+    download_group = parser.add_mutually_exclusive_group()
+    download_group.add_argument("--download", dest="download", action="store_true")
+    download_group.add_argument("--no-download", dest="download", action="store_false")
+    parser.set_defaults(download=None)
+    parser.add_argument("--force", default=None)
+    parser.add_argument("--months", type=int, choices=range(1, 37), default=None)
     return parser.parse_args()
 
 
@@ -369,6 +550,9 @@ def main() -> None:
             embedding_batch_size=args.embedding_batch_size,
             incremental=not args.full_vector_rebuild,
             save_precomputed=args.save_precomputed,
+            policeuk_download=args.download,
+            policeuk_force=args.force,
+            policeuk_months=args.months,
         )
     )
     print(report.model_dump_json(indent=2))

@@ -1,6 +1,7 @@
 import csv
 import json
 from pathlib import Path
+from typing import Any, cast
 from urllib.parse import quote
 
 from rdflib import OWL, RDF, RDFS, Graph, Literal, Namespace, URIRef
@@ -48,7 +49,7 @@ def load_csv_connector(directory: Path, connector_id: str) -> tuple[Graph, int, 
     mappings = mapping_profile(f"csv:{connector_id}") or []
     if not mappings:
         raise ValueError("CSV connector has no saved object mapping")
-    mapping = mappings[0]
+    mapping = cast(dict[str, Any], mappings[0])
     source_path = directory / str(metadata["stored_filename"])
     graph, entities, relationships = Graph(), 0, 0
     roles = {str(column["role"]): str(column["source"]) for column in mapping["columns"]}

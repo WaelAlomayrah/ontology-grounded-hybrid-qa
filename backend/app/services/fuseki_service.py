@@ -1,12 +1,15 @@
 import hashlib
 import re
+from pathlib import Path
 from typing import Any
+from urllib.parse import quote
 
 import httpx
 
 from app.config import Settings
 from app.models.graph import GraphData, GraphEdge, GraphNode, GraphPath
 from app.models.retrieval import GraphFact
+from app.services.workspace_state import active_dataset
 
 
 def _literal(value: str) -> str:
@@ -21,9 +24,14 @@ def _iri(value: str) -> str:
 
 
 class FusekiService:
-    def __init__(self, settings: Settings) -> None:
+    def __init__(self, settings: Settings, dataset: str | None = None) -> None:
         self.settings = settings
         self.auth = (settings.fuseki_user, settings.fuseki_password)
+        self.dataset = dataset or active_dataset()
+
+    @property
+    def graph_uri(self) -> str:
+        return f"http://example.org/graph/dataset/{quote(self.dataset, safe='')}"
 
     @property
     def dataset_url(self) -> str:
@@ -38,34 +46,98 @@ class FusekiService:
 
     async def query_select(self, query: str) -> list[dict[str, Any]]:
         async with httpx.AsyncClient(timeout=30, auth=self.auth) as client:
-            response = await client.post(f"{self.dataset_url}/query", data={"query": query}, headers={"Accept": "application/sparql-results+json"})
+            response = await client.post(f"{self.dataset_url}/query", data={"query": query, "default-graph-uri": self.graph_uri}, headers={"Accept": "application/sparql-results+json"})
             response.raise_for_status()
             return response.json()["results"]["bindings"]
 
     async def query_ask(self, query: str) -> bool:
         async with httpx.AsyncClient(timeout=10, auth=self.auth) as client:
-            response = await client.post(f"{self.dataset_url}/query", data={"query": query}, headers={"Accept": "application/sparql-results+json"})
+            response = await client.post(f"{self.dataset_url}/query", data={"query": query, "default-graph-uri": self.graph_uri}, headers={"Accept": "application/sparql-results+json"})
             response.raise_for_status()
             return bool(response.json()["boolean"])
 
     async def query_construct(self, query: str) -> str:
         async with httpx.AsyncClient(timeout=30, auth=self.auth) as client:
-            response = await client.post(f"{self.dataset_url}/query", data={"query": query}, headers={"Accept": "text/turtle"})
+            response = await client.post(f"{self.dataset_url}/query", data={"query": query, "default-graph-uri": self.graph_uri}, headers={"Accept": "text/turtle"})
             response.raise_for_status()
             return response.text
 
     async def execute_update(self, update: str) -> None:
-        async with httpx.AsyncClient(timeout=30, auth=self.auth) as client:
+        async with httpx.AsyncClient(timeout=300, auth=self.auth) as client:
             response = await client.post(f"{self.dataset_url}/update", data={"update": update})
             response.raise_for_status()
 
     async def upload_rdf(self, data: bytes, content_type: str = "text/turtle") -> None:
         async with httpx.AsyncClient(timeout=120, auth=self.auth) as client:
-            response = await client.post(f"{self.dataset_url}/data", content=data, headers={"Content-Type": content_type})
-            response.raise_for_status()
+            chunk_size = 25 * 1024 * 1024 if content_type == "application/n-triples" else len(data)
+            offset = 0
+            while offset < len(data):
+                end = min(offset + chunk_size, len(data))
+                if end < len(data):
+                    newline = data.rfind(b"\n", offset, end)
+                    end = newline + 1 if newline >= offset else end
+                response = await client.post(
+                    f"{self.dataset_url}/data",
+                    params={"graph": self.graph_uri},
+                    content=data[offset:end],
+                    headers={"Content-Type": content_type},
+                )
+                response.raise_for_status()
+                offset = end
+
+    async def upload_rdf_file(
+        self,
+        path: Path,
+        content_type: str = "application/n-triples",
+        chunk_size: int = 2 * 1024 * 1024,
+    ) -> None:
+        """Upload an RDF file in bounded newline-aligned chunks."""
+        async with httpx.AsyncClient(timeout=180, auth=self.auth) as client:
+            with path.open("rb") as handle:
+                pending = b""
+                while block := handle.read(chunk_size):
+                    pending += block
+                    newline = pending.rfind(b"\n")
+                    if newline < 0:
+                        continue
+                    payload, pending = pending[: newline + 1], pending[newline + 1 :]
+                    response = await client.post(
+                        f"{self.dataset_url}/data",
+                        params={"graph": self.graph_uri},
+                        content=payload,
+                        headers={"Content-Type": content_type},
+                    )
+                    response.raise_for_status()
+                if pending:
+                    response = await client.post(
+                        f"{self.dataset_url}/data",
+                        params={"graph": self.graph_uri},
+                        content=pending,
+                        headers={"Content-Type": content_type},
+                    )
+                    response.raise_for_status()
 
     async def delete_all(self) -> None:
-        await self.execute_update("CLEAR ALL")
+        await self.execute_update(f"CLEAR SILENT GRAPH <{self.graph_uri}>")
+
+    async def exists(self) -> bool:
+        return await self.query_ask("ASK { ?s ?p ?o }")
+
+    async def preserve_legacy_default_graph(self) -> bool:
+        """Copy the legacy default graph once into this dataset's named graph."""
+        if await self.exists():
+            return True
+        async with httpx.AsyncClient(timeout=10, auth=self.auth) as client:
+            response = await client.post(
+                f"{self.dataset_url}/query",
+                data={"query": "ASK { ?s ?p ?o }"},
+                headers={"Accept": "application/sparql-results+json"},
+            )
+            response.raise_for_status()
+            has_legacy_data = bool(response.json()["boolean"])
+        if has_legacy_data:
+            await self.execute_update(f"COPY DEFAULT TO GRAPH <{self.graph_uri}>")
+        return has_legacy_data
 
     async def search_labels(self, text: str, limit: int = 20) -> list[dict[str, str]]:
         limit = min(max(limit, 1), self.settings.graph_result_limit)
@@ -113,7 +185,7 @@ FILTER(isIRI(?o)) OPTIONAL {{ ?s rdfs:label ?sLabel }} OPTIONAL {{ ?s a ?sType }
         for edge in graph.edges:
             adjacency.setdefault(edge.source, []).append((edge.target, edge.label))
             adjacency.setdefault(edge.target, []).append((edge.source, edge.label))
-        queue = [(source, [source], [])]
+        queue: list[tuple[str, list[str], list[str]]] = [(source, [source], [])]
         while queue:
             current, nodes, predicates = queue.pop(0)
             if current == target:

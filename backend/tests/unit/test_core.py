@@ -6,8 +6,8 @@ from rdflib import RDF, RDFS, URIRef
 from app.config import Settings
 from app.evaluation.metrics import coverage, token_f1
 from app.ingestion.csv_loader import load_sample_csvs
-from app.ingestion.loader import entity_documents
 from app.ingestion.kg2qa_loader import load_kg2qa
+from app.ingestion.loader import entity_documents
 from app.ingestion.mappings import SOURCE_COLUMNS, detect_column
 from app.models.api import EvaluationRunRequest, QuestionRequest
 from app.models.retrieval import GraphFact, RetrievalItem

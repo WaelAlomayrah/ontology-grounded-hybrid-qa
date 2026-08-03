@@ -2,7 +2,8 @@ import asyncio
 import time
 
 from app.config import Settings
-from app.models.retrieval import RetrievalDetails, RetrievalItem, RetrievalResult
+from app.models.graph import GraphData
+from app.models.retrieval import GraphFact, RetrievalDetails, RetrievalItem, RetrievalResult
 from app.retrieval.intent_classifier import classify_intent, extract_entity_mentions
 from app.services.embedding_service import EmbeddingService
 from app.services.fuseki_service import FusekiService
@@ -30,7 +31,9 @@ class HybridRetriever:
         started = time.perf_counter()
         intents, mentions = classify_intent(question), extract_entity_mentions(question)
         warnings: list[str] = []
-        graph, facts, vectors = None, [], []
+        graph: GraphData | None = None
+        facts: list[GraphFact] = []
+        vectors: list[RetrievalItem] = []
         graph_ms = vector_ms = 0.0
         if mode != "graph_only":
             mark = time.perf_counter()
@@ -59,5 +62,4 @@ class HybridRetriever:
         if graph:
             graph_entities = [RetrievalItem(id=node.id, entity_uri=node.id, entity_type=node.type, label=node.label, text=f"Entity: {node.label}; Type: {node.type}", source="fuseki", score=self.settings.hybrid_graph_weight) for node in graph.nodes]
             entities = deduplicate_results(entities + graph_entities)
-        from app.models.graph import GraphData
         return RetrievalResult(question=question, intent=intents, entities=entities[:self.settings.max_context_items], graph=graph or GraphData(), sources=sorted({item.source for item in entities} | ({"fuseki"} if facts else set())), retrieval=RetrievalDetails(vector_results=vectors, graph_facts=facts, timings_ms={"graph": round(graph_ms, 2), "vector": round(vector_ms, 2), "total": round((time.perf_counter()-started)*1000, 2)}), warnings=warnings)

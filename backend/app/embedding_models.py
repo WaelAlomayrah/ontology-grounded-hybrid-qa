@@ -20,7 +20,7 @@ MODELS = {
         "intfloat/multilingual-e5-large",
         1024,
         "Multilingual E5 Large (baseline)",
-        16,
+        64,
         True,
     ),
     "granite-311m-r2": EmbeddingModelSpec(

@@ -17,9 +17,9 @@ from app.models.retrieval import QueryPlan, RetrievalResult
 from app.retrieval.context_builder import build_context
 from app.retrieval.hybrid_retriever import HybridRetriever
 from app.retrieval.intent_classifier import classify_intent, extract_entity_mentions
+from app.services.language_service import localized_message
 from app.services.ollama_service import OllamaService
 from app.services.ontology_service import OntologyService
-from app.services.language_service import localized_message
 
 router = APIRouter(prefix="/api/v1", tags=["chat"])
 

@@ -1,12 +1,14 @@
 import json
 import time
 from collections.abc import Iterable
-from typing import Any
+from typing import Any, Callable, TypeVar
 
 from pymilvus import DataType, MilvusClient
 
 from app.config import Settings
 from app.models.retrieval import RetrievalItem
+
+T = TypeVar("T")
 
 
 class MilvusService:
@@ -30,6 +32,20 @@ class MilvusService:
             return True
         except Exception:
             return False
+
+    def _retry(self, operation: Callable[[], T]) -> T:
+        last_error: Exception | None = None
+        for attempt in range(self.settings.milvus_operation_retries):
+            try:
+                return operation()
+            except Exception as exc:
+                last_error = exc
+                if attempt + 1 == self.settings.milvus_operation_retries:
+                    break
+                time.sleep(self.settings.milvus_retry_backoff_seconds * (2**attempt))
+                self._client = None
+        assert last_error is not None
+        raise last_error
 
     def ensure_collection(self, dimension: int) -> None:
         if dimension != self.settings.milvus_vector_dimension:
@@ -72,11 +88,11 @@ class MilvusService:
             item["metadata_json"] = json.dumps(item.pop("metadata", {}), default=str)
             batch.append(item)
             if len(batch) >= batch_size:
-                self.client.upsert(self.settings.milvus_collection, batch)
+                self._retry(lambda: self.client.upsert(self.settings.milvus_collection, batch))
                 total += len(batch)
                 batch = []
         if batch:
-            self.client.upsert(self.settings.milvus_collection, batch)
+            self._retry(lambda: self.client.upsert(self.settings.milvus_collection, batch))
             total += len(batch)
         return total
 
@@ -108,7 +124,7 @@ class MilvusService:
 
     def flush(self) -> None:
         if self.client.has_collection(self.settings.milvus_collection):
-            self.client.flush(self.settings.milvus_collection)
+            self._retry(lambda: self.client.flush(self.settings.milvus_collection))
 
     def wait_until_source_visible(
         self,
@@ -140,13 +156,23 @@ class MilvusService:
         )
         return {str(row["id"]): str(row.get("content_hash", "")) for row in rows}
 
+    def existing_hashes_for_ids(self, identifiers: list[str]) -> dict[str, str]:
+        if not identifiers or not self.client.has_collection(self.settings.milvus_collection):
+            return {}
+        rows = self.client.get(
+            self.settings.milvus_collection,
+            ids=identifiers,
+            output_fields=["id", "content_hash"],
+        )
+        return {str(row["id"]): str(row.get("content_hash", "")) for row in rows}
+
     def count(self) -> int:
         if not self.client.has_collection(self.settings.milvus_collection):
             return 0
-        rows = self.client.query(
-            self.settings.milvus_collection, filter="", output_fields=["count(*)"]
+        stats = self._retry(
+            lambda: self.client.get_collection_stats(self.settings.milvus_collection)
         )
-        return int(rows[0]["count(*)"])
+        return int(stats["row_count"])
 
     def drop_collection(self) -> None:
         if self.client.has_collection(self.settings.milvus_collection):

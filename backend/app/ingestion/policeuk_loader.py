@@ -287,6 +287,19 @@ def select_archive_members(
     return sorted(selected)
 
 
+def filter_rows_to_months(
+    rows: Iterable[dict[str, Any]], kind: str, months: Iterable[str]
+) -> list[dict[str, Any]]:
+    """Keep records whose published event month is explicitly selected."""
+    allowed = set(months)
+    field = "Date" if kind == "stop" else "Month"
+    return [
+        row
+        for row in rows
+        if str(row.get(field) or "").strip()[:7] in allowed
+    ]
+
+
 def read_csv_rows(raw: bytes) -> list[dict[str, str]]:
     return list(csv.DictReader(io.StringIO(raw.decode("utf-8-sig"))))
 
@@ -1066,6 +1079,10 @@ def load_policeuk(
                 rows_by_kind[kind].extend(read_csv_rows(zipped.read(member)))
                 files_by_kind[kind] = member
                 logger.info("policeuk_archive_member_selected", extra={"event": "policeuk_archive_member_selected", "source_file": member})
+    for kind in includes:
+        rows_by_kind[kind] = filter_rows_to_months(
+            rows_by_kind[kind], kind, available_months
+        )
 
     population_paths = sorted(
         [*raw_dir.glob("ons-population*.csv"), *raw_dir.glob("ons-population*.xlsx")]

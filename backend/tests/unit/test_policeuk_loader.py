@@ -13,6 +13,7 @@ from app.ingestion.policeuk_loader import (
     assign_neighbourhood,
     build_policeuk_graph,
     crime_id,
+    filter_rows_to_months,
     normalize_force,
     normalize_lsoa,
     parse_population_rows,
@@ -81,6 +82,20 @@ def test_archive_selection_inspects_members() -> None:
     assert select_archive_members(
         names, "thames-valley", ["2025-01"], {"crime", "outcome"}
     ) == sorted(names[:2])
+
+
+def test_rows_are_limited_to_selected_event_months() -> None:
+    assert filter_rows_to_months(
+        [{"Month": "2026-05"}, {"Month": "2026-06"}], "crime", ["2026-06"]
+    ) == [{"Month": "2026-06"}]
+    assert filter_rows_to_months(
+        [
+            {"Date": "2026-05-31T23:30:00+00:00"},
+            {"Date": "2026-06-01T00:30:00+00:00"},
+        ],
+        "stop",
+        ["2026-06"],
+    ) == [{"Date": "2026-06-01T00:30:00+00:00"}]
 
 
 def test_population_exact_code_and_rate_generation() -> None:

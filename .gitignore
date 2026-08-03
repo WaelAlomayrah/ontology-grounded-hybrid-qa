@@ -20,9 +20,7 @@ data/Northwind_dataset/
 .DS_Store
 ~$*.pptx
 data/policeuk/raw/
-data/policeuk/processed/
-data/policeuk/reports/
-data/policeuk/manifest.json
+data/policeuk/processed/vector-checkpoint.json
 presentations/
 reports/
 tools/

@@ -1,0 +1,19 @@
+{
+  "name": "Arabic Enterprise Ontology QA Dataset",
+  "language": "ar",
+  "synthetic": true,
+  "seed": 20260724,
+  "created": "2026-07-24",
+  "counts": {
+    "employees": 800,
+    "departments": 50,
+    "systems": 200,
+    "projects": 100,
+    "vendors": 300,
+    "documents": 3000,
+    "project_assignments": 1200,
+    "evaluation_questions": 400,
+    "rdf_triples": 42903,
+    "rdf_source_lines": 42857
+  }
+}

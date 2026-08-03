@@ -1,0 +1,27 @@
+@prefix ae: <http://example.org/arabic-enterprise/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ae:Ontology a owl:Ontology ; rdfs:label "أنطولوجيا المؤسسة العربية"@ar .
+ae:Employee a owl:Class ; rdfs:label "موظف"@ar .
+ae:Department a owl:Class ; rdfs:label "إدارة"@ar .
+ae:InformationSystem a owl:Class ; rdfs:label "نظام معلومات"@ar .
+ae:Project a owl:Class ; rdfs:label "مشروع"@ar .
+ae:Vendor a owl:Class ; rdfs:label "مورد"@ar .
+ae:Document a owl:Class ; rdfs:label "مستند"@ar .
+ae:Location a owl:Class ; rdfs:label "موقع"@ar .
+ae:worksIn a owl:ObjectProperty ; rdfs:label "يعمل في"@ar ; rdfs:domain ae:Employee ; rdfs:range ae:Department .
+ae:manages a owl:ObjectProperty ; rdfs:label "يدير"@ar ; rdfs:domain ae:Employee ; rdfs:range ae:Department .
+ae:locatedAt a owl:ObjectProperty ; rdfs:label "موجود في"@ar ; rdfs:range ae:Location .
+ae:ownedBy a owl:ObjectProperty ; rdfs:label "مملوك بواسطة"@ar ; rdfs:domain ae:InformationSystem ; rdfs:range ae:Department .
+ae:suppliedBy a owl:ObjectProperty ; rdfs:label "مورّد بواسطة"@ar ; rdfs:domain ae:InformationSystem ; rdfs:range ae:Vendor .
+ae:sponsoredBy a owl:ObjectProperty ; rdfs:label "برعاية"@ar ; rdfs:domain ae:Project ; rdfs:range ae:Department .
+ae:usesSystem a owl:ObjectProperty ; rdfs:label "يستخدم النظام"@ar ; rdfs:domain ae:Project ; rdfs:range ae:InformationSystem .
+ae:managedBy a owl:ObjectProperty ; rdfs:label "يدار بواسطة"@ar ; rdfs:domain ae:Project ; rdfs:range ae:Employee .
+ae:assignedTo a owl:ObjectProperty ; rdfs:label "مكلف في"@ar ; rdfs:domain ae:Employee ; rdfs:range ae:Project .
+ae:authoredBy a owl:ObjectProperty ; rdfs:label "أعد بواسطة"@ar ; rdfs:domain ae:Document ; rdfs:range ae:Employee .
+ae:aboutProject a owl:ObjectProperty ; rdfs:label "يتعلق بالمشروع"@ar ; rdfs:domain ae:Document ; rdfs:range ae:Project .
+ae:aboutSystem a owl:ObjectProperty ; rdfs:label "يتعلق بالنظام"@ar ; rdfs:domain ae:Document ; rdfs:range ae:InformationSystem .
+ae:belongsTo a owl:ObjectProperty ; rdfs:label "يتبع الإدارة"@ar ; rdfs:domain ae:Document ; rdfs:range ae:Department .

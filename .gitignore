@@ -19,7 +19,6 @@ data/Northwind_dataset/
 *.log
 .DS_Store
 ~$*.pptx
-data/Arabic_enterprise_dataset/
 data/policeuk/raw/
 data/policeuk/processed/
 data/policeuk/reports/

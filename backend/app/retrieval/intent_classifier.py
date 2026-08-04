@@ -19,8 +19,26 @@ def classify_intent(question: str) -> list[str]:
 
 def extract_entity_mentions(question: str) -> list[str]:
     """Extract title-like spans; retrieval also semantically searches the full question."""
+    quoted = [
+        next(value for value in match if value)
+        for match in re.findall(r'"([^"]+)"|\'([^\']+)\'', question)
+    ]
     mentions = re.findall(r"\b(?:[A-Z][\w'-]*(?:\s+|$)){1,6}", question)
+    arabic_patterns = (
+        r"الموظف\s+(.+?)(?:[؟?]|$)",
+        r"الذي يورد\s+(.+?)(?:[؟?]|$)",
+        r"في\s+(مشروع\s+.+?)(?:[؟?]|$)",
+        r"عدد الموظفين في\s+(.+?)(?:[؟?]|$)",
+    )
+    arabic = [
+        match.strip()
+        for pattern in arabic_patterns
+        for match in re.findall(pattern, question)
+        if match.strip()
+    ]
+    arabic.extend(match.strip() for match in re.findall(r"«([^»]+)»", question))
     stop = {"Which", "What", "Who", "Where", "How", "The"}
     cleaned = [" ".join(m.split()).rstrip("?.") for m in mentions]
-    return list(dict.fromkeys(m for m in cleaned if m and m not in stop))
-
+    return list(
+        dict.fromkeys([*quoted, *arabic, *(m for m in cleaned if m and m not in stop)])
+    )

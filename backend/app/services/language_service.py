@@ -1,6 +1,5 @@
 import re
 
-
 MESSAGES = {
     "ar": {
         "insufficient": "الأدلة المتاحة غير كافية للإجابة عن هذا السؤال.",
@@ -59,7 +58,7 @@ def detect_language(text: str) -> str:
         "de": (" der ", " die ", " das ", " welche ", " wie ", " warum ", " wer "),
     }
     scores = {language: sum(marker in lowered for marker in words) for language, words in markers.items()}
-    best = max(scores, key=scores.get)
+    best = max(scores, key=lambda language: scores[language])
     return best if scores[best] > 0 else "en"
 
 

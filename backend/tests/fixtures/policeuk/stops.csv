@@ -1,0 +1,3 @@
+Type,Date,Part of a policing operation,Policing operation,Latitude,Longitude,Gender,Age range,Self-defined ethnicity,Officer-defined ethnicity,Legislation,Object of search,Outcome,Outcome linked to object of search,Removal of more than just outer clothing
+Person search,2025-01-15T10:00:00+00:00,False,,51.7500,-1.2500,,,,"",Police and Criminal Evidence Act 1984,Controlled drugs,A no further action disposal,False,False
+Person search,2025-01-16T11:00:00+00:00,False,,51.7500,-1.1500,,,,"",Police and Criminal Evidence Act 1984,Offensive weapons,Community resolution,True,False

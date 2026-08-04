@@ -1,0 +1,4 @@
+Crime ID,Month,Reported by,Falls within,Longitude,Latitude,Location,LSOA code,LSOA name,Outcome type
+crime-001,2025-02,Thames Valley Police,Thames Valley Police,-1.2500,51.7500,On or near High Street,E01000001,Oxford 001A,Investigation complete; no suspect identified
+crime-002,2025-02,Thames Valley Police,Thames Valley Police,-1.2490,51.7510,On or near High Street,E01000001,Oxford 001A,Under investigation
+unmatched-crime,2025-02,Thames Valley Police,Thames Valley Police,-1.1500,51.7500,On or near Cowley Road,E01000002,Oxford 001B,Under investigation

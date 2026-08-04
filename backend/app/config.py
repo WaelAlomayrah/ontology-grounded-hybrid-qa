@@ -25,8 +25,11 @@ class Settings(BaseSettings):
     milvus_collection: str = "ontology_documents"
     milvus_vector_dimension: int = 1024
     milvus_metric_type: str = "COSINE"
+    milvus_operation_retries: int = Field(5, ge=1, le=10)
+    milvus_retry_backoff_seconds: float = Field(1.0, ge=0.1, le=30)
+    milvus_flush_interval: int = Field(4096, ge=64, le=65536)
     ollama_base_url: str = "http://ollama:11434"
-    ollama_model: str = "qwen2.5:7b"
+    ollama_model: str = "gemma3:4b"
     ollama_timeout_seconds: float = 120
     prometheus_base_url: str = "http://prometheus:9090"
     docker_proxy_base_url: str = "http://docker-proxy:2375"
@@ -36,6 +39,26 @@ class Settings(BaseSettings):
     embedding_normalize: bool = True
     dataset_path: Path = Path("/app/data/KG2QA_ontology_dataset")
     northwind_dataset_path: Path = Path("/app/data/Northwind_dataset")
+    arabic_enterprise_dataset_path: Path = Path("/app/data/Arabic_enterprise_dataset")
+    policeuk_enabled: bool = True
+    policeuk_force: str = "Thames Valley Police"
+    policeuk_months: int = Field(12, ge=1, le=36)
+    policeuk_raw_dir: Path = Path("/app/data/policeuk/raw")
+    policeuk_processed_dir: Path = Path("/app/data/policeuk/processed")
+    policeuk_download: bool = True
+    policeuk_include_crimes: bool = True
+    policeuk_include_outcomes: bool = True
+    policeuk_include_stops: bool = True
+    policeuk_include_neighbourhoods: bool = True
+    policeuk_include_ons_population: bool = True
+    policeuk_archive_url: str = "https://data.police.uk/data/archive/latest.zip"
+    policeuk_ons_population_url: str = (
+        "https://www.nomisweb.co.uk/api/v01/dataset/NM_2014_1.data.csv"
+    )
+    policeuk_http_timeout_seconds: float = Field(60, ge=5, le=3600)
+    policeuk_http_retries: int = Field(3, ge=0, le=10)
+    policeuk_api_delay_seconds: float = Field(0.1, ge=0, le=5)
+    policeuk_user_agent: str = "ontology-grounded-hybrid-qa/0.1 (public-safety research)"
     ontology_file: Path = Path("/app/data/sample/ontology.ttl")
     vector_top_k: int = Field(8, ge=1, le=100)
     graph_result_limit: int = Field(100, ge=1, le=1000)

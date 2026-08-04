@@ -1,18 +1,27 @@
 import { useQuery } from '@tanstack/react-query';
+import { useState } from 'react';
 import { api } from '../api/client';
-import type { ContainerLoad } from '../types/api';
+import type { ContainerLoad, User } from '../types/api';
 
 const bytes = (value = 0) => value > 1024 ** 3 ? `${(value / 1024 ** 3).toFixed(1)} GB` : `${(value / 1024 ** 2).toFixed(0)} MB`;
 const rate = (value = 0) => value > 1024 ** 2 ? `${(value / 1024 ** 2).toFixed(1)} MB/s` : `${(value / 1024).toFixed(1)} KB/s`;
 const cleanName = (name: string) => name.replace('ontology-ai-pilot-', '').replace(/-1$/, '').replaceAll('-', ' ');
 
-export default function StatusPage() {
+export default function StatusPage({ role }: { role: User['role'] }) {
+  const [exporting, setExporting] = useState<string>();
+  const [exportError, setExportError] = useState('');
   const health = useQuery({ queryKey: ['health'], queryFn: api.health, refetchInterval: 10000 });
   const status = useQuery({ queryKey: ['status'], queryFn: api.status, refetchInterval: 15000 });
   const monitoring = useQuery({ queryKey: ['monitoring'], queryFn: api.monitoring, refetchInterval: 10000 });
   const datasets = useQuery({ queryKey: ['datasets'], queryFn: api.datasets });
   const services = health.data?.services ?? {};
   const activeContainers = monitoring.data?.containers.filter(container => container.running && container.name !== 'docker runtime').length;
+  async function exportDataset(dataset: string) {
+    setExporting(dataset); setExportError('');
+    try { await api.exportDataset(dataset); }
+    catch (reason) { setExportError(reason instanceof Error ? reason.message : 'Dataset export failed'); }
+    finally { setExporting(undefined); }
+  }
 
   return <section className="operations-page">
     <div className="page-heading"><div><span className="eyebrow">Live operations</span><h1>System observability</h1><p>Health, container load, ingestion state, and available research datasets in one view.</p></div><a className="button secondary" href="http://localhost:3001" target="_blank" rel="noreferrer">Open Grafana ↗</a></div>
@@ -33,7 +42,7 @@ export default function StatusPage() {
         {Object.entries(services).map(([name, value]) => { const up = typeof value === 'boolean' ? value : Boolean((value as { healthy?: boolean } | null)?.healthy); return <div key={name}><span className={up ? 'service-up' : 'service-down'}>{up ? '✓' : '!'}</span><div><strong>{name}</strong><small>{up ? 'Healthy and responding' : 'Unavailable'}</small></div><b>{up ? 'Online' : 'Offline'}</b></div>; })}
         {monitoring.data?.targets.map(target => <div key={`${target.job}-${target.instance}`}><span className={target.up ? 'service-up' : 'service-down'}>{target.up ? '✓' : '!'}</span><div><strong>{target.job}</strong><small>{target.instance}</small></div><b>{target.up ? 'Scraping' : 'Down'}</b></div>)}
       </div></div>
-      <div><div className="section-title"><div><h2>Available datasets</h2><p>Archives are inspected without altering source files.</p></div></div><div className="dataset-list">{datasets.data?.map(dataset => <article key={dataset.id}><div className="dataset-head"><span>DB</span><div><h3>{dataset.name}</h3><small>{dataset.files} files · {dataset.data_files} data tables/resources</small></div><b className={dataset.supported_for_ingestion ? 'ready-tag' : 'source-tag'}>{dataset.supported_for_ingestion ? 'ingestion ready' : 'source available'}</b></div>{dataset.archive_preview.length > 0 && <details><summary>{dataset.archives} archive · preview contents</summary><p>{dataset.archive_preview.slice(0, 8).join(' · ')}</p></details>}</article>)}</div></div>
+      <div><div className="section-title"><div><h2>Available datasets</h2><p>Download a complete, self-contained ZIP without changing source files.</p></div></div>{exportError && <div className="error dataset-export-error">{exportError}</div>}<div className="dataset-list">{datasets.data?.map(dataset => <article key={dataset.id}><div className="dataset-head"><span>DB</span><div><h3>{dataset.name}</h3><small>{dataset.files} files · {dataset.data_files} data tables/resources</small></div><b className={dataset.supported_for_ingestion ? 'ready-tag' : 'source-tag'}>{dataset.supported_for_ingestion ? 'ingestion ready' : 'source available'}</b>{dataset.exportable !== false && <button className="dataset-export" disabled={role === 'viewer' || exporting === dataset.id} onClick={() => void exportDataset(dataset.id)}>{exporting === dataset.id ? 'Preparing…' : 'Export ZIP'}</button>}</div>{dataset.archive_preview.length > 0 && <details><summary>{dataset.archives} archive · preview contents</summary><p>{dataset.archive_preview.slice(0, 8).join(' · ')}</p></details>}</article>)}</div></div>
     </div>
   </section>;
 }

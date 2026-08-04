@@ -1,6 +1,6 @@
 import hashlib
 import hmac
-from typing import Literal
+from typing import Literal, cast
 
 from fastapi import APIRouter, Depends, Header, HTTPException
 
@@ -20,10 +20,14 @@ def _token(username: str, role: Role, secret: str) -> str:
 def current_user(authorization: str = Header(default=""), settings: Settings = Depends(get_settings)) -> dict[str, str]:
     token = authorization.removeprefix("Bearer ").strip()
     try: username, role, _ = token.split(".", 2)
-    except ValueError: raise HTTPException(status_code=401, detail="Authentication required")
-    if role not in ROLE_LEVEL or not hmac.compare_digest(token, _token(username, role, settings.admin_token)):
+    except ValueError:
+        raise HTTPException(status_code=401, detail="Authentication required") from None
+    if role not in ROLE_LEVEL:
         raise HTTPException(status_code=401, detail="Invalid session")
-    return {"username": username, "role": role}
+    validated_role = cast(Role, role)
+    if not hmac.compare_digest(token, _token(username, validated_role, settings.admin_token)):
+        raise HTTPException(status_code=401, detail="Invalid session")
+    return {"username": username, "role": validated_role}
 
 
 def require_role(minimum: Role):

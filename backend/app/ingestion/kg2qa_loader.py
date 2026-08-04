@@ -1,7 +1,7 @@
 import json
-from zipfile import ZipFile
 from pathlib import Path
 from urllib.parse import quote
+from zipfile import ZipFile
 
 import pandas as pd
 from rdflib import RDF, RDFS, Graph, Literal, Namespace, URIRef
@@ -68,6 +68,7 @@ def load_kg2qa(directory: Path) -> tuple[Graph, int, int, list[str]]:
                 frames.append((Path(name).name, frame))
     for filename, frame in frames:
         columns = list(frame.columns)
+        normalized_columns = {column.strip().lower(): column for column in columns}
         source = detect_column(columns, SOURCE_COLUMNS, required=False)
         target = detect_column(columns, TARGET_COLUMNS, required=False)
         relation = detect_column(columns, RELATION_COLUMNS, required=False)
@@ -78,13 +79,28 @@ def load_kg2qa(directory: Path) -> tuple[Graph, int, int, list[str]]:
                 relationships += 1
             continue
         identifier = detect_column(columns, ID_COLUMNS, required=False)
-        label = detect_column(columns, LABEL_COLUMNS, required=False)
+        # KG2QA entity tables use ``name`` for the human-readable label and
+        # ``LABEL`` for the ontology class code (ACT, FUN, IDEN, ...).
+        # Generic label detection would otherwise choose LABEL and make every
+        # entity appear under a repeated class code.
+        label = normalized_columns.get("name") or detect_column(
+            columns, LABEL_COLUMNS, required=False
+        )
+        class_column = normalized_columns.get("label")
         if identifier and label:
             for row in frame.to_dict("records"):
                 uri = _kg_uri(row[identifier])
-                graph.add((uri, RDF.type, KG.Entity)); graph.add((uri, RDFS.label, Literal(row[label])))
+                class_name = str(row.get(class_column, "")).strip() if class_column else ""
+                graph.add(
+                    (
+                        uri,
+                        RDF.type,
+                        _predicate_uri(class_name) if class_name else KG.Entity,
+                    )
+                )
+                graph.add((uri, RDFS.label, Literal(row[label])))
                 for key, value in row.items():
-                    if value != "" and key not in {identifier, label}:
+                    if value != "" and key not in {identifier, label, class_column}:
                         graph.add((uri, _predicate_uri(key), Literal(value)))
                 entities += 1
         else:

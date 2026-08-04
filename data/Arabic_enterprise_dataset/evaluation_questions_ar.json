@@ -1,0 +1,7122 @@
+[
+  {
+    "id": "ar-q0001",
+    "question": "في أي إدارة يعمل الموظف سعود العمري؟",
+    "expected_entities": [
+      "سعود العمري",
+      "الإدارة التنفيذية"
+    ],
+    "expected_answer_keywords": [
+      "الإدارة التنفيذية"
+    ],
+    "expected_path": [
+      "سعود العمري",
+      "يعمل في",
+      "الإدارة التنفيذية"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0002",
+    "question": "في أي إدارة يعمل الموظف عمر الجهني؟",
+    "expected_entities": [
+      "عمر الجهني",
+      "المسؤولية الاجتماعية"
+    ],
+    "expected_answer_keywords": [
+      "المسؤولية الاجتماعية"
+    ],
+    "expected_path": [
+      "عمر الجهني",
+      "يعمل في",
+      "المسؤولية الاجتماعية"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0003",
+    "question": "في أي إدارة يعمل الموظف حسين القحطاني؟",
+    "expected_entities": [
+      "حسين القحطاني",
+      "الذكاء الاصطناعي"
+    ],
+    "expected_answer_keywords": [
+      "الذكاء الاصطناعي"
+    ],
+    "expected_path": [
+      "حسين القحطاني",
+      "يعمل في",
+      "الذكاء الاصطناعي"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0004",
+    "question": "في أي إدارة يعمل الموظف طارق العنزي؟",
+    "expected_entities": [
+      "طارق العنزي",
+      "الخصوصية"
+    ],
+    "expected_answer_keywords": [
+      "الخصوصية"
+    ],
+    "expected_path": [
+      "طارق العنزي",
+      "يعمل في",
+      "الخصوصية"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0005",
+    "question": "في أي إدارة يعمل الموظف مازن الرشيدي؟",
+    "expected_entities": [
+      "مازن الرشيدي",
+      "خدمة العملاء"
+    ],
+    "expected_answer_keywords": [
+      "خدمة العملاء"
+    ],
+    "expected_path": [
+      "مازن الرشيدي",
+      "يعمل في",
+      "خدمة العملاء"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0006",
+    "question": "في أي إدارة يعمل الموظف ريم السعدي؟",
+    "expected_entities": [
+      "ريم السعدي",
+      "العلاقات الحكومية"
+    ],
+    "expected_answer_keywords": [
+      "العلاقات الحكومية"
+    ],
+    "expected_path": [
+      "ريم السعدي",
+      "يعمل في",
+      "العلاقات الحكومية"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0007",
+    "question": "في أي إدارة يعمل الموظف أمل الغامدي؟",
+    "expected_entities": [
+      "أمل الغامدي",
+      "الخدمات اللوجستية"
+    ],
+    "expected_answer_keywords": [
+      "الخدمات اللوجستية"
+    ],
+    "expected_path": [
+      "أمل الغامدي",
+      "يعمل في",
+      "الخدمات اللوجستية"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0008",
+    "question": "في أي إدارة يعمل الموظف عبير الشهري؟",
+    "expected_entities": [
+      "عبير الشهري",
+      "المشتريات"
+    ],
+    "expected_answer_keywords": [
+      "المشتريات"
+    ],
+    "expected_path": [
+      "عبير الشهري",
+      "يعمل في",
+      "المشتريات"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0009",
+    "question": "في أي إدارة يعمل الموظف مها السلمي؟",
+    "expected_entities": [
+      "مها السلمي",
+      "التدريب والتطوير"
+    ],
+    "expected_answer_keywords": [
+      "التدريب والتطوير"
+    ],
+    "expected_path": [
+      "مها السلمي",
+      "يعمل في",
+      "التدريب والتطوير"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0010",
+    "question": "في أي إدارة يعمل الموظف رنا الدوسري؟",
+    "expected_entities": [
+      "رنا الدوسري",
+      "الجودة والتميز"
+    ],
+    "expected_answer_keywords": [
+      "الجودة والتميز"
+    ],
+    "expected_path": [
+      "رنا الدوسري",
+      "يعمل في",
+      "الجودة والتميز"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0011",
+    "question": "في أي إدارة يعمل الموظف فاطمة السبيعي؟",
+    "expected_entities": [
+      "فاطمة السبيعي",
+      "دعم التطبيقات"
+    ],
+    "expected_answer_keywords": [
+      "دعم التطبيقات"
+    ],
+    "expected_path": [
+      "فاطمة السبيعي",
+      "يعمل في",
+      "دعم التطبيقات"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0012",
+    "question": "في أي إدارة يعمل الموظف محمد البلوي؟",
+    "expected_entities": [
+      "محمد البلوي",
+      "الاتصال المؤسسي"
+    ],
+    "expected_answer_keywords": [
+      "الاتصال المؤسسي"
+    ],
+    "expected_path": [
+      "محمد البلوي",
+      "يعمل في",
+      "الاتصال المؤسسي"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0013",
+    "question": "في أي إدارة يعمل الموظف خالد العبيدي؟",
+    "expected_entities": [
+      "خالد العبيدي",
+      "الاستثمار"
+    ],
+    "expected_answer_keywords": [
+      "الاستثمار"
+    ],
+    "expected_path": [
+      "خالد العبيدي",
+      "يعمل في",
+      "الاستثمار"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0014",
+    "question": "في أي إدارة يعمل الموظف تركي الزهراني؟",
+    "expected_entities": [
+      "تركي الزهراني",
+      "السلامة"
+    ],
+    "expected_answer_keywords": [
+      "السلامة"
+    ],
+    "expected_path": [
+      "تركي الزهراني",
+      "يعمل في",
+      "السلامة"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0015",
+    "question": "في أي إدارة يعمل الموظف ياسر القرني؟",
+    "expected_entities": [
+      "ياسر القرني",
+      "الأمن السيبراني"
+    ],
+    "expected_answer_keywords": [
+      "الأمن السيبراني"
+    ],
+    "expected_path": [
+      "ياسر القرني",
+      "يعمل في",
+      "الأمن السيبراني"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0016",
+    "question": "في أي إدارة يعمل الموظف حسن التميمي؟",
+    "expected_entities": [
+      "حسن التميمي",
+      "الحوكمة"
+    ],
+    "expected_answer_keywords": [
+      "الحوكمة"
+    ],
+    "expected_path": [
+      "حسن التميمي",
+      "يعمل في",
+      "الحوكمة"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0017",
+    "question": "في أي إدارة يعمل الموظف مصطفى الحربي؟",
+    "expected_entities": [
+      "مصطفى الحربي",
+      "إدارة المخاطر"
+    ],
+    "expected_answer_keywords": [
+      "إدارة المخاطر"
+    ],
+    "expected_path": [
+      "مصطفى الحربي",
+      "يعمل في",
+      "إدارة المخاطر"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0018",
+    "question": "في أي إدارة يعمل الموظف وليد المالكي؟",
+    "expected_entities": [
+      "وليد المالكي",
+      "التحليلات"
+    ],
+    "expected_answer_keywords": [
+      "التحليلات"
+    ],
+    "expected_path": [
+      "وليد المالكي",
+      "يعمل في",
+      "التحليلات"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0019",
+    "question": "في أي إدارة يعمل الموظف سارة اليامي؟",
+    "expected_entities": [
+      "سارة اليامي",
+      "سلاسل الإمداد"
+    ],
+    "expected_answer_keywords": [
+      "سلاسل الإمداد"
+    ],
+    "expected_path": [
+      "سارة اليامي",
+      "يعمل في",
+      "سلاسل الإمداد"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0020",
+    "question": "في أي إدارة يعمل الموظف هند العتيبي؟",
+    "expected_entities": [
+      "هند العتيبي",
+      "الموارد البشرية"
+    ],
+    "expected_answer_keywords": [
+      "الموارد البشرية"
+    ],
+    "expected_path": [
+      "هند العتيبي",
+      "يعمل في",
+      "الموارد البشرية"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0021",
+    "question": "في أي إدارة يعمل الموظف هدى المطيري؟",
+    "expected_entities": [
+      "هدى المطيري",
+      "البحث والتطوير"
+    ],
+    "expected_answer_keywords": [
+      "البحث والتطوير"
+    ],
+    "expected_path": [
+      "هدى المطيري",
+      "يعمل في",
+      "البحث والتطوير"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0022",
+    "question": "في أي إدارة يعمل الموظف لطيفة الهاجري؟",
+    "expected_entities": [
+      "لطيفة الهاجري",
+      "التحول الرقمي"
+    ],
+    "expected_answer_keywords": [
+      "التحول الرقمي"
+    ],
+    "expected_path": [
+      "لطيفة الهاجري",
+      "يعمل في",
+      "التحول الرقمي"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0023",
+    "question": "في أي إدارة يعمل الموظف الجوهرة الخالدي؟",
+    "expected_entities": [
+      "الجوهرة الخالدي",
+      "هندسة الحلول"
+    ],
+    "expected_answer_keywords": [
+      "هندسة الحلول"
+    ],
+    "expected_path": [
+      "الجوهرة الخالدي",
+      "يعمل في",
+      "هندسة الحلول"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0024",
+    "question": "في أي إدارة يعمل الموظف عائشة الشمري؟",
+    "expected_entities": [
+      "عائشة الشمري",
+      "تجربة المستفيد"
+    ],
+    "expected_answer_keywords": [
+      "تجربة المستفيد"
+    ],
+    "expected_path": [
+      "عائشة الشمري",
+      "يعمل في",
+      "تجربة المستفيد"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0025",
+    "question": "في أي إدارة يعمل الموظف روان العمري؟",
+    "expected_entities": [
+      "روان العمري",
+      "الشراكات"
+    ],
+    "expected_answer_keywords": [
+      "الشراكات"
+    ],
+    "expected_path": [
+      "روان العمري",
+      "يعمل في",
+      "الشراكات"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0026",
+    "question": "في أي إدارة يعمل الموظف عبدالله الجهني؟",
+    "expected_entities": [
+      "عبدالله الجهني",
+      "الصيانة"
+    ],
+    "expected_answer_keywords": [
+      "الصيانة"
+    ],
+    "expected_path": [
+      "عبدالله الجهني",
+      "يعمل في",
+      "الصيانة"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0027",
+    "question": "في أي إدارة يعمل الموظف فهد القحطاني؟",
+    "expected_entities": [
+      "فهد القحطاني",
+      "الشؤون القانونية"
+    ],
+    "expected_answer_keywords": [
+      "الشؤون القانونية"
+    ],
+    "expected_path": [
+      "فهد القحطاني",
+      "يعمل في",
+      "الشؤون القانونية"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0028",
+    "question": "في أي إدارة يعمل الموظف ناصر العنزي؟",
+    "expected_entities": [
+      "ناصر العنزي",
+      "إدارة المعرفة"
+    ],
+    "expected_answer_keywords": [
+      "إدارة المعرفة"
+    ],
+    "expected_path": [
+      "ناصر العنزي",
+      "يعمل في",
+      "إدارة المعرفة"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0029",
+    "question": "في أي إدارة يعمل الموظف علي العبيدي؟",
+    "expected_entities": [
+      "علي العبيدي",
+      "إدارة المشاريع"
+    ],
+    "expected_answer_keywords": [
+      "إدارة المشاريع"
+    ],
+    "expected_path": [
+      "علي العبيدي",
+      "يعمل في",
+      "إدارة المشاريع"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0030",
+    "question": "في أي إدارة يعمل الموظف إبراهيم الزهراني؟",
+    "expected_entities": [
+      "إبراهيم الزهراني",
+      "إدارة الخدمات"
+    ],
+    "expected_answer_keywords": [
+      "إدارة الخدمات"
+    ],
+    "expected_path": [
+      "إبراهيم الزهراني",
+      "يعمل في",
+      "إدارة الخدمات"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0031",
+    "question": "في أي إدارة يعمل الموظف زياد القرني؟",
+    "expected_entities": [
+      "زياد القرني",
+      "المبيعات"
+    ],
+    "expected_answer_keywords": [
+      "المبيعات"
+    ],
+    "expected_path": [
+      "زياد القرني",
+      "يعمل في",
+      "المبيعات"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0032",
+    "question": "في أي إدارة يعمل الموظف نورة التميمي؟",
+    "expected_entities": [
+      "نورة التميمي",
+      "إدارة الأصول"
+    ],
+    "expected_answer_keywords": [
+      "إدارة الأصول"
+    ],
+    "expected_path": [
+      "نورة التميمي",
+      "يعمل في",
+      "إدارة الأصول"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0033",
+    "question": "في أي إدارة يعمل الموظف لينا الحربي؟",
+    "expected_entities": [
+      "لينا الحربي",
+      "الاستدامة"
+    ],
+    "expected_answer_keywords": [
+      "الاستدامة"
+    ],
+    "expected_path": [
+      "لينا الحربي",
+      "يعمل في",
+      "الاستدامة"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0034",
+    "question": "في أي إدارة يعمل الموظف منى المالكي؟",
+    "expected_entities": [
+      "منى المالكي",
+      "إدارة البيانات"
+    ],
+    "expected_answer_keywords": [
+      "إدارة البيانات"
+    ],
+    "expected_path": [
+      "منى المالكي",
+      "يعمل في",
+      "إدارة البيانات"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0035",
+    "question": "في أي إدارة يعمل الموظف دانة اليامي؟",
+    "expected_entities": [
+      "دانة اليامي",
+      "الامتثال"
+    ],
+    "expected_answer_keywords": [
+      "الامتثال"
+    ],
+    "expected_path": [
+      "دانة اليامي",
+      "يعمل في",
+      "الامتثال"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0036",
+    "question": "في أي إدارة يعمل الموظف شهد العتيبي؟",
+    "expected_entities": [
+      "شهد العتيبي",
+      "المراجعة الداخلية"
+    ],
+    "expected_answer_keywords": [
+      "المراجعة الداخلية"
+    ],
+    "expected_path": [
+      "شهد العتيبي",
+      "يعمل في",
+      "المراجعة الداخلية"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0037",
+    "question": "في أي إدارة يعمل الموظف غادة المطيري؟",
+    "expected_entities": [
+      "غادة المطيري",
+      "هندسة المؤسسات"
+    ],
+    "expected_answer_keywords": [
+      "هندسة المؤسسات"
+    ],
+    "expected_path": [
+      "غادة المطيري",
+      "يعمل في",
+      "هندسة المؤسسات"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0038",
+    "question": "في أي إدارة يعمل الموظف مريم الهاجري؟",
+    "expected_entities": [
+      "مريم الهاجري",
+      "إدارة المخزون"
+    ],
+    "expected_answer_keywords": [
+      "إدارة المخزون"
+    ],
+    "expected_path": [
+      "مريم الهاجري",
+      "يعمل في",
+      "إدارة المخزون"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0039",
+    "question": "في أي إدارة يعمل الموظف أحمد الخالدي؟",
+    "expected_entities": [
+      "أحمد الخالدي",
+      "المالية"
+    ],
+    "expected_answer_keywords": [
+      "المالية"
+    ],
+    "expected_path": [
+      "أحمد الخالدي",
+      "يعمل في",
+      "المالية"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0040",
+    "question": "في أي إدارة يعمل الموظف سلمان الشمري؟",
+    "expected_entities": [
+      "سلمان الشمري",
+      "الابتكار"
+    ],
+    "expected_answer_keywords": [
+      "الابتكار"
+    ],
+    "expected_path": [
+      "سلمان الشمري",
+      "يعمل في",
+      "الابتكار"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0041",
+    "question": "في أي إدارة يعمل الموظف سعود العمري؟",
+    "expected_entities": [
+      "سعود العمري",
+      "العمليات"
+    ],
+    "expected_answer_keywords": [
+      "العمليات"
+    ],
+    "expected_path": [
+      "سعود العمري",
+      "يعمل في",
+      "العمليات"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0042",
+    "question": "في أي إدارة يعمل الموظف عمر الجهني؟",
+    "expected_entities": [
+      "عمر الجهني",
+      "البنية التحتية"
+    ],
+    "expected_answer_keywords": [
+      "البنية التحتية"
+    ],
+    "expected_path": [
+      "عمر الجهني",
+      "يعمل في",
+      "البنية التحتية"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0043",
+    "question": "في أي إدارة يعمل الموظف حسين القحطاني؟",
+    "expected_entities": [
+      "حسين القحطاني",
+      "التسويق"
+    ],
+    "expected_answer_keywords": [
+      "التسويق"
+    ],
+    "expected_path": [
+      "حسين القحطاني",
+      "يعمل في",
+      "التسويق"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0044",
+    "question": "في أي إدارة يعمل الموظف طارق العنزي؟",
+    "expected_entities": [
+      "طارق العنزي",
+      "العقود"
+    ],
+    "expected_answer_keywords": [
+      "العقود"
+    ],
+    "expected_path": [
+      "طارق العنزي",
+      "يعمل في",
+      "العقود"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0045",
+    "question": "في أي إدارة يعمل الموظف مازن الرشيدي؟",
+    "expected_entities": [
+      "مازن الرشيدي",
+      "المرافق"
+    ],
+    "expected_answer_keywords": [
+      "المرافق"
+    ],
+    "expected_path": [
+      "مازن الرشيدي",
+      "يعمل في",
+      "المرافق"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0046",
+    "question": "في أي إدارة يعمل الموظف ريم السعدي؟",
+    "expected_entities": [
+      "ريم السعدي",
+      "تقنية المعلومات"
+    ],
+    "expected_answer_keywords": [
+      "تقنية المعلومات"
+    ],
+    "expected_path": [
+      "ريم السعدي",
+      "يعمل في",
+      "تقنية المعلومات"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0047",
+    "question": "في أي إدارة يعمل الموظف أمل الغامدي؟",
+    "expected_entities": [
+      "أمل الغامدي",
+      "إدارة المحتوى"
+    ],
+    "expected_answer_keywords": [
+      "إدارة المحتوى"
+    ],
+    "expected_path": [
+      "أمل الغامدي",
+      "يعمل في",
+      "إدارة المحتوى"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0048",
+    "question": "في أي إدارة يعمل الموظف عبير الشهري؟",
+    "expected_entities": [
+      "عبير الشهري",
+      "التخطيط الاستراتيجي"
+    ],
+    "expected_answer_keywords": [
+      "التخطيط الاستراتيجي"
+    ],
+    "expected_path": [
+      "عبير الشهري",
+      "يعمل في",
+      "التخطيط الاستراتيجي"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0049",
+    "question": "في أي إدارة يعمل الموظف مها السلمي؟",
+    "expected_entities": [
+      "مها السلمي",
+      "مكتب البيانات"
+    ],
+    "expected_answer_keywords": [
+      "مكتب البيانات"
+    ],
+    "expected_path": [
+      "مها السلمي",
+      "يعمل في",
+      "مكتب البيانات"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0050",
+    "question": "في أي إدارة يعمل الموظف رنا الدوسري؟",
+    "expected_entities": [
+      "رنا الدوسري",
+      "تطوير الأعمال"
+    ],
+    "expected_answer_keywords": [
+      "تطوير الأعمال"
+    ],
+    "expected_path": [
+      "رنا الدوسري",
+      "يعمل في",
+      "تطوير الأعمال"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0051",
+    "question": "في أي إدارة يعمل الموظف فاطمة السبيعي؟",
+    "expected_entities": [
+      "فاطمة السبيعي",
+      "الإدارة التنفيذية"
+    ],
+    "expected_answer_keywords": [
+      "الإدارة التنفيذية"
+    ],
+    "expected_path": [
+      "فاطمة السبيعي",
+      "يعمل في",
+      "الإدارة التنفيذية"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0052",
+    "question": "في أي إدارة يعمل الموظف محمد البلوي؟",
+    "expected_entities": [
+      "محمد البلوي",
+      "المسؤولية الاجتماعية"
+    ],
+    "expected_answer_keywords": [
+      "المسؤولية الاجتماعية"
+    ],
+    "expected_path": [
+      "محمد البلوي",
+      "يعمل في",
+      "المسؤولية الاجتماعية"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0053",
+    "question": "في أي إدارة يعمل الموظف خالد العبيدي؟",
+    "expected_entities": [
+      "خالد العبيدي",
+      "الذكاء الاصطناعي"
+    ],
+    "expected_answer_keywords": [
+      "الذكاء الاصطناعي"
+    ],
+    "expected_path": [
+      "خالد العبيدي",
+      "يعمل في",
+      "الذكاء الاصطناعي"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0054",
+    "question": "في أي إدارة يعمل الموظف تركي الزهراني؟",
+    "expected_entities": [
+      "تركي الزهراني",
+      "الخصوصية"
+    ],
+    "expected_answer_keywords": [
+      "الخصوصية"
+    ],
+    "expected_path": [
+      "تركي الزهراني",
+      "يعمل في",
+      "الخصوصية"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0055",
+    "question": "في أي إدارة يعمل الموظف ياسر القرني؟",
+    "expected_entities": [
+      "ياسر القرني",
+      "خدمة العملاء"
+    ],
+    "expected_answer_keywords": [
+      "خدمة العملاء"
+    ],
+    "expected_path": [
+      "ياسر القرني",
+      "يعمل في",
+      "خدمة العملاء"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0056",
+    "question": "في أي إدارة يعمل الموظف حسن التميمي؟",
+    "expected_entities": [
+      "حسن التميمي",
+      "العلاقات الحكومية"
+    ],
+    "expected_answer_keywords": [
+      "العلاقات الحكومية"
+    ],
+    "expected_path": [
+      "حسن التميمي",
+      "يعمل في",
+      "العلاقات الحكومية"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0057",
+    "question": "في أي إدارة يعمل الموظف مصطفى العمري؟",
+    "expected_entities": [
+      "مصطفى العمري",
+      "الخدمات اللوجستية"
+    ],
+    "expected_answer_keywords": [
+      "الخدمات اللوجستية"
+    ],
+    "expected_path": [
+      "مصطفى العمري",
+      "يعمل في",
+      "الخدمات اللوجستية"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0058",
+    "question": "في أي إدارة يعمل الموظف وليد الجهني؟",
+    "expected_entities": [
+      "وليد الجهني",
+      "المشتريات"
+    ],
+    "expected_answer_keywords": [
+      "المشتريات"
+    ],
+    "expected_path": [
+      "وليد الجهني",
+      "يعمل في",
+      "المشتريات"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0059",
+    "question": "في أي إدارة يعمل الموظف سارة القحطاني؟",
+    "expected_entities": [
+      "سارة القحطاني",
+      "التدريب والتطوير"
+    ],
+    "expected_answer_keywords": [
+      "التدريب والتطوير"
+    ],
+    "expected_path": [
+      "سارة القحطاني",
+      "يعمل في",
+      "التدريب والتطوير"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0060",
+    "question": "في أي إدارة يعمل الموظف هند العنزي؟",
+    "expected_entities": [
+      "هند العنزي",
+      "الجودة والتميز"
+    ],
+    "expected_answer_keywords": [
+      "الجودة والتميز"
+    ],
+    "expected_path": [
+      "هند العنزي",
+      "يعمل في",
+      "الجودة والتميز"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0061",
+    "question": "في أي إدارة يعمل الموظف هدى الرشيدي؟",
+    "expected_entities": [
+      "هدى الرشيدي",
+      "دعم التطبيقات"
+    ],
+    "expected_answer_keywords": [
+      "دعم التطبيقات"
+    ],
+    "expected_path": [
+      "هدى الرشيدي",
+      "يعمل في",
+      "دعم التطبيقات"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0062",
+    "question": "في أي إدارة يعمل الموظف لطيفة السعدي؟",
+    "expected_entities": [
+      "لطيفة السعدي",
+      "الاتصال المؤسسي"
+    ],
+    "expected_answer_keywords": [
+      "الاتصال المؤسسي"
+    ],
+    "expected_path": [
+      "لطيفة السعدي",
+      "يعمل في",
+      "الاتصال المؤسسي"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0063",
+    "question": "في أي إدارة يعمل الموظف الجوهرة الغامدي؟",
+    "expected_entities": [
+      "الجوهرة الغامدي",
+      "الاستثمار"
+    ],
+    "expected_answer_keywords": [
+      "الاستثمار"
+    ],
+    "expected_path": [
+      "الجوهرة الغامدي",
+      "يعمل في",
+      "الاستثمار"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0064",
+    "question": "في أي إدارة يعمل الموظف عائشة الشهري؟",
+    "expected_entities": [
+      "عائشة الشهري",
+      "السلامة"
+    ],
+    "expected_answer_keywords": [
+      "السلامة"
+    ],
+    "expected_path": [
+      "عائشة الشهري",
+      "يعمل في",
+      "السلامة"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0065",
+    "question": "في أي إدارة يعمل الموظف روان السلمي؟",
+    "expected_entities": [
+      "روان السلمي",
+      "الأمن السيبراني"
+    ],
+    "expected_answer_keywords": [
+      "الأمن السيبراني"
+    ],
+    "expected_path": [
+      "روان السلمي",
+      "يعمل في",
+      "الأمن السيبراني"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0066",
+    "question": "في أي إدارة يعمل الموظف عبدالله الدوسري؟",
+    "expected_entities": [
+      "عبدالله الدوسري",
+      "الحوكمة"
+    ],
+    "expected_answer_keywords": [
+      "الحوكمة"
+    ],
+    "expected_path": [
+      "عبدالله الدوسري",
+      "يعمل في",
+      "الحوكمة"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0067",
+    "question": "في أي إدارة يعمل الموظف فهد السبيعي؟",
+    "expected_entities": [
+      "فهد السبيعي",
+      "إدارة المخاطر"
+    ],
+    "expected_answer_keywords": [
+      "إدارة المخاطر"
+    ],
+    "expected_path": [
+      "فهد السبيعي",
+      "يعمل في",
+      "إدارة المخاطر"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0068",
+    "question": "في أي إدارة يعمل الموظف ناصر البلوي؟",
+    "expected_entities": [
+      "ناصر البلوي",
+      "التحليلات"
+    ],
+    "expected_answer_keywords": [
+      "التحليلات"
+    ],
+    "expected_path": [
+      "ناصر البلوي",
+      "يعمل في",
+      "التحليلات"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0069",
+    "question": "في أي إدارة يعمل الموظف علي العبيدي؟",
+    "expected_entities": [
+      "علي العبيدي",
+      "سلاسل الإمداد"
+    ],
+    "expected_answer_keywords": [
+      "سلاسل الإمداد"
+    ],
+    "expected_path": [
+      "علي العبيدي",
+      "يعمل في",
+      "سلاسل الإمداد"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0070",
+    "question": "في أي إدارة يعمل الموظف إبراهيم الزهراني؟",
+    "expected_entities": [
+      "إبراهيم الزهراني",
+      "الموارد البشرية"
+    ],
+    "expected_answer_keywords": [
+      "الموارد البشرية"
+    ],
+    "expected_path": [
+      "إبراهيم الزهراني",
+      "يعمل في",
+      "الموارد البشرية"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0071",
+    "question": "في أي إدارة يعمل الموظف زياد القرني؟",
+    "expected_entities": [
+      "زياد القرني",
+      "البحث والتطوير"
+    ],
+    "expected_answer_keywords": [
+      "البحث والتطوير"
+    ],
+    "expected_path": [
+      "زياد القرني",
+      "يعمل في",
+      "البحث والتطوير"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0072",
+    "question": "في أي إدارة يعمل الموظف نورة التميمي؟",
+    "expected_entities": [
+      "نورة التميمي",
+      "التحول الرقمي"
+    ],
+    "expected_answer_keywords": [
+      "التحول الرقمي"
+    ],
+    "expected_path": [
+      "نورة التميمي",
+      "يعمل في",
+      "التحول الرقمي"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0073",
+    "question": "في أي إدارة يعمل الموظف لينا الحربي؟",
+    "expected_entities": [
+      "لينا الحربي",
+      "هندسة الحلول"
+    ],
+    "expected_answer_keywords": [
+      "هندسة الحلول"
+    ],
+    "expected_path": [
+      "لينا الحربي",
+      "يعمل في",
+      "هندسة الحلول"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0074",
+    "question": "في أي إدارة يعمل الموظف منى المالكي؟",
+    "expected_entities": [
+      "منى المالكي",
+      "تجربة المستفيد"
+    ],
+    "expected_answer_keywords": [
+      "تجربة المستفيد"
+    ],
+    "expected_path": [
+      "منى المالكي",
+      "يعمل في",
+      "تجربة المستفيد"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0075",
+    "question": "في أي إدارة يعمل الموظف دانة اليامي؟",
+    "expected_entities": [
+      "دانة اليامي",
+      "الشراكات"
+    ],
+    "expected_answer_keywords": [
+      "الشراكات"
+    ],
+    "expected_path": [
+      "دانة اليامي",
+      "يعمل في",
+      "الشراكات"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0076",
+    "question": "في أي إدارة يعمل الموظف شهد العتيبي؟",
+    "expected_entities": [
+      "شهد العتيبي",
+      "الصيانة"
+    ],
+    "expected_answer_keywords": [
+      "الصيانة"
+    ],
+    "expected_path": [
+      "شهد العتيبي",
+      "يعمل في",
+      "الصيانة"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0077",
+    "question": "في أي إدارة يعمل الموظف غادة المطيري؟",
+    "expected_entities": [
+      "غادة المطيري",
+      "الشؤون القانونية"
+    ],
+    "expected_answer_keywords": [
+      "الشؤون القانونية"
+    ],
+    "expected_path": [
+      "غادة المطيري",
+      "يعمل في",
+      "الشؤون القانونية"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0078",
+    "question": "في أي إدارة يعمل الموظف مريم الهاجري؟",
+    "expected_entities": [
+      "مريم الهاجري",
+      "إدارة المعرفة"
+    ],
+    "expected_answer_keywords": [
+      "إدارة المعرفة"
+    ],
+    "expected_path": [
+      "مريم الهاجري",
+      "يعمل في",
+      "إدارة المعرفة"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0079",
+    "question": "في أي إدارة يعمل الموظف أحمد الخالدي؟",
+    "expected_entities": [
+      "أحمد الخالدي",
+      "إدارة المشاريع"
+    ],
+    "expected_answer_keywords": [
+      "إدارة المشاريع"
+    ],
+    "expected_path": [
+      "أحمد الخالدي",
+      "يعمل في",
+      "إدارة المشاريع"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0080",
+    "question": "في أي إدارة يعمل الموظف سلمان الشمري؟",
+    "expected_entities": [
+      "سلمان الشمري",
+      "إدارة الخدمات"
+    ],
+    "expected_answer_keywords": [
+      "إدارة الخدمات"
+    ],
+    "expected_path": [
+      "سلمان الشمري",
+      "يعمل في",
+      "إدارة الخدمات"
+    ],
+    "category": "direct",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0081",
+    "question": "ما المورد الذي يورد نظام الموارد البشرية المؤسسية 1؟",
+    "expected_entities": [
+      "نظام الموارد البشرية المؤسسية 1",
+      "مجموعة الدرع الأمن السيبراني 14"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الدرع الأمن السيبراني 14"
+    ],
+    "expected_path": [
+      "نظام الموارد البشرية المؤسسية 1",
+      "مورّد بواسطة",
+      "مجموعة الدرع الأمن السيبراني 14"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0082",
+    "question": "ما المورد الذي يورد بوابة التدريب المؤسسية 32؟",
+    "expected_entities": [
+      "بوابة التدريب المؤسسية 32",
+      "شركة الرؤية تكامل الأنظمة 117"
+    ],
+    "expected_answer_keywords": [
+      "شركة الرؤية تكامل الأنظمة 117"
+    ],
+    "expected_path": [
+      "بوابة التدريب المؤسسية 32",
+      "مورّد بواسطة",
+      "شركة الرؤية تكامل الأنظمة 117"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0083",
+    "question": "ما المورد الذي يورد تطبيق المشتريات المؤسسية 63؟",
+    "expected_entities": [
+      "تطبيق المشتريات المؤسسية 63",
+      "مؤسسة القمم البنية التحتية 220"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة القمم البنية التحتية 220"
+    ],
+    "expected_path": [
+      "تطبيق المشتريات المؤسسية 63",
+      "مورّد بواسطة",
+      "مؤسسة القمم البنية التحتية 220"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0084",
+    "question": "ما المورد الذي يورد مستودع الأمن السيبراني المؤسسية 94؟",
+    "expected_entities": [
+      "مستودع الأمن السيبراني المؤسسية 94",
+      "مجموعة الصفوة التدريب 23"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الصفوة التدريب 23"
+    ],
+    "expected_path": [
+      "مستودع الأمن السيبراني المؤسسية 94",
+      "مورّد بواسطة",
+      "مجموعة الصفوة التدريب 23"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0085",
+    "question": "ما المورد الذي يورد منصة الوثائق المؤسسية 125؟",
+    "expected_entities": [
+      "منصة الوثائق المؤسسية 125",
+      "شركة الإتقان الأمن السيبراني 126"
+    ],
+    "expected_answer_keywords": [
+      "شركة الإتقان الأمن السيبراني 126"
+    ],
+    "expected_path": [
+      "منصة الوثائق المؤسسية 125",
+      "مورّد بواسطة",
+      "شركة الإتقان الأمن السيبراني 126"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0086",
+    "question": "ما المورد الذي يورد نظام المراسلات المؤسسية 156؟",
+    "expected_entities": [
+      "نظام المراسلات المؤسسية 156",
+      "مؤسسة المستقبل تكامل الأنظمة 229"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة المستقبل تكامل الأنظمة 229"
+    ],
+    "expected_path": [
+      "نظام المراسلات المؤسسية 156",
+      "مورّد بواسطة",
+      "مؤسسة المستقبل تكامل الأنظمة 229"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0087",
+    "question": "ما المورد الذي يورد بوابة إدارة المشاريع المؤسسية 187؟",
+    "expected_entities": [
+      "بوابة إدارة المشاريع المؤسسية 187",
+      "مجموعة التكامل الحلول الرقمية 32"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة التكامل الحلول الرقمية 32"
+    ],
+    "expected_path": [
+      "بوابة إدارة المشاريع المؤسسية 187",
+      "مورّد بواسطة",
+      "مجموعة التكامل الحلول الرقمية 32"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0088",
+    "question": "ما المورد الذي يورد تطبيق الامتثال المؤسسية 18؟",
+    "expected_entities": [
+      "تطبيق الامتثال المؤسسية 18",
+      "مؤسسة البوصلة الاستشارات 235"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة البوصلة الاستشارات 235"
+    ],
+    "expected_path": [
+      "تطبيق الامتثال المؤسسية 18",
+      "مورّد بواسطة",
+      "مؤسسة البوصلة الاستشارات 235"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0089",
+    "question": "ما المورد الذي يورد مستودع الأصول المؤسسية 49؟",
+    "expected_entities": [
+      "مستودع الأصول المؤسسية 49",
+      "مجموعة الدرع الأمن السيبراني 38"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الدرع الأمن السيبراني 38"
+    ],
+    "expected_path": [
+      "مستودع الأصول المؤسسية 49",
+      "مورّد بواسطة",
+      "مجموعة الدرع الأمن السيبراني 38"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0090",
+    "question": "ما المورد الذي يورد منصة ذكاء الأعمال المؤسسية 80؟",
+    "expected_entities": [
+      "منصة ذكاء الأعمال المؤسسية 80",
+      "شركة الرؤية تكامل الأنظمة 141"
+    ],
+    "expected_answer_keywords": [
+      "شركة الرؤية تكامل الأنظمة 141"
+    ],
+    "expected_path": [
+      "منصة ذكاء الأعمال المؤسسية 80",
+      "مورّد بواسطة",
+      "شركة الرؤية تكامل الأنظمة 141"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0091",
+    "question": "ما المورد الذي يورد نظام التحليلات المؤسسية 111؟",
+    "expected_entities": [
+      "نظام التحليلات المؤسسية 111",
+      "مؤسسة القمم البنية التحتية 244"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة القمم البنية التحتية 244"
+    ],
+    "expected_path": [
+      "نظام التحليلات المؤسسية 111",
+      "مورّد بواسطة",
+      "مؤسسة القمم البنية التحتية 244"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0092",
+    "question": "ما المورد الذي يورد بوابة المالية المؤسسية 142؟",
+    "expected_entities": [
+      "بوابة المالية المؤسسية 142",
+      "مجموعة الصفوة التدريب 47"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الصفوة التدريب 47"
+    ],
+    "expected_path": [
+      "بوابة المالية المؤسسية 142",
+      "مورّد بواسطة",
+      "مجموعة الصفوة التدريب 47"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0093",
+    "question": "ما المورد الذي يورد تطبيق الحوكمة المؤسسية 173؟",
+    "expected_entities": [
+      "تطبيق الحوكمة المؤسسية 173",
+      "شركة الإتقان الأمن السيبراني 150"
+    ],
+    "expected_answer_keywords": [
+      "شركة الإتقان الأمن السيبراني 150"
+    ],
+    "expected_path": [
+      "تطبيق الحوكمة المؤسسية 173",
+      "مورّد بواسطة",
+      "شركة الإتقان الأمن السيبراني 150"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0094",
+    "question": "ما المورد الذي يورد مستودع العقود المؤسسية 4؟",
+    "expected_entities": [
+      "مستودع العقود المؤسسية 4",
+      "مجموعة الآفاق تكامل الأنظمة 53"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الآفاق تكامل الأنظمة 53"
+    ],
+    "expected_path": [
+      "مستودع العقود المؤسسية 4",
+      "مورّد بواسطة",
+      "مجموعة الآفاق تكامل الأنظمة 53"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0095",
+    "question": "ما المورد الذي يورد منصة إدارة الهوية المؤسسية 35؟",
+    "expected_entities": [
+      "منصة إدارة الهوية المؤسسية 35",
+      "شركة البيان البنية التحتية 156"
+    ],
+    "expected_answer_keywords": [
+      "شركة البيان البنية التحتية 156"
+    ],
+    "expected_path": [
+      "منصة إدارة الهوية المؤسسية 35",
+      "مورّد بواسطة",
+      "شركة البيان البنية التحتية 156"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0096",
+    "question": "ما المورد الذي يورد نظام خدمة العملاء المؤسسية 66؟",
+    "expected_entities": [
+      "نظام خدمة العملاء المؤسسية 66",
+      "مؤسسة البوصلة الاستشارات 259"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة البوصلة الاستشارات 259"
+    ],
+    "expected_path": [
+      "نظام خدمة العملاء المؤسسية 66",
+      "مورّد بواسطة",
+      "مؤسسة البوصلة الاستشارات 259"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0097",
+    "question": "ما المورد الذي يورد بوابة الجودة المؤسسية 97؟",
+    "expected_entities": [
+      "بوابة الجودة المؤسسية 97",
+      "مجموعة الدرع الأمن السيبراني 62"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الدرع الأمن السيبراني 62"
+    ],
+    "expected_path": [
+      "بوابة الجودة المؤسسية 97",
+      "مورّد بواسطة",
+      "مجموعة الدرع الأمن السيبراني 62"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0098",
+    "question": "ما المورد الذي يورد تطبيق المخاطر المؤسسية 128؟",
+    "expected_entities": [
+      "تطبيق المخاطر المؤسسية 128",
+      "شركة الرؤية تكامل الأنظمة 165"
+    ],
+    "expected_answer_keywords": [
+      "شركة الرؤية تكامل الأنظمة 165"
+    ],
+    "expected_path": [
+      "تطبيق المخاطر المؤسسية 128",
+      "مورّد بواسطة",
+      "شركة الرؤية تكامل الأنظمة 165"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0099",
+    "question": "ما المورد الذي يورد مستودع البيانات الرئيسية المؤسسية 159؟",
+    "expected_entities": [
+      "مستودع البيانات الرئيسية المؤسسية 159",
+      "مؤسسة القمم البنية التحتية 268"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة القمم البنية التحتية 268"
+    ],
+    "expected_path": [
+      "مستودع البيانات الرئيسية المؤسسية 159",
+      "مورّد بواسطة",
+      "مؤسسة القمم البنية التحتية 268"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0100",
+    "question": "ما المورد الذي يورد منصة المخزون المؤسسية 190؟",
+    "expected_entities": [
+      "منصة المخزون المؤسسية 190",
+      "مجموعة الصفوة التدريب 71"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الصفوة التدريب 71"
+    ],
+    "expected_path": [
+      "منصة المخزون المؤسسية 190",
+      "مورّد بواسطة",
+      "مجموعة الصفوة التدريب 71"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0101",
+    "question": "ما المورد الذي يورد نظام الموارد البشرية المؤسسية 21؟",
+    "expected_entities": [
+      "نظام الموارد البشرية المؤسسية 21",
+      "مؤسسة التميز الخدمات السحابية 274"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة التميز الخدمات السحابية 274"
+    ],
+    "expected_path": [
+      "نظام الموارد البشرية المؤسسية 21",
+      "مورّد بواسطة",
+      "مؤسسة التميز الخدمات السحابية 274"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0102",
+    "question": "ما المورد الذي يورد بوابة التدريب المؤسسية 52؟",
+    "expected_entities": [
+      "بوابة التدريب المؤسسية 52",
+      "مجموعة الآفاق تكامل الأنظمة 77"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الآفاق تكامل الأنظمة 77"
+    ],
+    "expected_path": [
+      "بوابة التدريب المؤسسية 52",
+      "مورّد بواسطة",
+      "مجموعة الآفاق تكامل الأنظمة 77"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0103",
+    "question": "ما المورد الذي يورد تطبيق المشتريات المؤسسية 83؟",
+    "expected_entities": [
+      "تطبيق المشتريات المؤسسية 83",
+      "شركة البيان البنية التحتية 180"
+    ],
+    "expected_answer_keywords": [
+      "شركة البيان البنية التحتية 180"
+    ],
+    "expected_path": [
+      "تطبيق المشتريات المؤسسية 83",
+      "مورّد بواسطة",
+      "شركة البيان البنية التحتية 180"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0104",
+    "question": "ما المورد الذي يورد مستودع الأمن السيبراني المؤسسية 114؟",
+    "expected_entities": [
+      "مستودع الأمن السيبراني المؤسسية 114",
+      "مؤسسة البوصلة الاستشارات 283"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة البوصلة الاستشارات 283"
+    ],
+    "expected_path": [
+      "مستودع الأمن السيبراني المؤسسية 114",
+      "مورّد بواسطة",
+      "مؤسسة البوصلة الاستشارات 283"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0105",
+    "question": "ما المورد الذي يورد منصة الوثائق المؤسسية 145؟",
+    "expected_entities": [
+      "منصة الوثائق المؤسسية 145",
+      "مجموعة الدرع الأمن السيبراني 86"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الدرع الأمن السيبراني 86"
+    ],
+    "expected_path": [
+      "منصة الوثائق المؤسسية 145",
+      "مورّد بواسطة",
+      "مجموعة الدرع الأمن السيبراني 86"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0106",
+    "question": "ما المورد الذي يورد نظام المراسلات المؤسسية 176؟",
+    "expected_entities": [
+      "نظام المراسلات المؤسسية 176",
+      "شركة الرؤية تكامل الأنظمة 189"
+    ],
+    "expected_answer_keywords": [
+      "شركة الرؤية تكامل الأنظمة 189"
+    ],
+    "expected_path": [
+      "نظام المراسلات المؤسسية 176",
+      "مورّد بواسطة",
+      "شركة الرؤية تكامل الأنظمة 189"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0107",
+    "question": "ما المورد الذي يورد بوابة إدارة المشاريع المؤسسية 7؟",
+    "expected_entities": [
+      "بوابة إدارة المشاريع المؤسسية 7",
+      "مجموعة المدار البنية التحتية 92"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة المدار البنية التحتية 92"
+    ],
+    "expected_path": [
+      "بوابة إدارة المشاريع المؤسسية 7",
+      "مورّد بواسطة",
+      "مجموعة المدار البنية التحتية 92"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0108",
+    "question": "ما المورد الذي يورد تطبيق الامتثال المؤسسية 38؟",
+    "expected_entities": [
+      "تطبيق الامتثال المؤسسية 38",
+      "شركة الحلول الاستشارات 195"
+    ],
+    "expected_answer_keywords": [
+      "شركة الحلول الاستشارات 195"
+    ],
+    "expected_path": [
+      "تطبيق الامتثال المؤسسية 38",
+      "مورّد بواسطة",
+      "شركة الحلول الاستشارات 195"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0109",
+    "question": "ما المورد الذي يورد مستودع الأصول المؤسسية 69؟",
+    "expected_entities": [
+      "مستودع الأصول المؤسسية 69",
+      "مؤسسة التميز الخدمات السحابية 298"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة التميز الخدمات السحابية 298"
+    ],
+    "expected_path": [
+      "مستودع الأصول المؤسسية 69",
+      "مورّد بواسطة",
+      "مؤسسة التميز الخدمات السحابية 298"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0110",
+    "question": "ما المورد الذي يورد منصة ذكاء الأعمال المؤسسية 100؟",
+    "expected_entities": [
+      "منصة ذكاء الأعمال المؤسسية 100",
+      "مجموعة الآفاق تكامل الأنظمة 101"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الآفاق تكامل الأنظمة 101"
+    ],
+    "expected_path": [
+      "منصة ذكاء الأعمال المؤسسية 100",
+      "مورّد بواسطة",
+      "مجموعة الآفاق تكامل الأنظمة 101"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0111",
+    "question": "ما المورد الذي يورد نظام التحليلات المؤسسية 131؟",
+    "expected_entities": [
+      "نظام التحليلات المؤسسية 131",
+      "شركة البيان البنية التحتية 204"
+    ],
+    "expected_answer_keywords": [
+      "شركة البيان البنية التحتية 204"
+    ],
+    "expected_path": [
+      "نظام التحليلات المؤسسية 131",
+      "مورّد بواسطة",
+      "شركة البيان البنية التحتية 204"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0112",
+    "question": "ما المورد الذي يورد بوابة المالية المؤسسية 162؟",
+    "expected_entities": [
+      "بوابة المالية المؤسسية 162",
+      "مؤسسة السحابة التدريب 7"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة السحابة التدريب 7"
+    ],
+    "expected_path": [
+      "بوابة المالية المؤسسية 162",
+      "مورّد بواسطة",
+      "مؤسسة السحابة التدريب 7"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0113",
+    "question": "ما المورد الذي يورد تطبيق الحوكمة المؤسسية 193؟",
+    "expected_entities": [
+      "تطبيق الحوكمة المؤسسية 193",
+      "مجموعة الدرع الأمن السيبراني 110"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الدرع الأمن السيبراني 110"
+    ],
+    "expected_path": [
+      "تطبيق الحوكمة المؤسسية 193",
+      "مورّد بواسطة",
+      "مجموعة الدرع الأمن السيبراني 110"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0114",
+    "question": "ما المورد الذي يورد مستودع العقود المؤسسية 24؟",
+    "expected_entities": [
+      "مستودع العقود المؤسسية 24",
+      "مؤسسة المستقبل تكامل الأنظمة 13"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة المستقبل تكامل الأنظمة 13"
+    ],
+    "expected_path": [
+      "مستودع العقود المؤسسية 24",
+      "مورّد بواسطة",
+      "مؤسسة المستقبل تكامل الأنظمة 13"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0115",
+    "question": "ما المورد الذي يورد منصة إدارة الهوية المؤسسية 55؟",
+    "expected_entities": [
+      "منصة إدارة الهوية المؤسسية 55",
+      "مجموعة المدار البنية التحتية 116"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة المدار البنية التحتية 116"
+    ],
+    "expected_path": [
+      "منصة إدارة الهوية المؤسسية 55",
+      "مورّد بواسطة",
+      "مجموعة المدار البنية التحتية 116"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0116",
+    "question": "ما المورد الذي يورد نظام خدمة العملاء المؤسسية 86؟",
+    "expected_entities": [
+      "نظام خدمة العملاء المؤسسية 86",
+      "شركة الحلول الاستشارات 219"
+    ],
+    "expected_answer_keywords": [
+      "شركة الحلول الاستشارات 219"
+    ],
+    "expected_path": [
+      "نظام خدمة العملاء المؤسسية 86",
+      "مورّد بواسطة",
+      "شركة الحلول الاستشارات 219"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0117",
+    "question": "ما المورد الذي يورد بوابة الجودة المؤسسية 117؟",
+    "expected_entities": [
+      "بوابة الجودة المؤسسية 117",
+      "مؤسسة الربط الأمن السيبراني 22"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة الربط الأمن السيبراني 22"
+    ],
+    "expected_path": [
+      "بوابة الجودة المؤسسية 117",
+      "مورّد بواسطة",
+      "مؤسسة الربط الأمن السيبراني 22"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0118",
+    "question": "ما المورد الذي يورد تطبيق المخاطر المؤسسية 148؟",
+    "expected_entities": [
+      "تطبيق المخاطر المؤسسية 148",
+      "مجموعة الآفاق تكامل الأنظمة 125"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الآفاق تكامل الأنظمة 125"
+    ],
+    "expected_path": [
+      "تطبيق المخاطر المؤسسية 148",
+      "مورّد بواسطة",
+      "مجموعة الآفاق تكامل الأنظمة 125"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0119",
+    "question": "ما المورد الذي يورد مستودع البيانات الرئيسية المؤسسية 179؟",
+    "expected_entities": [
+      "مستودع البيانات الرئيسية المؤسسية 179",
+      "شركة البيان البنية التحتية 228"
+    ],
+    "expected_answer_keywords": [
+      "شركة البيان البنية التحتية 228"
+    ],
+    "expected_path": [
+      "مستودع البيانات الرئيسية المؤسسية 179",
+      "مورّد بواسطة",
+      "شركة البيان البنية التحتية 228"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0120",
+    "question": "ما المورد الذي يورد منصة المخزون المؤسسية 10؟",
+    "expected_entities": [
+      "منصة المخزون المؤسسية 10",
+      "مجموعة الابتكار الاستشارات 131"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الابتكار الاستشارات 131"
+    ],
+    "expected_path": [
+      "منصة المخزون المؤسسية 10",
+      "مورّد بواسطة",
+      "مجموعة الابتكار الاستشارات 131"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0121",
+    "question": "ما المورد الذي يورد نظام الموارد البشرية المؤسسية 41؟",
+    "expected_entities": [
+      "نظام الموارد البشرية المؤسسية 41",
+      "شركة الواحة الخدمات السحابية 234"
+    ],
+    "expected_answer_keywords": [
+      "شركة الواحة الخدمات السحابية 234"
+    ],
+    "expected_path": [
+      "نظام الموارد البشرية المؤسسية 41",
+      "مورّد بواسطة",
+      "شركة الواحة الخدمات السحابية 234"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0122",
+    "question": "ما المورد الذي يورد بوابة التدريب المؤسسية 72؟",
+    "expected_entities": [
+      "بوابة التدريب المؤسسية 72",
+      "مؤسسة المستقبل تكامل الأنظمة 37"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة المستقبل تكامل الأنظمة 37"
+    ],
+    "expected_path": [
+      "بوابة التدريب المؤسسية 72",
+      "مورّد بواسطة",
+      "مؤسسة المستقبل تكامل الأنظمة 37"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0123",
+    "question": "ما المورد الذي يورد تطبيق المشتريات المؤسسية 103؟",
+    "expected_entities": [
+      "تطبيق المشتريات المؤسسية 103",
+      "مجموعة المدار البنية التحتية 140"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة المدار البنية التحتية 140"
+    ],
+    "expected_path": [
+      "تطبيق المشتريات المؤسسية 103",
+      "مورّد بواسطة",
+      "مجموعة المدار البنية التحتية 140"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0124",
+    "question": "ما المورد الذي يورد مستودع الأمن السيبراني المؤسسية 134؟",
+    "expected_entities": [
+      "مستودع الأمن السيبراني المؤسسية 134",
+      "شركة الحلول الاستشارات 243"
+    ],
+    "expected_answer_keywords": [
+      "شركة الحلول الاستشارات 243"
+    ],
+    "expected_path": [
+      "مستودع الأمن السيبراني المؤسسية 134",
+      "مورّد بواسطة",
+      "شركة الحلول الاستشارات 243"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0125",
+    "question": "ما المورد الذي يورد منصة الوثائق المؤسسية 165؟",
+    "expected_entities": [
+      "منصة الوثائق المؤسسية 165",
+      "مؤسسة الربط الأمن السيبراني 46"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة الربط الأمن السيبراني 46"
+    ],
+    "expected_path": [
+      "منصة الوثائق المؤسسية 165",
+      "مورّد بواسطة",
+      "مؤسسة الربط الأمن السيبراني 46"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0126",
+    "question": "ما المورد الذي يورد نظام المراسلات المؤسسية 196؟",
+    "expected_entities": [
+      "نظام المراسلات المؤسسية 196",
+      "مجموعة الآفاق تكامل الأنظمة 149"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الآفاق تكامل الأنظمة 149"
+    ],
+    "expected_path": [
+      "نظام المراسلات المؤسسية 196",
+      "مورّد بواسطة",
+      "مجموعة الآفاق تكامل الأنظمة 149"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0127",
+    "question": "ما المورد الذي يورد بوابة إدارة المشاريع المؤسسية 27؟",
+    "expected_entities": [
+      "بوابة إدارة المشاريع المؤسسية 27",
+      "مؤسسة القمم البنية التحتية 52"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة القمم البنية التحتية 52"
+    ],
+    "expected_path": [
+      "بوابة إدارة المشاريع المؤسسية 27",
+      "مورّد بواسطة",
+      "مؤسسة القمم البنية التحتية 52"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0128",
+    "question": "ما المورد الذي يورد تطبيق الامتثال المؤسسية 58؟",
+    "expected_entities": [
+      "تطبيق الامتثال المؤسسية 58",
+      "مجموعة الابتكار الاستشارات 155"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الابتكار الاستشارات 155"
+    ],
+    "expected_path": [
+      "تطبيق الامتثال المؤسسية 58",
+      "مورّد بواسطة",
+      "مجموعة الابتكار الاستشارات 155"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0129",
+    "question": "ما المورد الذي يورد مستودع الأصول المؤسسية 89؟",
+    "expected_entities": [
+      "مستودع الأصول المؤسسية 89",
+      "شركة الواحة الخدمات السحابية 258"
+    ],
+    "expected_answer_keywords": [
+      "شركة الواحة الخدمات السحابية 258"
+    ],
+    "expected_path": [
+      "مستودع الأصول المؤسسية 89",
+      "مورّد بواسطة",
+      "شركة الواحة الخدمات السحابية 258"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0130",
+    "question": "ما المورد الذي يورد منصة ذكاء الأعمال المؤسسية 120؟",
+    "expected_entities": [
+      "منصة ذكاء الأعمال المؤسسية 120",
+      "مؤسسة المستقبل تكامل الأنظمة 61"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة المستقبل تكامل الأنظمة 61"
+    ],
+    "expected_path": [
+      "منصة ذكاء الأعمال المؤسسية 120",
+      "مورّد بواسطة",
+      "مؤسسة المستقبل تكامل الأنظمة 61"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0131",
+    "question": "ما المورد الذي يورد نظام التحليلات المؤسسية 151؟",
+    "expected_entities": [
+      "نظام التحليلات المؤسسية 151",
+      "مجموعة المدار البنية التحتية 164"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة المدار البنية التحتية 164"
+    ],
+    "expected_path": [
+      "نظام التحليلات المؤسسية 151",
+      "مورّد بواسطة",
+      "مجموعة المدار البنية التحتية 164"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0132",
+    "question": "ما المورد الذي يورد بوابة المالية المؤسسية 182؟",
+    "expected_entities": [
+      "بوابة المالية المؤسسية 182",
+      "شركة الحلول الاستشارات 267"
+    ],
+    "expected_answer_keywords": [
+      "شركة الحلول الاستشارات 267"
+    ],
+    "expected_path": [
+      "بوابة المالية المؤسسية 182",
+      "مورّد بواسطة",
+      "شركة الحلول الاستشارات 267"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0133",
+    "question": "ما المورد الذي يورد تطبيق الحوكمة المؤسسية 13؟",
+    "expected_entities": [
+      "تطبيق الحوكمة المؤسسية 13",
+      "مجموعة الريادة الخدمات السحابية 170"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الريادة الخدمات السحابية 170"
+    ],
+    "expected_path": [
+      "تطبيق الحوكمة المؤسسية 13",
+      "مورّد بواسطة",
+      "مجموعة الريادة الخدمات السحابية 170"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0134",
+    "question": "ما المورد الذي يورد مستودع العقود المؤسسية 44؟",
+    "expected_entities": [
+      "مستودع العقود المؤسسية 44",
+      "شركة الركائز تحليل البيانات 273"
+    ],
+    "expected_answer_keywords": [
+      "شركة الركائز تحليل البيانات 273"
+    ],
+    "expected_path": [
+      "مستودع العقود المؤسسية 44",
+      "مورّد بواسطة",
+      "شركة الركائز تحليل البيانات 273"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0135",
+    "question": "ما المورد الذي يورد منصة إدارة الهوية المؤسسية 75؟",
+    "expected_entities": [
+      "منصة إدارة الهوية المؤسسية 75",
+      "مؤسسة القمم البنية التحتية 76"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة القمم البنية التحتية 76"
+    ],
+    "expected_path": [
+      "منصة إدارة الهوية المؤسسية 75",
+      "مورّد بواسطة",
+      "مؤسسة القمم البنية التحتية 76"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0136",
+    "question": "ما المورد الذي يورد نظام خدمة العملاء المؤسسية 106؟",
+    "expected_entities": [
+      "نظام خدمة العملاء المؤسسية 106",
+      "مجموعة الابتكار الاستشارات 179"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الابتكار الاستشارات 179"
+    ],
+    "expected_path": [
+      "نظام خدمة العملاء المؤسسية 106",
+      "مورّد بواسطة",
+      "مجموعة الابتكار الاستشارات 179"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0137",
+    "question": "ما المورد الذي يورد بوابة الجودة المؤسسية 137؟",
+    "expected_entities": [
+      "بوابة الجودة المؤسسية 137",
+      "شركة الواحة الخدمات السحابية 282"
+    ],
+    "expected_answer_keywords": [
+      "شركة الواحة الخدمات السحابية 282"
+    ],
+    "expected_path": [
+      "بوابة الجودة المؤسسية 137",
+      "مورّد بواسطة",
+      "شركة الواحة الخدمات السحابية 282"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0138",
+    "question": "ما المورد الذي يورد تطبيق المخاطر المؤسسية 168؟",
+    "expected_entities": [
+      "تطبيق المخاطر المؤسسية 168",
+      "مؤسسة المستقبل تكامل الأنظمة 85"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة المستقبل تكامل الأنظمة 85"
+    ],
+    "expected_path": [
+      "تطبيق المخاطر المؤسسية 168",
+      "مورّد بواسطة",
+      "مؤسسة المستقبل تكامل الأنظمة 85"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0139",
+    "question": "ما المورد الذي يورد مستودع البيانات الرئيسية المؤسسية 199؟",
+    "expected_entities": [
+      "مستودع البيانات الرئيسية المؤسسية 199",
+      "مجموعة المدار البنية التحتية 188"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة المدار البنية التحتية 188"
+    ],
+    "expected_path": [
+      "مستودع البيانات الرئيسية المؤسسية 199",
+      "مورّد بواسطة",
+      "مجموعة المدار البنية التحتية 188"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0140",
+    "question": "ما المورد الذي يورد منصة المخزون المؤسسية 30؟",
+    "expected_entities": [
+      "منصة المخزون المؤسسية 30",
+      "مؤسسة البوصلة الاستشارات 91"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة البوصلة الاستشارات 91"
+    ],
+    "expected_path": [
+      "منصة المخزون المؤسسية 30",
+      "مورّد بواسطة",
+      "مؤسسة البوصلة الاستشارات 91"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0141",
+    "question": "ما المورد الذي يورد نظام الموارد البشرية المؤسسية 61؟",
+    "expected_entities": [
+      "نظام الموارد البشرية المؤسسية 61",
+      "مجموعة الريادة الخدمات السحابية 194"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الريادة الخدمات السحابية 194"
+    ],
+    "expected_path": [
+      "نظام الموارد البشرية المؤسسية 61",
+      "مورّد بواسطة",
+      "مجموعة الريادة الخدمات السحابية 194"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0142",
+    "question": "ما المورد الذي يورد بوابة التدريب المؤسسية 92؟",
+    "expected_entities": [
+      "بوابة التدريب المؤسسية 92",
+      "شركة الركائز تحليل البيانات 297"
+    ],
+    "expected_answer_keywords": [
+      "شركة الركائز تحليل البيانات 297"
+    ],
+    "expected_path": [
+      "بوابة التدريب المؤسسية 92",
+      "مورّد بواسطة",
+      "شركة الركائز تحليل البيانات 297"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0143",
+    "question": "ما المورد الذي يورد تطبيق المشتريات المؤسسية 123؟",
+    "expected_entities": [
+      "تطبيق المشتريات المؤسسية 123",
+      "مؤسسة القمم البنية التحتية 100"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة القمم البنية التحتية 100"
+    ],
+    "expected_path": [
+      "تطبيق المشتريات المؤسسية 123",
+      "مورّد بواسطة",
+      "مؤسسة القمم البنية التحتية 100"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0144",
+    "question": "ما المورد الذي يورد مستودع الأمن السيبراني المؤسسية 154؟",
+    "expected_entities": [
+      "مستودع الأمن السيبراني المؤسسية 154",
+      "مجموعة الابتكار الاستشارات 203"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الابتكار الاستشارات 203"
+    ],
+    "expected_path": [
+      "مستودع الأمن السيبراني المؤسسية 154",
+      "مورّد بواسطة",
+      "مجموعة الابتكار الاستشارات 203"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0145",
+    "question": "ما المورد الذي يورد منصة الوثائق المؤسسية 185؟",
+    "expected_entities": [
+      "منصة الوثائق المؤسسية 185",
+      "شركة الإتقان الأمن السيبراني 6"
+    ],
+    "expected_answer_keywords": [
+      "شركة الإتقان الأمن السيبراني 6"
+    ],
+    "expected_path": [
+      "منصة الوثائق المؤسسية 185",
+      "مورّد بواسطة",
+      "شركة الإتقان الأمن السيبراني 6"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0146",
+    "question": "ما المورد الذي يورد نظام المراسلات المؤسسية 16؟",
+    "expected_entities": [
+      "نظام المراسلات المؤسسية 16",
+      "مجموعة المسار تحليل البيانات 209"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة المسار تحليل البيانات 209"
+    ],
+    "expected_path": [
+      "نظام المراسلات المؤسسية 16",
+      "مورّد بواسطة",
+      "مجموعة المسار تحليل البيانات 209"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0147",
+    "question": "ما المورد الذي يورد بوابة إدارة المشاريع المؤسسية 47؟",
+    "expected_entities": [
+      "بوابة إدارة المشاريع المؤسسية 47",
+      "شركة البيان البنية التحتية 12"
+    ],
+    "expected_answer_keywords": [
+      "شركة البيان البنية التحتية 12"
+    ],
+    "expected_path": [
+      "بوابة إدارة المشاريع المؤسسية 47",
+      "مورّد بواسطة",
+      "شركة البيان البنية التحتية 12"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0148",
+    "question": "ما المورد الذي يورد تطبيق الامتثال المؤسسية 78؟",
+    "expected_entities": [
+      "تطبيق الامتثال المؤسسية 78",
+      "مؤسسة البوصلة الاستشارات 115"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة البوصلة الاستشارات 115"
+    ],
+    "expected_path": [
+      "تطبيق الامتثال المؤسسية 78",
+      "مورّد بواسطة",
+      "مؤسسة البوصلة الاستشارات 115"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0149",
+    "question": "ما المورد الذي يورد مستودع الأصول المؤسسية 109؟",
+    "expected_entities": [
+      "مستودع الأصول المؤسسية 109",
+      "مجموعة الريادة الخدمات السحابية 218"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الريادة الخدمات السحابية 218"
+    ],
+    "expected_path": [
+      "مستودع الأصول المؤسسية 109",
+      "مورّد بواسطة",
+      "مجموعة الريادة الخدمات السحابية 218"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0150",
+    "question": "ما المورد الذي يورد منصة ذكاء الأعمال المؤسسية 140؟",
+    "expected_entities": [
+      "منصة ذكاء الأعمال المؤسسية 140",
+      "شركة الرؤية تكامل الأنظمة 21"
+    ],
+    "expected_answer_keywords": [
+      "شركة الرؤية تكامل الأنظمة 21"
+    ],
+    "expected_path": [
+      "منصة ذكاء الأعمال المؤسسية 140",
+      "مورّد بواسطة",
+      "شركة الرؤية تكامل الأنظمة 21"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0151",
+    "question": "ما المورد الذي يورد نظام التحليلات المؤسسية 171؟",
+    "expected_entities": [
+      "نظام التحليلات المؤسسية 171",
+      "مؤسسة القمم البنية التحتية 124"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة القمم البنية التحتية 124"
+    ],
+    "expected_path": [
+      "نظام التحليلات المؤسسية 171",
+      "مورّد بواسطة",
+      "مؤسسة القمم البنية التحتية 124"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0152",
+    "question": "ما المورد الذي يورد بوابة المالية المؤسسية 2؟",
+    "expected_entities": [
+      "بوابة المالية المؤسسية 2",
+      "شركة الحلول الاستشارات 27"
+    ],
+    "expected_answer_keywords": [
+      "شركة الحلول الاستشارات 27"
+    ],
+    "expected_path": [
+      "بوابة المالية المؤسسية 2",
+      "مورّد بواسطة",
+      "شركة الحلول الاستشارات 27"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0153",
+    "question": "ما المورد الذي يورد تطبيق الحوكمة المؤسسية 33؟",
+    "expected_entities": [
+      "تطبيق الحوكمة المؤسسية 33",
+      "مؤسسة التميز الخدمات السحابية 130"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة التميز الخدمات السحابية 130"
+    ],
+    "expected_path": [
+      "تطبيق الحوكمة المؤسسية 33",
+      "مورّد بواسطة",
+      "مؤسسة التميز الخدمات السحابية 130"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0154",
+    "question": "ما المورد الذي يورد مستودع العقود المؤسسية 64؟",
+    "expected_entities": [
+      "مستودع العقود المؤسسية 64",
+      "مجموعة المسار تحليل البيانات 233"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة المسار تحليل البيانات 233"
+    ],
+    "expected_path": [
+      "مستودع العقود المؤسسية 64",
+      "مورّد بواسطة",
+      "مجموعة المسار تحليل البيانات 233"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0155",
+    "question": "ما المورد الذي يورد منصة إدارة الهوية المؤسسية 95؟",
+    "expected_entities": [
+      "منصة إدارة الهوية المؤسسية 95",
+      "شركة البيان البنية التحتية 36"
+    ],
+    "expected_answer_keywords": [
+      "شركة البيان البنية التحتية 36"
+    ],
+    "expected_path": [
+      "منصة إدارة الهوية المؤسسية 95",
+      "مورّد بواسطة",
+      "شركة البيان البنية التحتية 36"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0156",
+    "question": "ما المورد الذي يورد نظام خدمة العملاء المؤسسية 126؟",
+    "expected_entities": [
+      "نظام خدمة العملاء المؤسسية 126",
+      "مؤسسة البوصلة الاستشارات 139"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة البوصلة الاستشارات 139"
+    ],
+    "expected_path": [
+      "نظام خدمة العملاء المؤسسية 126",
+      "مورّد بواسطة",
+      "مؤسسة البوصلة الاستشارات 139"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0157",
+    "question": "ما المورد الذي يورد بوابة الجودة المؤسسية 157؟",
+    "expected_entities": [
+      "بوابة الجودة المؤسسية 157",
+      "مجموعة الريادة الخدمات السحابية 242"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الريادة الخدمات السحابية 242"
+    ],
+    "expected_path": [
+      "بوابة الجودة المؤسسية 157",
+      "مورّد بواسطة",
+      "مجموعة الريادة الخدمات السحابية 242"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0158",
+    "question": "ما المورد الذي يورد تطبيق المخاطر المؤسسية 188؟",
+    "expected_entities": [
+      "تطبيق المخاطر المؤسسية 188",
+      "شركة الرؤية تكامل الأنظمة 45"
+    ],
+    "expected_answer_keywords": [
+      "شركة الرؤية تكامل الأنظمة 45"
+    ],
+    "expected_path": [
+      "تطبيق المخاطر المؤسسية 188",
+      "مورّد بواسطة",
+      "شركة الرؤية تكامل الأنظمة 45"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0159",
+    "question": "ما المورد الذي يورد مستودع البيانات الرئيسية المؤسسية 19؟",
+    "expected_entities": [
+      "مستودع البيانات الرئيسية المؤسسية 19",
+      "مجموعة التكامل الحلول الرقمية 248"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة التكامل الحلول الرقمية 248"
+    ],
+    "expected_path": [
+      "مستودع البيانات الرئيسية المؤسسية 19",
+      "مورّد بواسطة",
+      "مجموعة التكامل الحلول الرقمية 248"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0160",
+    "question": "ما المورد الذي يورد منصة المخزون المؤسسية 50؟",
+    "expected_entities": [
+      "منصة المخزون المؤسسية 50",
+      "شركة الحلول الاستشارات 51"
+    ],
+    "expected_answer_keywords": [
+      "شركة الحلول الاستشارات 51"
+    ],
+    "expected_path": [
+      "منصة المخزون المؤسسية 50",
+      "مورّد بواسطة",
+      "شركة الحلول الاستشارات 51"
+    ],
+    "category": "relationship",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0161",
+    "question": "من هو مورد النظام المستخدم في مشروع تطوير الخدمات الرقمية 1؟",
+    "expected_entities": [
+      "مشروع تطوير الخدمات الرقمية 1",
+      "تطبيق الامتثال المؤسسية 18",
+      "مؤسسة البوصلة الاستشارات 235"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة البوصلة الاستشارات 235"
+    ],
+    "expected_path": [
+      "مشروع تطوير الخدمات الرقمية 1",
+      "يستخدم النظام",
+      "تطبيق الامتثال المؤسسية 18",
+      "مورّد بواسطة",
+      "مؤسسة البوصلة الاستشارات 235"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0162",
+    "question": "من هو مورد النظام المستخدم في مشروع الامتثال المؤسسي 38؟",
+    "expected_entities": [
+      "مشروع الامتثال المؤسسي 38",
+      "بوابة إدارة المشاريع المؤسسية 47",
+      "شركة البيان البنية التحتية 12"
+    ],
+    "expected_answer_keywords": [
+      "شركة البيان البنية التحتية 12"
+    ],
+    "expected_path": [
+      "مشروع الامتثال المؤسسي 38",
+      "يستخدم النظام",
+      "بوابة إدارة المشاريع المؤسسية 47",
+      "مورّد بواسطة",
+      "شركة البيان البنية التحتية 12"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0163",
+    "question": "من هو مورد النظام المستخدم في مشروع مركز الاتصال 75؟",
+    "expected_entities": [
+      "مشروع مركز الاتصال 75",
+      "نظام المراسلات المؤسسية 76",
+      "مجموعة المسار تحليل البيانات 89"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة المسار تحليل البيانات 89"
+    ],
+    "expected_path": [
+      "مشروع مركز الاتصال 75",
+      "يستخدم النظام",
+      "نظام المراسلات المؤسسية 76",
+      "مورّد بواسطة",
+      "مجموعة المسار تحليل البيانات 89"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0164",
+    "question": "من هو مورد النظام المستخدم في مشروع التحول السحابي 12؟",
+    "expected_entities": [
+      "مشروع التحول السحابي 12",
+      "منصة الوثائق المؤسسية 5",
+      "شركة الواحة الخدمات السحابية 66"
+    ],
+    "expected_answer_keywords": [
+      "شركة الواحة الخدمات السحابية 66"
+    ],
+    "expected_path": [
+      "مشروع التحول السحابي 12",
+      "يستخدم النظام",
+      "منصة الوثائق المؤسسية 5",
+      "مورّد بواسطة",
+      "شركة الواحة الخدمات السحابية 66"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0165",
+    "question": "من هو مورد النظام المستخدم في مشروع تحسين جودة البيانات 49؟",
+    "expected_entities": [
+      "مشروع تحسين جودة البيانات 49",
+      "مستودع الأمن السيبراني المؤسسية 34",
+      "مجموعة الصفوة التدريب 143"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الصفوة التدريب 143"
+    ],
+    "expected_path": [
+      "مشروع تحسين جودة البيانات 49",
+      "يستخدم النظام",
+      "مستودع الأمن السيبراني المؤسسية 34",
+      "مورّد بواسطة",
+      "مجموعة الصفوة التدريب 143"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0166",
+    "question": "من هو مورد النظام المستخدم في مشروع الحوكمة المؤسسية 86؟",
+    "expected_entities": [
+      "مشروع الحوكمة المؤسسية 86",
+      "تطبيق المشتريات المؤسسية 63",
+      "مؤسسة القمم البنية التحتية 220"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة القمم البنية التحتية 220"
+    ],
+    "expected_path": [
+      "مشروع الحوكمة المؤسسية 86",
+      "يستخدم النظام",
+      "تطبيق المشتريات المؤسسية 63",
+      "مورّد بواسطة",
+      "مؤسسة القمم البنية التحتية 220"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0167",
+    "question": "من هو مورد النظام المستخدم في مشروع توحيد البيانات 23؟",
+    "expected_entities": [
+      "مشروع توحيد البيانات 23",
+      "بوابة التدريب المؤسسية 192",
+      "مؤسسة النخبة تحليل البيانات 97"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة النخبة تحليل البيانات 97"
+    ],
+    "expected_path": [
+      "مشروع توحيد البيانات 23",
+      "يستخدم النظام",
+      "بوابة التدريب المؤسسية 192",
+      "مورّد بواسطة",
+      "مؤسسة النخبة تحليل البيانات 97"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0168",
+    "question": "من هو مورد النظام المستخدم في مشروع الابتكار المفتوح 60؟",
+    "expected_entities": [
+      "مشروع الابتكار المفتوح 60",
+      "نظام الموارد البشرية المؤسسية 21",
+      "مؤسسة التميز الخدمات السحابية 274"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة التميز الخدمات السحابية 274"
+    ],
+    "expected_path": [
+      "مشروع الابتكار المفتوح 60",
+      "يستخدم النظام",
+      "نظام الموارد البشرية المؤسسية 21",
+      "مورّد بواسطة",
+      "مؤسسة التميز الخدمات السحابية 274"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0169",
+    "question": "من هو مورد النظام المستخدم في مشروع المشتريات الرقمية 97؟",
+    "expected_entities": [
+      "مشروع المشتريات الرقمية 97",
+      "منصة المخزون المؤسسية 50",
+      "شركة الحلول الاستشارات 51"
+    ],
+    "expected_answer_keywords": [
+      "شركة الحلول الاستشارات 51"
+    ],
+    "expected_path": [
+      "مشروع المشتريات الرقمية 97",
+      "يستخدم النظام",
+      "منصة المخزون المؤسسية 50",
+      "مورّد بواسطة",
+      "شركة الحلول الاستشارات 51"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0170",
+    "question": "من هو مورد النظام المستخدم في مشروع تكامل الأنظمة 34؟",
+    "expected_entities": [
+      "مشروع تكامل الأنظمة 34",
+      "مستودع البيانات الرئيسية المؤسسية 179",
+      "شركة البيان البنية التحتية 228"
+    ],
+    "expected_answer_keywords": [
+      "شركة البيان البنية التحتية 228"
+    ],
+    "expected_path": [
+      "مشروع تكامل الأنظمة 34",
+      "يستخدم النظام",
+      "مستودع البيانات الرئيسية المؤسسية 179",
+      "مورّد بواسطة",
+      "شركة البيان البنية التحتية 228"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0171",
+    "question": "من هو مورد النظام المستخدم في مشروع تحليل الأداء 71؟",
+    "expected_entities": [
+      "مشروع تحليل الأداء 71",
+      "تطبيق المخاطر المؤسسية 8",
+      "شركة الركائز تحليل البيانات 105"
+    ],
+    "expected_answer_keywords": [
+      "شركة الركائز تحليل البيانات 105"
+    ],
+    "expected_path": [
+      "مشروع تحليل الأداء 71",
+      "يستخدم النظام",
+      "تطبيق المخاطر المؤسسية 8",
+      "مورّد بواسطة",
+      "شركة الركائز تحليل البيانات 105"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0172",
+    "question": "من هو مورد النظام المستخدم في مشروع إدارة المعرفة 8؟",
+    "expected_entities": [
+      "مشروع إدارة المعرفة 8",
+      "بوابة الجودة المؤسسية 137",
+      "شركة الواحة الخدمات السحابية 282"
+    ],
+    "expected_answer_keywords": [
+      "شركة الواحة الخدمات السحابية 282"
+    ],
+    "expected_path": [
+      "مشروع إدارة المعرفة 8",
+      "يستخدم النظام",
+      "بوابة الجودة المؤسسية 137",
+      "مورّد بواسطة",
+      "شركة الواحة الخدمات السحابية 282"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0173",
+    "question": "من هو مورد النظام المستخدم في مشروع الأتمتة الذكية 45؟",
+    "expected_entities": [
+      "مشروع الأتمتة الذكية 45",
+      "نظام خدمة العملاء المؤسسية 166",
+      "مجموعة الابتكار الاستشارات 59"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الابتكار الاستشارات 59"
+    ],
+    "expected_path": [
+      "مشروع الأتمتة الذكية 45",
+      "يستخدم النظام",
+      "نظام خدمة العملاء المؤسسية 166",
+      "مورّد بواسطة",
+      "مجموعة الابتكار الاستشارات 59"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0174",
+    "question": "من هو مورد النظام المستخدم في مشروع رفع كفاءة العمليات 82؟",
+    "expected_entities": [
+      "مشروع رفع كفاءة العمليات 82",
+      "منصة إدارة الهوية المؤسسية 195",
+      "مؤسسة المنارة الحلول الرقمية 136"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة المنارة الحلول الرقمية 136"
+    ],
+    "expected_path": [
+      "مشروع رفع كفاءة العمليات 82",
+      "يستخدم النظام",
+      "منصة إدارة الهوية المؤسسية 195",
+      "مورّد بواسطة",
+      "مؤسسة المنارة الحلول الرقمية 136"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0175",
+    "question": "من هو مورد النظام المستخدم في مشروع الأرشفة الإلكترونية 19؟",
+    "expected_entities": [
+      "مشروع الأرشفة الإلكترونية 19",
+      "مستودع العقود المؤسسية 124",
+      "مجموعة المسار تحليل البيانات 113"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة المسار تحليل البيانات 113"
+    ],
+    "expected_path": [
+      "مشروع الأرشفة الإلكترونية 19",
+      "يستخدم النظام",
+      "مستودع العقود المؤسسية 124",
+      "مورّد بواسطة",
+      "مجموعة المسار تحليل البيانات 113"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0176",
+    "question": "من هو مورد النظام المستخدم في مشروع إدارة المواهب 56؟",
+    "expected_entities": [
+      "مشروع إدارة المواهب 56",
+      "تطبيق الحوكمة المؤسسية 153",
+      "مؤسسة الربط الأمن السيبراني 190"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة الربط الأمن السيبراني 190"
+    ],
+    "expected_path": [
+      "مشروع إدارة المواهب 56",
+      "يستخدم النظام",
+      "تطبيق الحوكمة المؤسسية 153",
+      "مورّد بواسطة",
+      "مؤسسة الربط الأمن السيبراني 190"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0177",
+    "question": "من هو مورد النظام المستخدم في مشروع إدارة الأصول 93؟",
+    "expected_entities": [
+      "مشروع إدارة الأصول 93",
+      "بوابة المالية المؤسسية 182",
+      "شركة الحلول الاستشارات 267"
+    ],
+    "expected_answer_keywords": [
+      "شركة الحلول الاستشارات 267"
+    ],
+    "expected_path": [
+      "مشروع إدارة الأصول 93",
+      "يستخدم النظام",
+      "بوابة المالية المؤسسية 182",
+      "مورّد بواسطة",
+      "شركة الحلول الاستشارات 267"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0178",
+    "question": "من هو مورد النظام المستخدم في مشروع استمرارية الأعمال 30؟",
+    "expected_entities": [
+      "مشروع استمرارية الأعمال 30",
+      "نظام التحليلات المؤسسية 111",
+      "مؤسسة القمم البنية التحتية 244"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة القمم البنية التحتية 244"
+    ],
+    "expected_path": [
+      "مشروع استمرارية الأعمال 30",
+      "يستخدم النظام",
+      "نظام التحليلات المؤسسية 111",
+      "مورّد بواسطة",
+      "مؤسسة القمم البنية التحتية 244"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0179",
+    "question": "من هو مورد النظام المستخدم في مشروع تعزيز الأمن السيبراني 67؟",
+    "expected_entities": [
+      "مشروع تعزيز الأمن السيبراني 67",
+      "منصة ذكاء الأعمال المؤسسية 140",
+      "شركة الرؤية تكامل الأنظمة 21"
+    ],
+    "expected_answer_keywords": [
+      "شركة الرؤية تكامل الأنظمة 21"
+    ],
+    "expected_path": [
+      "مشروع تعزيز الأمن السيبراني 67",
+      "يستخدم النظام",
+      "منصة ذكاء الأعمال المؤسسية 140",
+      "مورّد بواسطة",
+      "شركة الرؤية تكامل الأنظمة 21"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0180",
+    "question": "من هو مورد النظام المستخدم في مشروع تجربة المستفيد 4؟",
+    "expected_entities": [
+      "مشروع تجربة المستفيد 4",
+      "مستودع الأصول المؤسسية 69",
+      "مؤسسة التميز الخدمات السحابية 298"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة التميز الخدمات السحابية 298"
+    ],
+    "expected_path": [
+      "مشروع تجربة المستفيد 4",
+      "يستخدم النظام",
+      "مستودع الأصول المؤسسية 69",
+      "مورّد بواسطة",
+      "مؤسسة التميز الخدمات السحابية 298"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0181",
+    "question": "من هو مورد النظام المستخدم في مشروع تطوير الخدمات الرقمية 41؟",
+    "expected_entities": [
+      "مشروع تطوير الخدمات الرقمية 41",
+      "تطبيق الامتثال المؤسسية 98",
+      "شركة الحلول الاستشارات 75"
+    ],
+    "expected_answer_keywords": [
+      "شركة الحلول الاستشارات 75"
+    ],
+    "expected_path": [
+      "مشروع تطوير الخدمات الرقمية 41",
+      "يستخدم النظام",
+      "تطبيق الامتثال المؤسسية 98",
+      "مورّد بواسطة",
+      "شركة الحلول الاستشارات 75"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0182",
+    "question": "من هو مورد النظام المستخدم في مشروع الامتثال المؤسسي 78؟",
+    "expected_entities": [
+      "مشروع الامتثال المؤسسي 78",
+      "بوابة إدارة المشاريع المؤسسية 127",
+      "مجموعة التكامل الحلول الرقمية 152"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة التكامل الحلول الرقمية 152"
+    ],
+    "expected_path": [
+      "مشروع الامتثال المؤسسي 78",
+      "يستخدم النظام",
+      "بوابة إدارة المشاريع المؤسسية 127",
+      "مورّد بواسطة",
+      "مجموعة التكامل الحلول الرقمية 152"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0183",
+    "question": "من هو مورد النظام المستخدم في مشروع مركز الاتصال 15؟",
+    "expected_entities": [
+      "مشروع مركز الاتصال 15",
+      "نظام المراسلات المؤسسية 56",
+      "شركة الركائز تحليل البيانات 129"
+    ],
+    "expected_answer_keywords": [
+      "شركة الركائز تحليل البيانات 129"
+    ],
+    "expected_path": [
+      "مشروع مركز الاتصال 15",
+      "يستخدم النظام",
+      "نظام المراسلات المؤسسية 56",
+      "مورّد بواسطة",
+      "شركة الركائز تحليل البيانات 129"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0184",
+    "question": "من هو مورد النظام المستخدم في مشروع التحول السحابي 52؟",
+    "expected_entities": [
+      "مشروع التحول السحابي 52",
+      "منصة الوثائق المؤسسية 85",
+      "مجموعة الدرع الأمن السيبراني 206"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الدرع الأمن السيبراني 206"
+    ],
+    "expected_path": [
+      "مشروع التحول السحابي 52",
+      "يستخدم النظام",
+      "منصة الوثائق المؤسسية 85",
+      "مورّد بواسطة",
+      "مجموعة الدرع الأمن السيبراني 206"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0185",
+    "question": "من هو مورد النظام المستخدم في مشروع تحسين جودة البيانات 89؟",
+    "expected_entities": [
+      "مشروع تحسين جودة البيانات 89",
+      "مستودع الأمن السيبراني المؤسسية 114",
+      "مؤسسة البوصلة الاستشارات 283"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة البوصلة الاستشارات 283"
+    ],
+    "expected_path": [
+      "مشروع تحسين جودة البيانات 89",
+      "يستخدم النظام",
+      "مستودع الأمن السيبراني المؤسسية 114",
+      "مورّد بواسطة",
+      "مؤسسة البوصلة الاستشارات 283"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0186",
+    "question": "من هو مورد النظام المستخدم في مشروع الحوكمة المؤسسية 26؟",
+    "expected_entities": [
+      "مشروع الحوكمة المؤسسية 26",
+      "تطبيق المشتريات المؤسسية 43",
+      "مجموعة المدار البنية التحتية 260"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة المدار البنية التحتية 260"
+    ],
+    "expected_path": [
+      "مشروع الحوكمة المؤسسية 26",
+      "يستخدم النظام",
+      "تطبيق المشتريات المؤسسية 43",
+      "مورّد بواسطة",
+      "مجموعة المدار البنية التحتية 260"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0187",
+    "question": "من هو مورد النظام المستخدم في مشروع توحيد البيانات 63؟",
+    "expected_entities": [
+      "مشروع توحيد البيانات 63",
+      "بوابة التدريب المؤسسية 72",
+      "مؤسسة المستقبل تكامل الأنظمة 37"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة المستقبل تكامل الأنظمة 37"
+    ],
+    "expected_path": [
+      "مشروع توحيد البيانات 63",
+      "يستخدم النظام",
+      "بوابة التدريب المؤسسية 72",
+      "مورّد بواسطة",
+      "مؤسسة المستقبل تكامل الأنظمة 37"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0188",
+    "question": "من هو مورد النظام المستخدم في مشروع الابتكار المفتوح 100؟",
+    "expected_entities": [
+      "مشروع الابتكار المفتوح 100",
+      "نظام الموارد البشرية المؤسسية 101",
+      "شركة الواحة الخدمات السحابية 114"
+    ],
+    "expected_answer_keywords": [
+      "شركة الواحة الخدمات السحابية 114"
+    ],
+    "expected_path": [
+      "مشروع الابتكار المفتوح 100",
+      "يستخدم النظام",
+      "نظام الموارد البشرية المؤسسية 101",
+      "مورّد بواسطة",
+      "شركة الواحة الخدمات السحابية 114"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0189",
+    "question": "من هو مورد النظام المستخدم في مشروع المشتريات الرقمية 37؟",
+    "expected_entities": [
+      "مشروع المشتريات الرقمية 37",
+      "منصة المخزون المؤسسية 30",
+      "مؤسسة البوصلة الاستشارات 91"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة البوصلة الاستشارات 91"
+    ],
+    "expected_path": [
+      "مشروع المشتريات الرقمية 37",
+      "يستخدم النظام",
+      "منصة المخزون المؤسسية 30",
+      "مورّد بواسطة",
+      "مؤسسة البوصلة الاستشارات 91"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0190",
+    "question": "من هو مورد النظام المستخدم في مشروع تكامل الأنظمة 74؟",
+    "expected_entities": [
+      "مشروع تكامل الأنظمة 74",
+      "مستودع البيانات الرئيسية المؤسسية 59",
+      "شركة الرواد الحلول الرقمية 168"
+    ],
+    "expected_answer_keywords": [
+      "شركة الرواد الحلول الرقمية 168"
+    ],
+    "expected_path": [
+      "مشروع تكامل الأنظمة 74",
+      "يستخدم النظام",
+      "مستودع البيانات الرئيسية المؤسسية 59",
+      "مورّد بواسطة",
+      "شركة الرواد الحلول الرقمية 168"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0191",
+    "question": "من هو مورد النظام المستخدم في مشروع تحليل الأداء 11؟",
+    "expected_entities": [
+      "مشروع تحليل الأداء 11",
+      "تطبيق المخاطر المؤسسية 188",
+      "شركة الرؤية تكامل الأنظمة 45"
+    ],
+    "expected_answer_keywords": [
+      "شركة الرؤية تكامل الأنظمة 45"
+    ],
+    "expected_path": [
+      "مشروع تحليل الأداء 11",
+      "يستخدم النظام",
+      "تطبيق المخاطر المؤسسية 188",
+      "مورّد بواسطة",
+      "شركة الرؤية تكامل الأنظمة 45"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0192",
+    "question": "من هو مورد النظام المستخدم في مشروع إدارة المعرفة 48؟",
+    "expected_entities": [
+      "مشروع إدارة المعرفة 48",
+      "بوابة الجودة المؤسسية 17",
+      "شركة الإتقان الأمن السيبراني 222"
+    ],
+    "expected_answer_keywords": [
+      "شركة الإتقان الأمن السيبراني 222"
+    ],
+    "expected_path": [
+      "مشروع إدارة المعرفة 48",
+      "يستخدم النظام",
+      "بوابة الجودة المؤسسية 17",
+      "مورّد بواسطة",
+      "شركة الإتقان الأمن السيبراني 222"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0193",
+    "question": "من هو مورد النظام المستخدم في مشروع الأتمتة الذكية 85؟",
+    "expected_entities": [
+      "مشروع الأتمتة الذكية 85",
+      "نظام خدمة العملاء المؤسسية 46",
+      "مجموعة الابتكار الاستشارات 299"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الابتكار الاستشارات 299"
+    ],
+    "expected_path": [
+      "مشروع الأتمتة الذكية 85",
+      "يستخدم النظام",
+      "نظام خدمة العملاء المؤسسية 46",
+      "مورّد بواسطة",
+      "مجموعة الابتكار الاستشارات 299"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0194",
+    "question": "من هو مورد النظام المستخدم في مشروع رفع كفاءة العمليات 22؟",
+    "expected_entities": [
+      "مشروع رفع كفاءة العمليات 22",
+      "منصة إدارة الهوية المؤسسية 175",
+      "مجموعة التكامل الحلول الرقمية 176"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة التكامل الحلول الرقمية 176"
+    ],
+    "expected_path": [
+      "مشروع رفع كفاءة العمليات 22",
+      "يستخدم النظام",
+      "منصة إدارة الهوية المؤسسية 175",
+      "مورّد بواسطة",
+      "مجموعة التكامل الحلول الرقمية 176"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0195",
+    "question": "من هو مورد النظام المستخدم في مشروع الأرشفة الإلكترونية 59؟",
+    "expected_entities": [
+      "مشروع الأرشفة الإلكترونية 59",
+      "مستودع العقود المؤسسية 4",
+      "مجموعة الآفاق تكامل الأنظمة 53"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الآفاق تكامل الأنظمة 53"
+    ],
+    "expected_path": [
+      "مشروع الأرشفة الإلكترونية 59",
+      "يستخدم النظام",
+      "مستودع العقود المؤسسية 4",
+      "مورّد بواسطة",
+      "مجموعة الآفاق تكامل الأنظمة 53"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0196",
+    "question": "من هو مورد النظام المستخدم في مشروع إدارة المواهب 96؟",
+    "expected_entities": [
+      "مشروع إدارة المواهب 96",
+      "تطبيق الحوكمة المؤسسية 33",
+      "مؤسسة التميز الخدمات السحابية 130"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة التميز الخدمات السحابية 130"
+    ],
+    "expected_path": [
+      "مشروع إدارة المواهب 96",
+      "يستخدم النظام",
+      "تطبيق الحوكمة المؤسسية 33",
+      "مورّد بواسطة",
+      "مؤسسة التميز الخدمات السحابية 130"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0197",
+    "question": "من هو مورد النظام المستخدم في مشروع إدارة الأصول 33؟",
+    "expected_entities": [
+      "مشروع إدارة الأصول 33",
+      "بوابة المالية المؤسسية 162",
+      "مؤسسة السحابة التدريب 7"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة السحابة التدريب 7"
+    ],
+    "expected_path": [
+      "مشروع إدارة الأصول 33",
+      "يستخدم النظام",
+      "بوابة المالية المؤسسية 162",
+      "مورّد بواسطة",
+      "مؤسسة السحابة التدريب 7"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0198",
+    "question": "من هو مورد النظام المستخدم في مشروع استمرارية الأعمال 70؟",
+    "expected_entities": [
+      "مشروع استمرارية الأعمال 70",
+      "نظام التحليلات المؤسسية 191",
+      "شركة البيان البنية التحتية 84"
+    ],
+    "expected_answer_keywords": [
+      "شركة البيان البنية التحتية 84"
+    ],
+    "expected_path": [
+      "مشروع استمرارية الأعمال 70",
+      "يستخدم النظام",
+      "نظام التحليلات المؤسسية 191",
+      "مورّد بواسطة",
+      "شركة البيان البنية التحتية 84"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0199",
+    "question": "من هو مورد النظام المستخدم في مشروع تعزيز الأمن السيبراني 7؟",
+    "expected_entities": [
+      "مشروع تعزيز الأمن السيبراني 7",
+      "منصة ذكاء الأعمال المؤسسية 120",
+      "مؤسسة المستقبل تكامل الأنظمة 61"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة المستقبل تكامل الأنظمة 61"
+    ],
+    "expected_path": [
+      "مشروع تعزيز الأمن السيبراني 7",
+      "يستخدم النظام",
+      "منصة ذكاء الأعمال المؤسسية 120",
+      "مورّد بواسطة",
+      "مؤسسة المستقبل تكامل الأنظمة 61"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0200",
+    "question": "من هو مورد النظام المستخدم في مشروع تجربة المستفيد 44؟",
+    "expected_entities": [
+      "مشروع تجربة المستفيد 44",
+      "مستودع الأصول المؤسسية 149",
+      "شركة الواحة الخدمات السحابية 138"
+    ],
+    "expected_answer_keywords": [
+      "شركة الواحة الخدمات السحابية 138"
+    ],
+    "expected_path": [
+      "مشروع تجربة المستفيد 44",
+      "يستخدم النظام",
+      "مستودع الأصول المؤسسية 149",
+      "مورّد بواسطة",
+      "شركة الواحة الخدمات السحابية 138"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0201",
+    "question": "من هو مورد النظام المستخدم في مشروع تطوير الخدمات الرقمية 81؟",
+    "expected_entities": [
+      "مشروع تطوير الخدمات الرقمية 81",
+      "تطبيق الامتثال المؤسسية 178",
+      "مجموعة الصفوة التدريب 215"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الصفوة التدريب 215"
+    ],
+    "expected_path": [
+      "مشروع تطوير الخدمات الرقمية 81",
+      "يستخدم النظام",
+      "تطبيق الامتثال المؤسسية 178",
+      "مورّد بواسطة",
+      "مجموعة الصفوة التدريب 215"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0202",
+    "question": "من هو مورد النظام المستخدم في مشروع الامتثال المؤسسي 18؟",
+    "expected_entities": [
+      "مشروع الامتثال المؤسسي 18",
+      "بوابة إدارة المشاريع المؤسسية 107",
+      "شركة الرواد الحلول الرقمية 192"
+    ],
+    "expected_answer_keywords": [
+      "شركة الرواد الحلول الرقمية 192"
+    ],
+    "expected_path": [
+      "مشروع الامتثال المؤسسي 18",
+      "يستخدم النظام",
+      "بوابة إدارة المشاريع المؤسسية 107",
+      "مورّد بواسطة",
+      "شركة الرواد الحلول الرقمية 192"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0203",
+    "question": "من هو مورد النظام المستخدم في مشروع مركز الاتصال 55؟",
+    "expected_entities": [
+      "مشروع مركز الاتصال 55",
+      "نظام المراسلات المؤسسية 136",
+      "مجموعة الآفاق تكامل الأنظمة 269"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الآفاق تكامل الأنظمة 269"
+    ],
+    "expected_path": [
+      "مشروع مركز الاتصال 55",
+      "يستخدم النظام",
+      "نظام المراسلات المؤسسية 136",
+      "مورّد بواسطة",
+      "مجموعة الآفاق تكامل الأنظمة 269"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0204",
+    "question": "من هو مورد النظام المستخدم في مشروع التحول السحابي 92؟",
+    "expected_entities": [
+      "مشروع التحول السحابي 92",
+      "منصة الوثائق المؤسسية 165",
+      "مؤسسة الربط الأمن السيبراني 46"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة الربط الأمن السيبراني 46"
+    ],
+    "expected_path": [
+      "مشروع التحول السحابي 92",
+      "يستخدم النظام",
+      "منصة الوثائق المؤسسية 165",
+      "مورّد بواسطة",
+      "مؤسسة الربط الأمن السيبراني 46"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0205",
+    "question": "من هو مورد النظام المستخدم في مشروع تحسين جودة البيانات 29؟",
+    "expected_entities": [
+      "مشروع تحسين جودة البيانات 29",
+      "مستودع الأمن السيبراني المؤسسية 94",
+      "مجموعة الصفوة التدريب 23"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الصفوة التدريب 23"
+    ],
+    "expected_path": [
+      "مشروع تحسين جودة البيانات 29",
+      "يستخدم النظام",
+      "مستودع الأمن السيبراني المؤسسية 94",
+      "مورّد بواسطة",
+      "مجموعة الصفوة التدريب 23"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0206",
+    "question": "من هو مورد النظام المستخدم في مشروع الحوكمة المؤسسية 66؟",
+    "expected_entities": [
+      "مشروع الحوكمة المؤسسية 66",
+      "تطبيق المشتريات المؤسسية 123",
+      "مؤسسة القمم البنية التحتية 100"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة القمم البنية التحتية 100"
+    ],
+    "expected_path": [
+      "مشروع الحوكمة المؤسسية 66",
+      "يستخدم النظام",
+      "تطبيق المشتريات المؤسسية 123",
+      "مورّد بواسطة",
+      "مؤسسة القمم البنية التحتية 100"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0207",
+    "question": "من هو مورد النظام المستخدم في مشروع توحيد البيانات 3؟",
+    "expected_entities": [
+      "مشروع توحيد البيانات 3",
+      "بوابة التدريب المؤسسية 52",
+      "مجموعة الآفاق تكامل الأنظمة 77"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الآفاق تكامل الأنظمة 77"
+    ],
+    "expected_path": [
+      "مشروع توحيد البيانات 3",
+      "يستخدم النظام",
+      "بوابة التدريب المؤسسية 52",
+      "مورّد بواسطة",
+      "مجموعة الآفاق تكامل الأنظمة 77"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0208",
+    "question": "من هو مورد النظام المستخدم في مشروع الابتكار المفتوح 40؟",
+    "expected_entities": [
+      "مشروع الابتكار المفتوح 40",
+      "نظام الموارد البشرية المؤسسية 81",
+      "مؤسسة التميز الخدمات السحابية 154"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة التميز الخدمات السحابية 154"
+    ],
+    "expected_path": [
+      "مشروع الابتكار المفتوح 40",
+      "يستخدم النظام",
+      "نظام الموارد البشرية المؤسسية 81",
+      "مورّد بواسطة",
+      "مؤسسة التميز الخدمات السحابية 154"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0209",
+    "question": "من هو مورد النظام المستخدم في مشروع المشتريات الرقمية 77؟",
+    "expected_entities": [
+      "مشروع المشتريات الرقمية 77",
+      "منصة المخزون المؤسسية 110",
+      "شركة المعرفة التدريب 231"
+    ],
+    "expected_answer_keywords": [
+      "شركة المعرفة التدريب 231"
+    ],
+    "expected_path": [
+      "مشروع المشتريات الرقمية 77",
+      "يستخدم النظام",
+      "منصة المخزون المؤسسية 110",
+      "مورّد بواسطة",
+      "شركة المعرفة التدريب 231"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0210",
+    "question": "من هو مورد النظام المستخدم في مشروع تكامل الأنظمة 14؟",
+    "expected_entities": [
+      "مشروع تكامل الأنظمة 14",
+      "مستودع البيانات الرئيسية المؤسسية 39",
+      "مؤسسة المنارة الحلول الرقمية 208"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة المنارة الحلول الرقمية 208"
+    ],
+    "expected_path": [
+      "مشروع تكامل الأنظمة 14",
+      "يستخدم النظام",
+      "مستودع البيانات الرئيسية المؤسسية 39",
+      "مورّد بواسطة",
+      "مؤسسة المنارة الحلول الرقمية 208"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0211",
+    "question": "من هو مورد النظام المستخدم في مشروع تحليل الأداء 51؟",
+    "expected_entities": [
+      "مشروع تحليل الأداء 51",
+      "تطبيق المخاطر المؤسسية 68",
+      "شركة الرؤية تكامل الأنظمة 285"
+    ],
+    "expected_answer_keywords": [
+      "شركة الرؤية تكامل الأنظمة 285"
+    ],
+    "expected_path": [
+      "مشروع تحليل الأداء 51",
+      "يستخدم النظام",
+      "تطبيق المخاطر المؤسسية 68",
+      "مورّد بواسطة",
+      "شركة الرؤية تكامل الأنظمة 285"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0212",
+    "question": "من هو مورد النظام المستخدم في مشروع إدارة المعرفة 88؟",
+    "expected_entities": [
+      "مشروع إدارة المعرفة 88",
+      "بوابة الجودة المؤسسية 97",
+      "مجموعة الدرع الأمن السيبراني 62"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الدرع الأمن السيبراني 62"
+    ],
+    "expected_path": [
+      "مشروع إدارة المعرفة 88",
+      "يستخدم النظام",
+      "بوابة الجودة المؤسسية 97",
+      "مورّد بواسطة",
+      "مجموعة الدرع الأمن السيبراني 62"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0213",
+    "question": "من هو مورد النظام المستخدم في مشروع الأتمتة الذكية 25؟",
+    "expected_entities": [
+      "مشروع الأتمتة الذكية 25",
+      "نظام خدمة العملاء المؤسسية 26",
+      "شركة المعرفة التدريب 39"
+    ],
+    "expected_answer_keywords": [
+      "شركة المعرفة التدريب 39"
+    ],
+    "expected_path": [
+      "مشروع الأتمتة الذكية 25",
+      "يستخدم النظام",
+      "نظام خدمة العملاء المؤسسية 26",
+      "مورّد بواسطة",
+      "شركة المعرفة التدريب 39"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0214",
+    "question": "من هو مورد النظام المستخدم في مشروع رفع كفاءة العمليات 62؟",
+    "expected_entities": [
+      "مشروع رفع كفاءة العمليات 62",
+      "منصة إدارة الهوية المؤسسية 55",
+      "مجموعة المدار البنية التحتية 116"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة المدار البنية التحتية 116"
+    ],
+    "expected_path": [
+      "مشروع رفع كفاءة العمليات 62",
+      "يستخدم النظام",
+      "منصة إدارة الهوية المؤسسية 55",
+      "مورّد بواسطة",
+      "مجموعة المدار البنية التحتية 116"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0215",
+    "question": "من هو مورد النظام المستخدم في مشروع الأرشفة الإلكترونية 99؟",
+    "expected_entities": [
+      "مشروع الأرشفة الإلكترونية 99",
+      "مستودع العقود المؤسسية 84",
+      "مؤسسة النخبة تحليل البيانات 193"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة النخبة تحليل البيانات 193"
+    ],
+    "expected_path": [
+      "مشروع الأرشفة الإلكترونية 99",
+      "يستخدم النظام",
+      "مستودع العقود المؤسسية 84",
+      "مورّد بواسطة",
+      "مؤسسة النخبة تحليل البيانات 193"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0216",
+    "question": "من هو مورد النظام المستخدم في مشروع إدارة المواهب 36؟",
+    "expected_entities": [
+      "مشروع إدارة المواهب 36",
+      "تطبيق الحوكمة المؤسسية 13",
+      "مجموعة الريادة الخدمات السحابية 170"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الريادة الخدمات السحابية 170"
+    ],
+    "expected_path": [
+      "مشروع إدارة المواهب 36",
+      "يستخدم النظام",
+      "تطبيق الحوكمة المؤسسية 13",
+      "مورّد بواسطة",
+      "مجموعة الريادة الخدمات السحابية 170"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0217",
+    "question": "من هو مورد النظام المستخدم في مشروع إدارة الأصول 73؟",
+    "expected_entities": [
+      "مشروع إدارة الأصول 73",
+      "بوابة المالية المؤسسية 42",
+      "مؤسسة السحابة التدريب 247"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة السحابة التدريب 247"
+    ],
+    "expected_path": [
+      "مشروع إدارة الأصول 73",
+      "يستخدم النظام",
+      "بوابة المالية المؤسسية 42",
+      "مورّد بواسطة",
+      "مؤسسة السحابة التدريب 247"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0218",
+    "question": "من هو مورد النظام المستخدم في مشروع استمرارية الأعمال 10؟",
+    "expected_entities": [
+      "مشروع استمرارية الأعمال 10",
+      "نظام التحليلات المؤسسية 171",
+      "مؤسسة القمم البنية التحتية 124"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة القمم البنية التحتية 124"
+    ],
+    "expected_path": [
+      "مشروع استمرارية الأعمال 10",
+      "يستخدم النظام",
+      "نظام التحليلات المؤسسية 171",
+      "مورّد بواسطة",
+      "مؤسسة القمم البنية التحتية 124"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0219",
+    "question": "من هو مورد النظام المستخدم في مشروع تعزيز الأمن السيبراني 47؟",
+    "expected_entities": [
+      "مشروع تعزيز الأمن السيبراني 47",
+      "منصة ذكاء الأعمال المؤسسية 200",
+      "شركة الركائز تحليل البيانات 201"
+    ],
+    "expected_answer_keywords": [
+      "شركة الركائز تحليل البيانات 201"
+    ],
+    "expected_path": [
+      "مشروع تعزيز الأمن السيبراني 47",
+      "يستخدم النظام",
+      "منصة ذكاء الأعمال المؤسسية 200",
+      "مورّد بواسطة",
+      "شركة الركائز تحليل البيانات 201"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0220",
+    "question": "من هو مورد النظام المستخدم في مشروع تجربة المستفيد 84؟",
+    "expected_entities": [
+      "مشروع تجربة المستفيد 84",
+      "مستودع الأصول المؤسسية 29",
+      "شركة الإتقان الأمن السيبراني 78"
+    ],
+    "expected_answer_keywords": [
+      "شركة الإتقان الأمن السيبراني 78"
+    ],
+    "expected_path": [
+      "مشروع تجربة المستفيد 84",
+      "يستخدم النظام",
+      "مستودع الأصول المؤسسية 29",
+      "مورّد بواسطة",
+      "شركة الإتقان الأمن السيبراني 78"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0221",
+    "question": "من هو مورد النظام المستخدم في مشروع تطوير الخدمات الرقمية 21؟",
+    "expected_entities": [
+      "مشروع تطوير الخدمات الرقمية 21",
+      "تطبيق الامتثال المؤسسية 158",
+      "شركة المعرفة التدريب 255"
+    ],
+    "expected_answer_keywords": [
+      "شركة المعرفة التدريب 255"
+    ],
+    "expected_path": [
+      "مشروع تطوير الخدمات الرقمية 21",
+      "يستخدم النظام",
+      "تطبيق الامتثال المؤسسية 158",
+      "مورّد بواسطة",
+      "شركة المعرفة التدريب 255"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0222",
+    "question": "من هو مورد النظام المستخدم في مشروع الامتثال المؤسسي 58؟",
+    "expected_entities": [
+      "مشروع الامتثال المؤسسي 58",
+      "بوابة إدارة المشاريع المؤسسية 187",
+      "مجموعة التكامل الحلول الرقمية 32"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة التكامل الحلول الرقمية 32"
+    ],
+    "expected_path": [
+      "مشروع الامتثال المؤسسي 58",
+      "يستخدم النظام",
+      "بوابة إدارة المشاريع المؤسسية 187",
+      "مورّد بواسطة",
+      "مجموعة التكامل الحلول الرقمية 32"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0223",
+    "question": "من هو مورد النظام المستخدم في مشروع مركز الاتصال 95؟",
+    "expected_entities": [
+      "مشروع مركز الاتصال 95",
+      "نظام المراسلات المؤسسية 16",
+      "مجموعة المسار تحليل البيانات 209"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة المسار تحليل البيانات 209"
+    ],
+    "expected_path": [
+      "مشروع مركز الاتصال 95",
+      "يستخدم النظام",
+      "نظام المراسلات المؤسسية 16",
+      "مورّد بواسطة",
+      "مجموعة المسار تحليل البيانات 209"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0224",
+    "question": "من هو مورد النظام المستخدم في مشروع التحول السحابي 32؟",
+    "expected_entities": [
+      "مشروع التحول السحابي 32",
+      "منصة الوثائق المؤسسية 145",
+      "مجموعة الدرع الأمن السيبراني 86"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الدرع الأمن السيبراني 86"
+    ],
+    "expected_path": [
+      "مشروع التحول السحابي 32",
+      "يستخدم النظام",
+      "منصة الوثائق المؤسسية 145",
+      "مورّد بواسطة",
+      "مجموعة الدرع الأمن السيبراني 86"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0225",
+    "question": "من هو مورد النظام المستخدم في مشروع تحسين جودة البيانات 69؟",
+    "expected_entities": [
+      "مشروع تحسين جودة البيانات 69",
+      "مستودع الأمن السيبراني المؤسسية 174",
+      "مؤسسة البوصلة الاستشارات 163"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة البوصلة الاستشارات 163"
+    ],
+    "expected_path": [
+      "مشروع تحسين جودة البيانات 69",
+      "يستخدم النظام",
+      "مستودع الأمن السيبراني المؤسسية 174",
+      "مورّد بواسطة",
+      "مؤسسة البوصلة الاستشارات 163"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0226",
+    "question": "من هو مورد النظام المستخدم في مشروع الحوكمة المؤسسية 6؟",
+    "expected_entities": [
+      "مشروع الحوكمة المؤسسية 6",
+      "تطبيق المشتريات المؤسسية 103",
+      "مجموعة المدار البنية التحتية 140"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة المدار البنية التحتية 140"
+    ],
+    "expected_path": [
+      "مشروع الحوكمة المؤسسية 6",
+      "يستخدم النظام",
+      "تطبيق المشتريات المؤسسية 103",
+      "مورّد بواسطة",
+      "مجموعة المدار البنية التحتية 140"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0227",
+    "question": "من هو مورد النظام المستخدم في مشروع توحيد البيانات 43؟",
+    "expected_entities": [
+      "مشروع توحيد البيانات 43",
+      "بوابة التدريب المؤسسية 132",
+      "مؤسسة النخبة تحليل البيانات 217"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة النخبة تحليل البيانات 217"
+    ],
+    "expected_path": [
+      "مشروع توحيد البيانات 43",
+      "يستخدم النظام",
+      "بوابة التدريب المؤسسية 132",
+      "مورّد بواسطة",
+      "مؤسسة النخبة تحليل البيانات 217"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0228",
+    "question": "من هو مورد النظام المستخدم في مشروع الابتكار المفتوح 80؟",
+    "expected_entities": [
+      "مشروع الابتكار المفتوح 80",
+      "نظام الموارد البشرية المؤسسية 161",
+      "شركة الإتقان الأمن السيبراني 294"
+    ],
+    "expected_answer_keywords": [
+      "شركة الإتقان الأمن السيبراني 294"
+    ],
+    "expected_path": [
+      "مشروع الابتكار المفتوح 80",
+      "يستخدم النظام",
+      "نظام الموارد البشرية المؤسسية 161",
+      "مورّد بواسطة",
+      "شركة الإتقان الأمن السيبراني 294"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0229",
+    "question": "من هو مورد النظام المستخدم في مشروع المشتريات الرقمية 17؟",
+    "expected_entities": [
+      "مشروع المشتريات الرقمية 17",
+      "منصة المخزون المؤسسية 90",
+      "مؤسسة السحابة التدريب 271"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة السحابة التدريب 271"
+    ],
+    "expected_path": [
+      "مشروع المشتريات الرقمية 17",
+      "يستخدم النظام",
+      "منصة المخزون المؤسسية 90",
+      "مورّد بواسطة",
+      "مؤسسة السحابة التدريب 271"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0230",
+    "question": "من هو مورد النظام المستخدم في مشروع تكامل الأنظمة 54؟",
+    "expected_entities": [
+      "مشروع تكامل الأنظمة 54",
+      "مستودع البيانات الرئيسية المؤسسية 119",
+      "شركة الرواد الحلول الرقمية 48"
+    ],
+    "expected_answer_keywords": [
+      "شركة الرواد الحلول الرقمية 48"
+    ],
+    "expected_path": [
+      "مشروع تكامل الأنظمة 54",
+      "يستخدم النظام",
+      "مستودع البيانات الرئيسية المؤسسية 119",
+      "مورّد بواسطة",
+      "شركة الرواد الحلول الرقمية 48"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0231",
+    "question": "من هو مورد النظام المستخدم في مشروع تحليل الأداء 91؟",
+    "expected_entities": [
+      "مشروع تحليل الأداء 91",
+      "تطبيق المخاطر المؤسسية 148",
+      "مجموعة الآفاق تكامل الأنظمة 125"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الآفاق تكامل الأنظمة 125"
+    ],
+    "expected_path": [
+      "مشروع تحليل الأداء 91",
+      "يستخدم النظام",
+      "تطبيق المخاطر المؤسسية 148",
+      "مورّد بواسطة",
+      "مجموعة الآفاق تكامل الأنظمة 125"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0232",
+    "question": "من هو مورد النظام المستخدم في مشروع إدارة المعرفة 28؟",
+    "expected_entities": [
+      "مشروع إدارة المعرفة 28",
+      "بوابة الجودة المؤسسية 77",
+      "شركة الإتقان الأمن السيبراني 102"
+    ],
+    "expected_answer_keywords": [
+      "شركة الإتقان الأمن السيبراني 102"
+    ],
+    "expected_path": [
+      "مشروع إدارة المعرفة 28",
+      "يستخدم النظام",
+      "بوابة الجودة المؤسسية 77",
+      "مورّد بواسطة",
+      "شركة الإتقان الأمن السيبراني 102"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0233",
+    "question": "من هو مورد النظام المستخدم في مشروع الأتمتة الذكية 65؟",
+    "expected_entities": [
+      "مشروع الأتمتة الذكية 65",
+      "نظام خدمة العملاء المؤسسية 106",
+      "مجموعة الابتكار الاستشارات 179"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الابتكار الاستشارات 179"
+    ],
+    "expected_path": [
+      "مشروع الأتمتة الذكية 65",
+      "يستخدم النظام",
+      "نظام خدمة العملاء المؤسسية 106",
+      "مورّد بواسطة",
+      "مجموعة الابتكار الاستشارات 179"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0234",
+    "question": "من هو مورد النظام المستخدم في مشروع رفع كفاءة العمليات 2؟",
+    "expected_entities": [
+      "مشروع رفع كفاءة العمليات 2",
+      "منصة إدارة الهوية المؤسسية 35",
+      "شركة البيان البنية التحتية 156"
+    ],
+    "expected_answer_keywords": [
+      "شركة البيان البنية التحتية 156"
+    ],
+    "expected_path": [
+      "مشروع رفع كفاءة العمليات 2",
+      "يستخدم النظام",
+      "منصة إدارة الهوية المؤسسية 35",
+      "مورّد بواسطة",
+      "شركة البيان البنية التحتية 156"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0235",
+    "question": "من هو مورد النظام المستخدم في مشروع الأرشفة الإلكترونية 39؟",
+    "expected_entities": [
+      "مشروع الأرشفة الإلكترونية 39",
+      "مستودع العقود المؤسسية 64",
+      "مجموعة المسار تحليل البيانات 233"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة المسار تحليل البيانات 233"
+    ],
+    "expected_path": [
+      "مشروع الأرشفة الإلكترونية 39",
+      "يستخدم النظام",
+      "مستودع العقود المؤسسية 64",
+      "مورّد بواسطة",
+      "مجموعة المسار تحليل البيانات 233"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0236",
+    "question": "من هو مورد النظام المستخدم في مشروع إدارة المواهب 76؟",
+    "expected_entities": [
+      "مشروع إدارة المواهب 76",
+      "تطبيق الحوكمة المؤسسية 93",
+      "مؤسسة التميز الخدمات السحابية 10"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة التميز الخدمات السحابية 10"
+    ],
+    "expected_path": [
+      "مشروع إدارة المواهب 76",
+      "يستخدم النظام",
+      "تطبيق الحوكمة المؤسسية 93",
+      "مورّد بواسطة",
+      "مؤسسة التميز الخدمات السحابية 10"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0237",
+    "question": "من هو مورد النظام المستخدم في مشروع إدارة الأصول 13؟",
+    "expected_entities": [
+      "مشروع إدارة الأصول 13",
+      "بوابة المالية المؤسسية 22",
+      "مجموعة الصفوة التدريب 287"
+    ],
+    "expected_answer_keywords": [
+      "مجموعة الصفوة التدريب 287"
+    ],
+    "expected_path": [
+      "مشروع إدارة الأصول 13",
+      "يستخدم النظام",
+      "بوابة المالية المؤسسية 22",
+      "مورّد بواسطة",
+      "مجموعة الصفوة التدريب 287"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0238",
+    "question": "من هو مورد النظام المستخدم في مشروع استمرارية الأعمال 50؟",
+    "expected_entities": [
+      "مشروع استمرارية الأعمال 50",
+      "نظام التحليلات المؤسسية 51",
+      "مؤسسة المنارة الحلول الرقمية 64"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة المنارة الحلول الرقمية 64"
+    ],
+    "expected_path": [
+      "مشروع استمرارية الأعمال 50",
+      "يستخدم النظام",
+      "نظام التحليلات المؤسسية 51",
+      "مورّد بواسطة",
+      "مؤسسة المنارة الحلول الرقمية 64"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0239",
+    "question": "من هو مورد النظام المستخدم في مشروع تعزيز الأمن السيبراني 87؟",
+    "expected_entities": [
+      "مشروع تعزيز الأمن السيبراني 87",
+      "منصة ذكاء الأعمال المؤسسية 80",
+      "شركة الرؤية تكامل الأنظمة 141"
+    ],
+    "expected_answer_keywords": [
+      "شركة الرؤية تكامل الأنظمة 141"
+    ],
+    "expected_path": [
+      "مشروع تعزيز الأمن السيبراني 87",
+      "يستخدم النظام",
+      "منصة ذكاء الأعمال المؤسسية 80",
+      "مورّد بواسطة",
+      "شركة الرؤية تكامل الأنظمة 141"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0240",
+    "question": "من هو مورد النظام المستخدم في مشروع تجربة المستفيد 24؟",
+    "expected_entities": [
+      "مشروع تجربة المستفيد 24",
+      "مستودع الأصول المؤسسية 9",
+      "مؤسسة الربط الأمن السيبراني 118"
+    ],
+    "expected_answer_keywords": [
+      "مؤسسة الربط الأمن السيبراني 118"
+    ],
+    "expected_path": [
+      "مشروع تجربة المستفيد 24",
+      "يستخدم النظام",
+      "مستودع الأصول المؤسسية 9",
+      "مورّد بواسطة",
+      "مؤسسة الربط الأمن السيبراني 118"
+    ],
+    "category": "multi_hop",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0241",
+    "question": "من أعد المستند «إجراء إدارة البيانات رقم 1»؟",
+    "expected_entities": [
+      "إجراء إدارة البيانات رقم 1",
+      "تركي الزهراني"
+    ],
+    "expected_answer_keywords": [
+      "تركي الزهراني"
+    ],
+    "expected_path": [
+      "إجراء إدارة البيانات رقم 1",
+      "أعد بواسطة",
+      "تركي الزهراني"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0242",
+    "question": "من أعد المستند «تقرير هندسة المؤسسات رقم 42»؟",
+    "expected_entities": [
+      "تقرير هندسة المؤسسات رقم 42",
+      "فهد اليامي"
+    ],
+    "expected_answer_keywords": [
+      "فهد اليامي"
+    ],
+    "expected_path": [
+      "تقرير هندسة المؤسسات رقم 42",
+      "أعد بواسطة",
+      "فهد اليامي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0243",
+    "question": "من أعد المستند «محضر اجتماع الابتكار رقم 83»؟",
+    "expected_entities": [
+      "محضر اجتماع الابتكار رقم 83",
+      "سلمان الشهري"
+    ],
+    "expected_answer_keywords": [
+      "سلمان الشهري"
+    ],
+    "expected_path": [
+      "محضر اجتماع الابتكار رقم 83",
+      "أعد بواسطة",
+      "سلمان الشهري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0244",
+    "question": "من أعد المستند «دليل مستخدم التسويق رقم 124»؟",
+    "expected_entities": [
+      "دليل مستخدم التسويق رقم 124",
+      "خالد المطيري"
+    ],
+    "expected_answer_keywords": [
+      "خالد المطيري"
+    ],
+    "expected_path": [
+      "دليل مستخدم التسويق رقم 124",
+      "أعد بواسطة",
+      "خالد المطيري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0245",
+    "question": "من أعد المستند «مذكرة تقنية المعلومات رقم 165»؟",
+    "expected_entities": [
+      "مذكرة تقنية المعلومات رقم 165",
+      "عبدالله الدوسري"
+    ],
+    "expected_answer_keywords": [
+      "عبدالله الدوسري"
+    ],
+    "expected_path": [
+      "مذكرة تقنية المعلومات رقم 165",
+      "أعد بواسطة",
+      "عبدالله الدوسري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0246",
+    "question": "من أعد المستند «خطة عمل مكتب البيانات رقم 206»؟",
+    "expected_entities": [
+      "خطة عمل مكتب البيانات رقم 206",
+      "أحمد الخالدي"
+    ],
+    "expected_answer_keywords": [
+      "أحمد الخالدي"
+    ],
+    "expected_path": [
+      "خطة عمل مكتب البيانات رقم 206",
+      "أعد بواسطة",
+      "أحمد الخالدي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0247",
+    "question": "من أعد المستند «دراسة المسؤولية الاجتماعية رقم 247»؟",
+    "expected_entities": [
+      "دراسة المسؤولية الاجتماعية رقم 247",
+      "محمد البلوي"
+    ],
+    "expected_answer_keywords": [
+      "محمد البلوي"
+    ],
+    "expected_path": [
+      "دراسة المسؤولية الاجتماعية رقم 247",
+      "أعد بواسطة",
+      "محمد البلوي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0248",
+    "question": "من أعد المستند «طلب تغيير خدمة العملاء رقم 288»؟",
+    "expected_entities": [
+      "طلب تغيير خدمة العملاء رقم 288",
+      "روان العمري"
+    ],
+    "expected_answer_keywords": [
+      "روان العمري"
+    ],
+    "expected_path": [
+      "طلب تغيير خدمة العملاء رقم 288",
+      "أعد بواسطة",
+      "روان العمري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0249",
+    "question": "من أعد المستند «تقييم مخاطر المشتريات رقم 329»؟",
+    "expected_entities": [
+      "تقييم مخاطر المشتريات رقم 329",
+      "مريم السعدي"
+    ],
+    "expected_answer_keywords": [
+      "مريم السعدي"
+    ],
+    "expected_path": [
+      "تقييم مخاطر المشتريات رقم 329",
+      "أعد بواسطة",
+      "مريم السعدي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0250",
+    "question": "من أعد المستند «سياسة دعم التطبيقات رقم 370»؟",
+    "expected_entities": [
+      "سياسة دعم التطبيقات رقم 370",
+      "فاطمة اليامي"
+    ],
+    "expected_answer_keywords": [
+      "فاطمة اليامي"
+    ],
+    "expected_path": [
+      "سياسة دعم التطبيقات رقم 370",
+      "أعد بواسطة",
+      "فاطمة اليامي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0251",
+    "question": "من أعد المستند «إجراء السلامة رقم 411»؟",
+    "expected_entities": [
+      "إجراء السلامة رقم 411",
+      "عائشة الشهري"
+    ],
+    "expected_answer_keywords": [
+      "عائشة الشهري"
+    ],
+    "expected_path": [
+      "إجراء السلامة رقم 411",
+      "أعد بواسطة",
+      "عائشة الشهري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0252",
+    "question": "من أعد المستند «تقرير إدارة المخاطر رقم 452»؟",
+    "expected_entities": [
+      "تقرير إدارة المخاطر رقم 452",
+      "غادة المطيري"
+    ],
+    "expected_answer_keywords": [
+      "غادة المطيري"
+    ],
+    "expected_path": [
+      "تقرير إدارة المخاطر رقم 452",
+      "أعد بواسطة",
+      "غادة المطيري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0253",
+    "question": "من أعد المستند «محضر اجتماع الموارد البشرية رقم 493»؟",
+    "expected_entities": [
+      "محضر اجتماع الموارد البشرية رقم 493",
+      "رنا الدوسري"
+    ],
+    "expected_answer_keywords": [
+      "رنا الدوسري"
+    ],
+    "expected_path": [
+      "محضر اجتماع الموارد البشرية رقم 493",
+      "أعد بواسطة",
+      "رنا الدوسري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0254",
+    "question": "من أعد المستند «دليل مستخدم هندسة الحلول رقم 534»؟",
+    "expected_entities": [
+      "دليل مستخدم هندسة الحلول رقم 534",
+      "الجوهرة الخالدي"
+    ],
+    "expected_answer_keywords": [
+      "الجوهرة الخالدي"
+    ],
+    "expected_path": [
+      "دليل مستخدم هندسة الحلول رقم 534",
+      "أعد بواسطة",
+      "الجوهرة الخالدي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0255",
+    "question": "من أعد المستند «مذكرة الصيانة رقم 575»؟",
+    "expected_entities": [
+      "مذكرة الصيانة رقم 575",
+      "شهد البلوي"
+    ],
+    "expected_answer_keywords": [
+      "شهد البلوي"
+    ],
+    "expected_path": [
+      "مذكرة الصيانة رقم 575",
+      "أعد بواسطة",
+      "شهد البلوي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0256",
+    "question": "من أعد المستند «خطة عمل إدارة المشاريع رقم 616»؟",
+    "expected_entities": [
+      "خطة عمل إدارة المشاريع رقم 616",
+      "مها العمري"
+    ],
+    "expected_answer_keywords": [
+      "مها العمري"
+    ],
+    "expected_path": [
+      "خطة عمل إدارة المشاريع رقم 616",
+      "أعد بواسطة",
+      "مها العمري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0257",
+    "question": "من أعد المستند «دراسة إدارة الأصول رقم 657»؟",
+    "expected_entities": [
+      "دراسة إدارة الأصول رقم 657",
+      "لطيفة السعدي"
+    ],
+    "expected_answer_keywords": [
+      "لطيفة السعدي"
+    ],
+    "expected_path": [
+      "دراسة إدارة الأصول رقم 657",
+      "أعد بواسطة",
+      "لطيفة السعدي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0258",
+    "question": "من أعد المستند «طلب تغيير الامتثال رقم 698»؟",
+    "expected_entities": [
+      "طلب تغيير الامتثال رقم 698",
+      "دانة اليامي"
+    ],
+    "expected_answer_keywords": [
+      "دانة اليامي"
+    ],
+    "expected_path": [
+      "طلب تغيير الامتثال رقم 698",
+      "أعد بواسطة",
+      "دانة اليامي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0259",
+    "question": "من أعد المستند «تقييم مخاطر إدارة المخزون رقم 739»؟",
+    "expected_entities": [
+      "تقييم مخاطر إدارة المخزون رقم 739",
+      "عبير الشهري"
+    ],
+    "expected_answer_keywords": [
+      "عبير الشهري"
+    ],
+    "expected_path": [
+      "تقييم مخاطر إدارة المخزون رقم 739",
+      "أعد بواسطة",
+      "عبير الشهري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0260",
+    "question": "من أعد المستند «سياسة العمليات رقم 780»؟",
+    "expected_entities": [
+      "سياسة العمليات رقم 780",
+      "هدى المطيري"
+    ],
+    "expected_answer_keywords": [
+      "هدى المطيري"
+    ],
+    "expected_path": [
+      "سياسة العمليات رقم 780",
+      "أعد بواسطة",
+      "هدى المطيري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0261",
+    "question": "من أعد المستند «إجراء العقود رقم 821»؟",
+    "expected_entities": [
+      "إجراء العقود رقم 821",
+      "منى الدوسري"
+    ],
+    "expected_answer_keywords": [
+      "منى الدوسري"
+    ],
+    "expected_path": [
+      "إجراء العقود رقم 821",
+      "أعد بواسطة",
+      "منى الدوسري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0262",
+    "question": "من أعد المستند «تقرير إدارة المحتوى رقم 862»؟",
+    "expected_entities": [
+      "تقرير إدارة المحتوى رقم 862",
+      "أمل الخالدي"
+    ],
+    "expected_answer_keywords": [
+      "أمل الخالدي"
+    ],
+    "expected_path": [
+      "تقرير إدارة المحتوى رقم 862",
+      "أعد بواسطة",
+      "أمل الخالدي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0263",
+    "question": "من أعد المستند «محضر اجتماع تطوير الأعمال رقم 903»؟",
+    "expected_entities": [
+      "محضر اجتماع تطوير الأعمال رقم 903",
+      "هند البلوي"
+    ],
+    "expected_answer_keywords": [
+      "هند البلوي"
+    ],
+    "expected_path": [
+      "محضر اجتماع تطوير الأعمال رقم 903",
+      "أعد بواسطة",
+      "هند البلوي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0264",
+    "question": "من أعد المستند «دليل مستخدم الذكاء الاصطناعي رقم 944»؟",
+    "expected_entities": [
+      "دليل مستخدم الذكاء الاصطناعي رقم 944",
+      "لينا العمري"
+    ],
+    "expected_answer_keywords": [
+      "لينا العمري"
+    ],
+    "expected_path": [
+      "دليل مستخدم الذكاء الاصطناعي رقم 944",
+      "أعد بواسطة",
+      "لينا العمري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0265",
+    "question": "من أعد المستند «مذكرة العلاقات الحكومية رقم 985»؟",
+    "expected_entities": [
+      "مذكرة العلاقات الحكومية رقم 985",
+      "ريم السعدي"
+    ],
+    "expected_answer_keywords": [
+      "ريم السعدي"
+    ],
+    "expected_path": [
+      "مذكرة العلاقات الحكومية رقم 985",
+      "أعد بواسطة",
+      "ريم السعدي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0266",
+    "question": "من أعد المستند «خطة عمل التدريب والتطوير رقم 1026»؟",
+    "expected_entities": [
+      "خطة عمل التدريب والتطوير رقم 1026",
+      "سارة اليامي"
+    ],
+    "expected_answer_keywords": [
+      "سارة اليامي"
+    ],
+    "expected_path": [
+      "خطة عمل التدريب والتطوير رقم 1026",
+      "أعد بواسطة",
+      "سارة اليامي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0267",
+    "question": "من أعد المستند «دراسة الاتصال المؤسسي رقم 1067»؟",
+    "expected_entities": [
+      "دراسة الاتصال المؤسسي رقم 1067",
+      "نورة الشهري"
+    ],
+    "expected_answer_keywords": [
+      "نورة الشهري"
+    ],
+    "expected_path": [
+      "دراسة الاتصال المؤسسي رقم 1067",
+      "أعد بواسطة",
+      "نورة الشهري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0268",
+    "question": "من أعد المستند «طلب تغيير الأمن السيبراني رقم 1108»؟",
+    "expected_entities": [
+      "طلب تغيير الأمن السيبراني رقم 1108",
+      "مازن المطيري"
+    ],
+    "expected_answer_keywords": [
+      "مازن المطيري"
+    ],
+    "expected_path": [
+      "طلب تغيير الأمن السيبراني رقم 1108",
+      "أعد بواسطة",
+      "مازن المطيري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0269",
+    "question": "من أعد المستند «تقييم مخاطر التحليلات رقم 1149»؟",
+    "expected_entities": [
+      "تقييم مخاطر التحليلات رقم 1149",
+      "وليد الدوسري"
+    ],
+    "expected_answer_keywords": [
+      "وليد الدوسري"
+    ],
+    "expected_path": [
+      "تقييم مخاطر التحليلات رقم 1149",
+      "أعد بواسطة",
+      "وليد الدوسري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0270",
+    "question": "من أعد المستند «سياسة البحث والتطوير رقم 1190»؟",
+    "expected_entities": [
+      "سياسة البحث والتطوير رقم 1190",
+      "زياد الخالدي"
+    ],
+    "expected_answer_keywords": [
+      "زياد الخالدي"
+    ],
+    "expected_path": [
+      "سياسة البحث والتطوير رقم 1190",
+      "أعد بواسطة",
+      "زياد الخالدي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0271",
+    "question": "من أعد المستند «إجراء تجربة المستفيد رقم 1231»؟",
+    "expected_entities": [
+      "إجراء تجربة المستفيد رقم 1231",
+      "طارق البلوي"
+    ],
+    "expected_answer_keywords": [
+      "طارق البلوي"
+    ],
+    "expected_path": [
+      "إجراء تجربة المستفيد رقم 1231",
+      "أعد بواسطة",
+      "طارق البلوي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0272",
+    "question": "من أعد المستند «تقرير الشؤون القانونية رقم 1272»؟",
+    "expected_entities": [
+      "تقرير الشؤون القانونية رقم 1272",
+      "مصطفى العمري"
+    ],
+    "expected_answer_keywords": [
+      "مصطفى العمري"
+    ],
+    "expected_path": [
+      "تقرير الشؤون القانونية رقم 1272",
+      "أعد بواسطة",
+      "مصطفى العمري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0273",
+    "question": "من أعد المستند «محضر اجتماع إدارة الخدمات رقم 1313»؟",
+    "expected_entities": [
+      "محضر اجتماع إدارة الخدمات رقم 1313",
+      "إبراهيم السعدي"
+    ],
+    "expected_answer_keywords": [
+      "إبراهيم السعدي"
+    ],
+    "expected_path": [
+      "محضر اجتماع إدارة الخدمات رقم 1313",
+      "أعد بواسطة",
+      "إبراهيم السعدي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0274",
+    "question": "من أعد المستند «دليل مستخدم الاستدامة رقم 1354»؟",
+    "expected_entities": [
+      "دليل مستخدم الاستدامة رقم 1354",
+      "حسين اليامي"
+    ],
+    "expected_answer_keywords": [
+      "حسين اليامي"
+    ],
+    "expected_path": [
+      "دليل مستخدم الاستدامة رقم 1354",
+      "أعد بواسطة",
+      "حسين اليامي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0275",
+    "question": "من أعد المستند «مذكرة المراجعة الداخلية رقم 1395»؟",
+    "expected_entities": [
+      "مذكرة المراجعة الداخلية رقم 1395",
+      "حسن الشهري"
+    ],
+    "expected_answer_keywords": [
+      "حسن الشهري"
+    ],
+    "expected_path": [
+      "مذكرة المراجعة الداخلية رقم 1395",
+      "أعد بواسطة",
+      "حسن الشهري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0276",
+    "question": "من أعد المستند «خطة عمل المالية رقم 1436»؟",
+    "expected_entities": [
+      "خطة عمل المالية رقم 1436",
+      "علي المطيري"
+    ],
+    "expected_answer_keywords": [
+      "علي المطيري"
+    ],
+    "expected_path": [
+      "خطة عمل المالية رقم 1436",
+      "أعد بواسطة",
+      "علي المطيري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0277",
+    "question": "من أعد المستند «دراسة البنية التحتية رقم 1477»؟",
+    "expected_entities": [
+      "دراسة البنية التحتية رقم 1477",
+      "عمر الدوسري"
+    ],
+    "expected_answer_keywords": [
+      "عمر الدوسري"
+    ],
+    "expected_path": [
+      "دراسة البنية التحتية رقم 1477",
+      "أعد بواسطة",
+      "عمر الدوسري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0278",
+    "question": "من أعد المستند «طلب تغيير المرافق رقم 1518»؟",
+    "expected_entities": [
+      "طلب تغيير المرافق رقم 1518",
+      "ياسر الخالدي"
+    ],
+    "expected_answer_keywords": [
+      "ياسر الخالدي"
+    ],
+    "expected_path": [
+      "طلب تغيير المرافق رقم 1518",
+      "أعد بواسطة",
+      "ياسر الخالدي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0279",
+    "question": "من أعد المستند «تقييم مخاطر التخطيط الاستراتيجي رقم 1559»؟",
+    "expected_entities": [
+      "تقييم مخاطر التخطيط الاستراتيجي رقم 1559",
+      "ناصر البلوي"
+    ],
+    "expected_answer_keywords": [
+      "ناصر البلوي"
+    ],
+    "expected_path": [
+      "تقييم مخاطر التخطيط الاستراتيجي رقم 1559",
+      "أعد بواسطة",
+      "ناصر البلوي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0280",
+    "question": "من أعد المستند «سياسة الإدارة التنفيذية رقم 1600»؟",
+    "expected_entities": [
+      "سياسة الإدارة التنفيذية رقم 1600",
+      "سعود العمري"
+    ],
+    "expected_answer_keywords": [
+      "سعود العمري"
+    ],
+    "expected_path": [
+      "سياسة الإدارة التنفيذية رقم 1600",
+      "أعد بواسطة",
+      "سعود العمري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0281",
+    "question": "من أعد المستند «إجراء الخصوصية رقم 1641»؟",
+    "expected_entities": [
+      "إجراء الخصوصية رقم 1641",
+      "تركي السعدي"
+    ],
+    "expected_answer_keywords": [
+      "تركي السعدي"
+    ],
+    "expected_path": [
+      "إجراء الخصوصية رقم 1641",
+      "أعد بواسطة",
+      "تركي السعدي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0282",
+    "question": "من أعد المستند «تقرير الخدمات اللوجستية رقم 1682»؟",
+    "expected_entities": [
+      "تقرير الخدمات اللوجستية رقم 1682",
+      "فهد اليامي"
+    ],
+    "expected_answer_keywords": [
+      "فهد اليامي"
+    ],
+    "expected_path": [
+      "تقرير الخدمات اللوجستية رقم 1682",
+      "أعد بواسطة",
+      "فهد اليامي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0283",
+    "question": "من أعد المستند «محضر اجتماع الجودة والتميز رقم 1723»؟",
+    "expected_entities": [
+      "محضر اجتماع الجودة والتميز رقم 1723",
+      "سلمان الشهري"
+    ],
+    "expected_answer_keywords": [
+      "سلمان الشهري"
+    ],
+    "expected_path": [
+      "محضر اجتماع الجودة والتميز رقم 1723",
+      "أعد بواسطة",
+      "سلمان الشهري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0284",
+    "question": "من أعد المستند «دليل مستخدم الاستثمار رقم 1764»؟",
+    "expected_entities": [
+      "دليل مستخدم الاستثمار رقم 1764",
+      "خالد المطيري"
+    ],
+    "expected_answer_keywords": [
+      "خالد المطيري"
+    ],
+    "expected_path": [
+      "دليل مستخدم الاستثمار رقم 1764",
+      "أعد بواسطة",
+      "خالد المطيري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0285",
+    "question": "من أعد المستند «مذكرة الحوكمة رقم 1805»؟",
+    "expected_entities": [
+      "مذكرة الحوكمة رقم 1805",
+      "عبدالله الدوسري"
+    ],
+    "expected_answer_keywords": [
+      "عبدالله الدوسري"
+    ],
+    "expected_path": [
+      "مذكرة الحوكمة رقم 1805",
+      "أعد بواسطة",
+      "عبدالله الدوسري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0286",
+    "question": "من أعد المستند «خطة عمل سلاسل الإمداد رقم 1846»؟",
+    "expected_entities": [
+      "خطة عمل سلاسل الإمداد رقم 1846",
+      "أحمد الخالدي"
+    ],
+    "expected_answer_keywords": [
+      "أحمد الخالدي"
+    ],
+    "expected_path": [
+      "خطة عمل سلاسل الإمداد رقم 1846",
+      "أعد بواسطة",
+      "أحمد الخالدي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0287",
+    "question": "من أعد المستند «دراسة التحول الرقمي رقم 1887»؟",
+    "expected_entities": [
+      "دراسة التحول الرقمي رقم 1887",
+      "محمد البلوي"
+    ],
+    "expected_answer_keywords": [
+      "محمد البلوي"
+    ],
+    "expected_path": [
+      "دراسة التحول الرقمي رقم 1887",
+      "أعد بواسطة",
+      "محمد البلوي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0288",
+    "question": "من أعد المستند «طلب تغيير الشراكات رقم 1928»؟",
+    "expected_entities": [
+      "طلب تغيير الشراكات رقم 1928",
+      "روان الحربي"
+    ],
+    "expected_answer_keywords": [
+      "روان الحربي"
+    ],
+    "expected_path": [
+      "طلب تغيير الشراكات رقم 1928",
+      "أعد بواسطة",
+      "روان الحربي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0289",
+    "question": "من أعد المستند «تقييم مخاطر إدارة المعرفة رقم 1969»؟",
+    "expected_entities": [
+      "تقييم مخاطر إدارة المعرفة رقم 1969",
+      "مريم السعدي"
+    ],
+    "expected_answer_keywords": [
+      "مريم السعدي"
+    ],
+    "expected_path": [
+      "تقييم مخاطر إدارة المعرفة رقم 1969",
+      "أعد بواسطة",
+      "مريم السعدي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0290",
+    "question": "من أعد المستند «سياسة المبيعات رقم 2010»؟",
+    "expected_entities": [
+      "سياسة المبيعات رقم 2010",
+      "فاطمة اليامي"
+    ],
+    "expected_answer_keywords": [
+      "فاطمة اليامي"
+    ],
+    "expected_path": [
+      "سياسة المبيعات رقم 2010",
+      "أعد بواسطة",
+      "فاطمة اليامي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0291",
+    "question": "من أعد المستند «إجراء إدارة البيانات رقم 2051»؟",
+    "expected_entities": [
+      "إجراء إدارة البيانات رقم 2051",
+      "عائشة الشهري"
+    ],
+    "expected_answer_keywords": [
+      "عائشة الشهري"
+    ],
+    "expected_path": [
+      "إجراء إدارة البيانات رقم 2051",
+      "أعد بواسطة",
+      "عائشة الشهري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0292",
+    "question": "من أعد المستند «تقرير هندسة المؤسسات رقم 2092»؟",
+    "expected_entities": [
+      "تقرير هندسة المؤسسات رقم 2092",
+      "غادة المطيري"
+    ],
+    "expected_answer_keywords": [
+      "غادة المطيري"
+    ],
+    "expected_path": [
+      "تقرير هندسة المؤسسات رقم 2092",
+      "أعد بواسطة",
+      "غادة المطيري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0293",
+    "question": "من أعد المستند «محضر اجتماع الابتكار رقم 2133»؟",
+    "expected_entities": [
+      "محضر اجتماع الابتكار رقم 2133",
+      "رنا الدوسري"
+    ],
+    "expected_answer_keywords": [
+      "رنا الدوسري"
+    ],
+    "expected_path": [
+      "محضر اجتماع الابتكار رقم 2133",
+      "أعد بواسطة",
+      "رنا الدوسري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0294",
+    "question": "من أعد المستند «دليل مستخدم التسويق رقم 2174»؟",
+    "expected_entities": [
+      "دليل مستخدم التسويق رقم 2174",
+      "الجوهرة الخالدي"
+    ],
+    "expected_answer_keywords": [
+      "الجوهرة الخالدي"
+    ],
+    "expected_path": [
+      "دليل مستخدم التسويق رقم 2174",
+      "أعد بواسطة",
+      "الجوهرة الخالدي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0295",
+    "question": "من أعد المستند «مذكرة تقنية المعلومات رقم 2215»؟",
+    "expected_entities": [
+      "مذكرة تقنية المعلومات رقم 2215",
+      "شهد البلوي"
+    ],
+    "expected_answer_keywords": [
+      "شهد البلوي"
+    ],
+    "expected_path": [
+      "مذكرة تقنية المعلومات رقم 2215",
+      "أعد بواسطة",
+      "شهد البلوي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0296",
+    "question": "من أعد المستند «خطة عمل مكتب البيانات رقم 2256»؟",
+    "expected_entities": [
+      "خطة عمل مكتب البيانات رقم 2256",
+      "مها الحربي"
+    ],
+    "expected_answer_keywords": [
+      "مها الحربي"
+    ],
+    "expected_path": [
+      "خطة عمل مكتب البيانات رقم 2256",
+      "أعد بواسطة",
+      "مها الحربي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0297",
+    "question": "من أعد المستند «دراسة المسؤولية الاجتماعية رقم 2297»؟",
+    "expected_entities": [
+      "دراسة المسؤولية الاجتماعية رقم 2297",
+      "لطيفة السعدي"
+    ],
+    "expected_answer_keywords": [
+      "لطيفة السعدي"
+    ],
+    "expected_path": [
+      "دراسة المسؤولية الاجتماعية رقم 2297",
+      "أعد بواسطة",
+      "لطيفة السعدي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0298",
+    "question": "من أعد المستند «طلب تغيير خدمة العملاء رقم 2338»؟",
+    "expected_entities": [
+      "طلب تغيير خدمة العملاء رقم 2338",
+      "دانة اليامي"
+    ],
+    "expected_answer_keywords": [
+      "دانة اليامي"
+    ],
+    "expected_path": [
+      "طلب تغيير خدمة العملاء رقم 2338",
+      "أعد بواسطة",
+      "دانة اليامي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0299",
+    "question": "من أعد المستند «تقييم مخاطر المشتريات رقم 2379»؟",
+    "expected_entities": [
+      "تقييم مخاطر المشتريات رقم 2379",
+      "عبير الشهري"
+    ],
+    "expected_answer_keywords": [
+      "عبير الشهري"
+    ],
+    "expected_path": [
+      "تقييم مخاطر المشتريات رقم 2379",
+      "أعد بواسطة",
+      "عبير الشهري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0300",
+    "question": "من أعد المستند «سياسة دعم التطبيقات رقم 2420»؟",
+    "expected_entities": [
+      "سياسة دعم التطبيقات رقم 2420",
+      "هدى المطيري"
+    ],
+    "expected_answer_keywords": [
+      "هدى المطيري"
+    ],
+    "expected_path": [
+      "سياسة دعم التطبيقات رقم 2420",
+      "أعد بواسطة",
+      "هدى المطيري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0301",
+    "question": "من أعد المستند «إجراء السلامة رقم 2461»؟",
+    "expected_entities": [
+      "إجراء السلامة رقم 2461",
+      "منى الدوسري"
+    ],
+    "expected_answer_keywords": [
+      "منى الدوسري"
+    ],
+    "expected_path": [
+      "إجراء السلامة رقم 2461",
+      "أعد بواسطة",
+      "منى الدوسري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0302",
+    "question": "من أعد المستند «تقرير إدارة المخاطر رقم 2502»؟",
+    "expected_entities": [
+      "تقرير إدارة المخاطر رقم 2502",
+      "أمل الخالدي"
+    ],
+    "expected_answer_keywords": [
+      "أمل الخالدي"
+    ],
+    "expected_path": [
+      "تقرير إدارة المخاطر رقم 2502",
+      "أعد بواسطة",
+      "أمل الخالدي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0303",
+    "question": "من أعد المستند «محضر اجتماع الموارد البشرية رقم 2543»؟",
+    "expected_entities": [
+      "محضر اجتماع الموارد البشرية رقم 2543",
+      "هند البلوي"
+    ],
+    "expected_answer_keywords": [
+      "هند البلوي"
+    ],
+    "expected_path": [
+      "محضر اجتماع الموارد البشرية رقم 2543",
+      "أعد بواسطة",
+      "هند البلوي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0304",
+    "question": "من أعد المستند «دليل مستخدم هندسة الحلول رقم 2584»؟",
+    "expected_entities": [
+      "دليل مستخدم هندسة الحلول رقم 2584",
+      "لينا الحربي"
+    ],
+    "expected_answer_keywords": [
+      "لينا الحربي"
+    ],
+    "expected_path": [
+      "دليل مستخدم هندسة الحلول رقم 2584",
+      "أعد بواسطة",
+      "لينا الحربي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0305",
+    "question": "من أعد المستند «مذكرة الصيانة رقم 2625»؟",
+    "expected_entities": [
+      "مذكرة الصيانة رقم 2625",
+      "ريم السعدي"
+    ],
+    "expected_answer_keywords": [
+      "ريم السعدي"
+    ],
+    "expected_path": [
+      "مذكرة الصيانة رقم 2625",
+      "أعد بواسطة",
+      "ريم السعدي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0306",
+    "question": "من أعد المستند «خطة عمل إدارة المشاريع رقم 2666»؟",
+    "expected_entities": [
+      "خطة عمل إدارة المشاريع رقم 2666",
+      "سارة اليامي"
+    ],
+    "expected_answer_keywords": [
+      "سارة اليامي"
+    ],
+    "expected_path": [
+      "خطة عمل إدارة المشاريع رقم 2666",
+      "أعد بواسطة",
+      "سارة اليامي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0307",
+    "question": "من أعد المستند «دراسة إدارة الأصول رقم 2707»؟",
+    "expected_entities": [
+      "دراسة إدارة الأصول رقم 2707",
+      "نورة الشهري"
+    ],
+    "expected_answer_keywords": [
+      "نورة الشهري"
+    ],
+    "expected_path": [
+      "دراسة إدارة الأصول رقم 2707",
+      "أعد بواسطة",
+      "نورة الشهري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0308",
+    "question": "من أعد المستند «طلب تغيير الامتثال رقم 2748»؟",
+    "expected_entities": [
+      "طلب تغيير الامتثال رقم 2748",
+      "مازن المطيري"
+    ],
+    "expected_answer_keywords": [
+      "مازن المطيري"
+    ],
+    "expected_path": [
+      "طلب تغيير الامتثال رقم 2748",
+      "أعد بواسطة",
+      "مازن المطيري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0309",
+    "question": "من أعد المستند «تقييم مخاطر إدارة المخزون رقم 2789»؟",
+    "expected_entities": [
+      "تقييم مخاطر إدارة المخزون رقم 2789",
+      "وليد الدوسري"
+    ],
+    "expected_answer_keywords": [
+      "وليد الدوسري"
+    ],
+    "expected_path": [
+      "تقييم مخاطر إدارة المخزون رقم 2789",
+      "أعد بواسطة",
+      "وليد الدوسري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0310",
+    "question": "من أعد المستند «سياسة العمليات رقم 2830»؟",
+    "expected_entities": [
+      "سياسة العمليات رقم 2830",
+      "زياد الخالدي"
+    ],
+    "expected_answer_keywords": [
+      "زياد الخالدي"
+    ],
+    "expected_path": [
+      "سياسة العمليات رقم 2830",
+      "أعد بواسطة",
+      "زياد الخالدي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0311",
+    "question": "من أعد المستند «إجراء العقود رقم 2871»؟",
+    "expected_entities": [
+      "إجراء العقود رقم 2871",
+      "طارق البلوي"
+    ],
+    "expected_answer_keywords": [
+      "طارق البلوي"
+    ],
+    "expected_path": [
+      "إجراء العقود رقم 2871",
+      "أعد بواسطة",
+      "طارق البلوي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0312",
+    "question": "من أعد المستند «تقرير إدارة المحتوى رقم 2912»؟",
+    "expected_entities": [
+      "تقرير إدارة المحتوى رقم 2912",
+      "مصطفى الحربي"
+    ],
+    "expected_answer_keywords": [
+      "مصطفى الحربي"
+    ],
+    "expected_path": [
+      "تقرير إدارة المحتوى رقم 2912",
+      "أعد بواسطة",
+      "مصطفى الحربي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0313",
+    "question": "من أعد المستند «محضر اجتماع تطوير الأعمال رقم 2953»؟",
+    "expected_entities": [
+      "محضر اجتماع تطوير الأعمال رقم 2953",
+      "إبراهيم السعدي"
+    ],
+    "expected_answer_keywords": [
+      "إبراهيم السعدي"
+    ],
+    "expected_path": [
+      "محضر اجتماع تطوير الأعمال رقم 2953",
+      "أعد بواسطة",
+      "إبراهيم السعدي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0314",
+    "question": "من أعد المستند «دليل مستخدم الذكاء الاصطناعي رقم 2994»؟",
+    "expected_entities": [
+      "دليل مستخدم الذكاء الاصطناعي رقم 2994",
+      "حسين اليامي"
+    ],
+    "expected_answer_keywords": [
+      "حسين اليامي"
+    ],
+    "expected_path": [
+      "دليل مستخدم الذكاء الاصطناعي رقم 2994",
+      "أعد بواسطة",
+      "حسين اليامي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0315",
+    "question": "من أعد المستند «مذكرة العلاقات الحكومية رقم 35»؟",
+    "expected_entities": [
+      "مذكرة العلاقات الحكومية رقم 35",
+      "حسن الشمري"
+    ],
+    "expected_answer_keywords": [
+      "حسن الشمري"
+    ],
+    "expected_path": [
+      "مذكرة العلاقات الحكومية رقم 35",
+      "أعد بواسطة",
+      "حسن الشمري"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0316",
+    "question": "من أعد المستند «خطة عمل التدريب والتطوير رقم 76»؟",
+    "expected_entities": [
+      "خطة عمل التدريب والتطوير رقم 76",
+      "علي العبيدي"
+    ],
+    "expected_answer_keywords": [
+      "علي العبيدي"
+    ],
+    "expected_path": [
+      "خطة عمل التدريب والتطوير رقم 76",
+      "أعد بواسطة",
+      "علي العبيدي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0317",
+    "question": "من أعد المستند «دراسة الاتصال المؤسسي رقم 117»؟",
+    "expected_entities": [
+      "دراسة الاتصال المؤسسي رقم 117",
+      "عمر الجهني"
+    ],
+    "expected_answer_keywords": [
+      "عمر الجهني"
+    ],
+    "expected_path": [
+      "دراسة الاتصال المؤسسي رقم 117",
+      "أعد بواسطة",
+      "عمر الجهني"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0318",
+    "question": "من أعد المستند «طلب تغيير الأمن السيبراني رقم 158»؟",
+    "expected_entities": [
+      "طلب تغيير الأمن السيبراني رقم 158",
+      "ياسر القرني"
+    ],
+    "expected_answer_keywords": [
+      "ياسر القرني"
+    ],
+    "expected_path": [
+      "طلب تغيير الأمن السيبراني رقم 158",
+      "أعد بواسطة",
+      "ياسر القرني"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0319",
+    "question": "من أعد المستند «تقييم مخاطر التحليلات رقم 199»؟",
+    "expected_entities": [
+      "تقييم مخاطر التحليلات رقم 199",
+      "ناصر العنزي"
+    ],
+    "expected_answer_keywords": [
+      "ناصر العنزي"
+    ],
+    "expected_path": [
+      "تقييم مخاطر التحليلات رقم 199",
+      "أعد بواسطة",
+      "ناصر العنزي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0320",
+    "question": "من أعد المستند «سياسة البحث والتطوير رقم 240»؟",
+    "expected_entities": [
+      "سياسة البحث والتطوير رقم 240",
+      "سعود الحربي"
+    ],
+    "expected_answer_keywords": [
+      "سعود الحربي"
+    ],
+    "expected_path": [
+      "سياسة البحث والتطوير رقم 240",
+      "أعد بواسطة",
+      "سعود الحربي"
+    ],
+    "category": "document",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0321",
+    "question": "كم عدد الموظفين في الإدارة التنفيذية؟",
+    "expected_entities": [
+      "الإدارة التنفيذية"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "الإدارة التنفيذية"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0322",
+    "question": "كم عدد الموظفين في الموارد البشرية؟",
+    "expected_entities": [
+      "الموارد البشرية"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "الموارد البشرية"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0323",
+    "question": "كم عدد الموظفين في المالية؟",
+    "expected_entities": [
+      "المالية"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "المالية"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0324",
+    "question": "كم عدد الموظفين في المشتريات؟",
+    "expected_entities": [
+      "المشتريات"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "المشتريات"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0325",
+    "question": "كم عدد الموظفين في الشؤون القانونية؟",
+    "expected_entities": [
+      "الشؤون القانونية"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "الشؤون القانونية"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0326",
+    "question": "كم عدد الموظفين في تقنية المعلومات؟",
+    "expected_entities": [
+      "تقنية المعلومات"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "تقنية المعلومات"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0327",
+    "question": "كم عدد الموظفين في الأمن السيبراني؟",
+    "expected_entities": [
+      "الأمن السيبراني"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "الأمن السيبراني"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0328",
+    "question": "كم عدد الموظفين في إدارة البيانات؟",
+    "expected_entities": [
+      "إدارة البيانات"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "إدارة البيانات"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0329",
+    "question": "كم عدد الموظفين في الذكاء الاصطناعي؟",
+    "expected_entities": [
+      "الذكاء الاصطناعي"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "الذكاء الاصطناعي"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0330",
+    "question": "كم عدد الموظفين في التحول الرقمي؟",
+    "expected_entities": [
+      "التحول الرقمي"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "التحول الرقمي"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0331",
+    "question": "كم عدد الموظفين في العمليات؟",
+    "expected_entities": [
+      "العمليات"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "العمليات"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0332",
+    "question": "كم عدد الموظفين في الجودة والتميز؟",
+    "expected_entities": [
+      "الجودة والتميز"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "الجودة والتميز"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0333",
+    "question": "كم عدد الموظفين في إدارة المشاريع؟",
+    "expected_entities": [
+      "إدارة المشاريع"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "إدارة المشاريع"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0334",
+    "question": "كم عدد الموظفين في التخطيط الاستراتيجي؟",
+    "expected_entities": [
+      "التخطيط الاستراتيجي"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "التخطيط الاستراتيجي"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0335",
+    "question": "كم عدد الموظفين في إدارة المخاطر؟",
+    "expected_entities": [
+      "إدارة المخاطر"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "إدارة المخاطر"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0336",
+    "question": "كم عدد الموظفين في المراجعة الداخلية؟",
+    "expected_entities": [
+      "المراجعة الداخلية"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "المراجعة الداخلية"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0337",
+    "question": "كم عدد الموظفين في خدمة العملاء؟",
+    "expected_entities": [
+      "خدمة العملاء"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "خدمة العملاء"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0338",
+    "question": "كم عدد الموظفين في تجربة المستفيد؟",
+    "expected_entities": [
+      "تجربة المستفيد"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "تجربة المستفيد"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0339",
+    "question": "كم عدد الموظفين في التسويق؟",
+    "expected_entities": [
+      "التسويق"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "التسويق"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0340",
+    "question": "كم عدد الموظفين في الاتصال المؤسسي؟",
+    "expected_entities": [
+      "الاتصال المؤسسي"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "الاتصال المؤسسي"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0341",
+    "question": "كم عدد الموظفين في المبيعات؟",
+    "expected_entities": [
+      "المبيعات"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "المبيعات"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0342",
+    "question": "كم عدد الموظفين في تطوير الأعمال؟",
+    "expected_entities": [
+      "تطوير الأعمال"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "تطوير الأعمال"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0343",
+    "question": "كم عدد الموظفين في سلاسل الإمداد؟",
+    "expected_entities": [
+      "سلاسل الإمداد"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "سلاسل الإمداد"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0344",
+    "question": "كم عدد الموظفين في إدارة المخزون؟",
+    "expected_entities": [
+      "إدارة المخزون"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "إدارة المخزون"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0345",
+    "question": "كم عدد الموظفين في الخدمات اللوجستية؟",
+    "expected_entities": [
+      "الخدمات اللوجستية"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "الخدمات اللوجستية"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0346",
+    "question": "كم عدد الموظفين في الصيانة؟",
+    "expected_entities": [
+      "الصيانة"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "الصيانة"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0347",
+    "question": "كم عدد الموظفين في المرافق؟",
+    "expected_entities": [
+      "المرافق"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "المرافق"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0348",
+    "question": "كم عدد الموظفين في السلامة؟",
+    "expected_entities": [
+      "السلامة"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "السلامة"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0349",
+    "question": "كم عدد الموظفين في الاستدامة؟",
+    "expected_entities": [
+      "الاستدامة"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "الاستدامة"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0350",
+    "question": "كم عدد الموظفين في المسؤولية الاجتماعية؟",
+    "expected_entities": [
+      "المسؤولية الاجتماعية"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "المسؤولية الاجتماعية"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0351",
+    "question": "كم عدد الموظفين في البحث والتطوير؟",
+    "expected_entities": [
+      "البحث والتطوير"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "البحث والتطوير"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0352",
+    "question": "كم عدد الموظفين في الابتكار؟",
+    "expected_entities": [
+      "الابتكار"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "الابتكار"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0353",
+    "question": "كم عدد الموظفين في التدريب والتطوير؟",
+    "expected_entities": [
+      "التدريب والتطوير"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "التدريب والتطوير"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0354",
+    "question": "كم عدد الموظفين في إدارة المعرفة؟",
+    "expected_entities": [
+      "إدارة المعرفة"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "إدارة المعرفة"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0355",
+    "question": "كم عدد الموظفين في إدارة المحتوى؟",
+    "expected_entities": [
+      "إدارة المحتوى"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "إدارة المحتوى"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0356",
+    "question": "كم عدد الموظفين في الحوكمة؟",
+    "expected_entities": [
+      "الحوكمة"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "الحوكمة"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0357",
+    "question": "كم عدد الموظفين في الامتثال؟",
+    "expected_entities": [
+      "الامتثال"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "الامتثال"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0358",
+    "question": "كم عدد الموظفين في الخصوصية؟",
+    "expected_entities": [
+      "الخصوصية"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "الخصوصية"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0359",
+    "question": "كم عدد الموظفين في هندسة الحلول؟",
+    "expected_entities": [
+      "هندسة الحلول"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "هندسة الحلول"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0360",
+    "question": "كم عدد الموظفين في البنية التحتية؟",
+    "expected_entities": [
+      "البنية التحتية"
+    ],
+    "expected_answer_keywords": [
+      "16"
+    ],
+    "expected_path": [
+      "موظف",
+      "يعمل في",
+      "البنية التحتية"
+    ],
+    "category": "aggregation",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0361",
+    "question": "ما هو مطعم المدير المفضل؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0362",
+    "question": "ما هو لون مكتب الرئيس؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0363",
+    "question": "ما هو الهواية الشخصية للمدير؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0364",
+    "question": "ما هو رقم هاتف منزل الموظف؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0365",
+    "question": "ما هو مطعم المدير المفضل؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0366",
+    "question": "ما هو لون مكتب الرئيس؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0367",
+    "question": "ما هو الهواية الشخصية للمدير؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0368",
+    "question": "ما هو رقم هاتف منزل الموظف؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0369",
+    "question": "ما هو مطعم المدير المفضل؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0370",
+    "question": "ما هو لون مكتب الرئيس؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0371",
+    "question": "ما هو الهواية الشخصية للمدير؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0372",
+    "question": "ما هو رقم هاتف منزل الموظف؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0373",
+    "question": "ما هو مطعم المدير المفضل؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0374",
+    "question": "ما هو لون مكتب الرئيس؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0375",
+    "question": "ما هو الهواية الشخصية للمدير؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0376",
+    "question": "ما هو رقم هاتف منزل الموظف؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0377",
+    "question": "ما هو مطعم المدير المفضل؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0378",
+    "question": "ما هو لون مكتب الرئيس؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0379",
+    "question": "ما هو الهواية الشخصية للمدير؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0380",
+    "question": "ما هو رقم هاتف منزل الموظف؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0381",
+    "question": "ما هو مطعم المدير المفضل؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0382",
+    "question": "ما هو لون مكتب الرئيس؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0383",
+    "question": "ما هو الهواية الشخصية للمدير؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0384",
+    "question": "ما هو رقم هاتف منزل الموظف؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0385",
+    "question": "ما هو مطعم المدير المفضل؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0386",
+    "question": "ما هو لون مكتب الرئيس؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0387",
+    "question": "ما هو الهواية الشخصية للمدير؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0388",
+    "question": "ما هو رقم هاتف منزل الموظف؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0389",
+    "question": "ما هو مطعم المدير المفضل؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0390",
+    "question": "ما هو لون مكتب الرئيس؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0391",
+    "question": "ما هو الهواية الشخصية للمدير؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0392",
+    "question": "ما هو رقم هاتف منزل الموظف؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0393",
+    "question": "ما هو مطعم المدير المفضل؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0394",
+    "question": "ما هو لون مكتب الرئيس؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0395",
+    "question": "ما هو الهواية الشخصية للمدير؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0396",
+    "question": "ما هو رقم هاتف منزل الموظف؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0397",
+    "question": "ما هو مطعم المدير المفضل؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0398",
+    "question": "ما هو لون مكتب الرئيس؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0399",
+    "question": "ما هو الهواية الشخصية للمدير؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  },
+  {
+    "id": "ar-q0400",
+    "question": "ما هو رقم هاتف منزل الموظف؟",
+    "expected_entities": [],
+    "expected_answer_keywords": [
+      "الأدلة غير كافية"
+    ],
+    "expected_path": [],
+    "category": "unanswerable",
+    "language": "ar"
+  }
+]

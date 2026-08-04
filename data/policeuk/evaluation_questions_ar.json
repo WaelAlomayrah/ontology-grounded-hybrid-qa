@@ -1,0 +1,26 @@
+[
+  {
+    "id": "policeuk-ar-001",
+    "question": "ما المناطق التي سجلت أعلى معدل لجرائم المركبات لكل ألف نسمة؟",
+    "expected_entities": ["CrimeRateObservation", "LSOA", "vehicle crime"],
+    "expected_answer_keywords": ["لكل ألف"],
+    "expected_path": ["CrimeAggregate", "LSOA", "PopulationObservation"],
+    "category": "aggregation"
+  },
+  {
+    "id": "policeuk-ar-002",
+    "question": "ما النتائج المسجلة لجرائم المركبات في المناطق ذات أعلى معدل؟",
+    "expected_entities": ["vehicle crime", "OutcomeCategory", "LSOA"],
+    "expected_answer_keywords": ["النتائج"],
+    "expected_path": ["CrimeIncident", "has outcome", "OutcomeEvent"],
+    "category": "multi_hop"
+  },
+  {
+    "id": "policeuk-en-001",
+    "question": "Which LSOAs recorded the highest vehicle-crime rate per 1,000 residents?",
+    "expected_entities": ["CrimeRateObservation", "LSOA", "vehicle crime"],
+    "expected_answer_keywords": ["per 1,000"],
+    "expected_path": ["CrimeRateObservation", "LSOA", "PopulationObservation"],
+    "category": "aggregation"
+  }
+]

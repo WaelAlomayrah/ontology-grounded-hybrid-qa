@@ -1,4 +1,5 @@
 import asyncio
+from typing import Any, cast
 
 from fastapi import APIRouter, Depends, Response, status
 
@@ -31,7 +32,7 @@ async def health(settings: Settings = Depends(get_settings), fuseki: FusekiServi
 @router.get("/ready")
 async def ready(response: Response, settings: Settings = Depends(get_settings), fuseki: FusekiService = Depends(get_fuseki), milvus: MilvusService = Depends(get_milvus), ollama: OllamaService = Depends(get_ollama)) -> dict[str, object]:
     result = await service_status(fuseki, milvus, ollama, settings)
-    services = result["services"]
+    services = cast(dict[str, Any], result["services"])
     ollama_healthy = bool(services["ollama"].get("healthy"))
     if not services["fuseki"] and not services["milvus"] and not ollama_healthy:
         response.status_code = status.HTTP_503_SERVICE_UNAVAILABLE

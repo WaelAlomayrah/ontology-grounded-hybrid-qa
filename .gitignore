@@ -11,12 +11,19 @@ frontend/node_modules/
 frontend/dist/
 data/evaluation-results/
 data/runtime/
+data/*/precomputed_vectors/
 data/KG2QA_ontology_dataset/
 data/Northwind_dataset/
 .tools-pptx/
+.tools/
 *.log
 .DS_Store
 ~$*.pptx
+data/policeuk/raw/
+data/policeuk/processed/vector-checkpoint.json
+presentations/
+reports/
+tools/
 
 # Academic reports, proposals, posters, and presentation artifacts
 README.pdf

@@ -1,0 +1,1061 @@
+{
+  "source": "data.police.uk and Office for National Statistics",
+  "source_type": "official open data",
+  "force": {
+    "id": "thames-valley",
+    "name": "Thames Valley Police"
+  },
+  "requested_dates": {
+    "months": 1
+  },
+  "actual_dates_loaded": [
+    "2026-06"
+  ],
+  "download_timestamp": "2026-08-03T21:06:57.188374+00:00",
+  "local_filename": "policeuk-latest.zip",
+  "sha256": "7c86e34192073c13a4d480d987e7ba41ca97e694749688fa41abf66cc772547f",
+  "record_count": 32525,
+  "processing_status": "complete",
+  "warnings": [],
+  "errors": [],
+  "licence": "Open Government Licence v3.0",
+  "provenance": {
+    "policeuk": "https://data.police.uk/",
+    "ons": "https://www.nomisweb.co.uk/api/v01/dataset/NM_2014_1.data.csv",
+    "coordinates": "anonymised approximate Police.uk published locations"
+  },
+  "selected_files": [
+    "2026-06/2026-06-thames-valley-outcomes.csv",
+    "2026-06/2026-06-thames-valley-stop-and-search.csv",
+    "2026-06/2026-06-thames-valley-street.csv",
+    "ons-population-0001.csv, ons-population-0002.csv, ons-population-0003.csv"
+  ],
+  "files": [
+    {
+      "local_filename": "raw/policeuk-latest.zip",
+      "sha256": "7c86e34192073c13a4d480d987e7ba41ca97e694749688fa41abf66cc772547f",
+      "record_count": 32525,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N106.json",
+      "sha256": "f3164fba78cfe45281332d4ab01a1aa0f55826fa030e9965390c31660879e126",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N200.json",
+      "sha256": "48be1677e95d8404757d8300b150b2909f2a1c7125b088c43df9aa949537e05b",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N289.json",
+      "sha256": "c12b69b0e1693f36d80f362318cb686b566e4160a5ee0c29582f1f0544fd8b3c",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N305.json",
+      "sha256": "8e847fd4732c1f4cabcc11a1c3a1618f944fa9c383522615cfbd0d45b747b304",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N337.json",
+      "sha256": "4ff9b1c3f2c2cfc3c54e0940cb86117516d58a4ef98be29b9f3071d3d53249be",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N348.json",
+      "sha256": "1c9abbce02f33c4ca94fe9b5903d94be7376b6c83b6f633e0454b83558652b42",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N375.json",
+      "sha256": "dbf3c4ef480c9531d86c782ac57659ecd574c1c7e2ba7b9141ff6a0ec4d49904",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N376.json",
+      "sha256": "3e882d95a88d5262caf66c0beeacd747db7f3424369ced021058cd1cf68bfb3d",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N377.json",
+      "sha256": "b7130edf266d188dfba36a64649c5d57e865b394fe149016fa4835f672119253",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N378.json",
+      "sha256": "50e3cbf60e258f62da3e7eb458244457cf264381fff8411da2c3027553eecf77",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N379.json",
+      "sha256": "887dfcf01432848ae258d853e4719ce98e98854d01da7ad22fdd7a042b473beb",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N380.json",
+      "sha256": "96a829b590ee108c23a42509541553f7ca43ac6ac85f619eb1ce161bc58c904b",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N381.json",
+      "sha256": "1eb74ac823abb273f36097b0457abcaf96b24873da81b6c8457457ccadd7877f",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N382.json",
+      "sha256": "a3686ab72bc07e3c02e767d87f20685f7a0a08e5a7c1c26acc7a3facfc5d7b9c",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N383.json",
+      "sha256": "fa21ed24f8e952fb9f7562032eb3908883a795875b5bcef6f3d5360ab39728f3",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N385.json",
+      "sha256": "8c2cce29fe56f8276a89eedf99973b41828ed234ee7bd00c37fc631986102843",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N386.json",
+      "sha256": "809343786d8ef03e3f4429696f76f7e2c040b1c2b2e5b4caa4f667cd7c12865a",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N387.json",
+      "sha256": "645b3d3e6ac25db50b1451e4f14c54a2674ffd66bc8e8f92af11687280b6cf3b",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N388.json",
+      "sha256": "1854a2348b75883306051bd2c66b0fbb790ce30d5d3a04c6a21da919818ab497",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N389.json",
+      "sha256": "088cac6fb00e9865a99eb0ba8498c02d273ea11c40b36e061b1eb901a918ce33",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N390.json",
+      "sha256": "c07483888d01d9d047792af009ac8aa468ad0cc92c31050bc21be0919c26cd35",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N391.json",
+      "sha256": "684edf5a0b8c62e2a6dd2c84ce1f978018caf904ed0fb2a4a72ddfc76ba028a7",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N392.json",
+      "sha256": "44a3b12a0afbb15b829794b14941d58f9da62339924ead9b1fd56a0fff77a407",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N393.json",
+      "sha256": "4bc42326c5c66ef14462c7dadc450ea997d186a4586c60b374fbeb8216d4937a",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N394.json",
+      "sha256": "166129799738230eb7f78b0f98336984707f13d953f0469ce311c22388e1c1ca",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N395.json",
+      "sha256": "b643a9b04efd0e0b64e2b7e7d92f81700e0a1d5d1e5443499847fd1afc2d8d60",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N396.json",
+      "sha256": "b7a3dffa10cbee3df213fcec9ebae1f8b7f72b224ba4731a65b6d99103e2796d",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N397.json",
+      "sha256": "f95b9061b1ff88abf9280e1ae8a1550f7f59b2c1f9e624e1dc57074ecf7bda92",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N398.json",
+      "sha256": "47d5026cfb5d4377cd334e69db6b5c6a6ea94a949191ec990c37eed45bfcb99d",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N399.json",
+      "sha256": "ec610ed06716a29c9269636d0eae1b04bc279e4283c7d7ffb7f601c3d7364b17",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N400.json",
+      "sha256": "fed3b6af0e68f69442169d0b4c50c2adf694cca931a11d8fd18897f968c2c26f",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N401.json",
+      "sha256": "bdf500ea45ba6215674dda7d936f3b628accf82c9c0adb9bc9c001b2a4f3cb5d",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N402.json",
+      "sha256": "9cebfe7d81880cc5acd27035a8f5006e2aef85bf70c7b363cac4bda7be7c0408",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N403.json",
+      "sha256": "86bae1abc22ef8cd722579040323859a75e9e5c654bcc69c3b7d8ef6f43fa2ef",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N404.json",
+      "sha256": "922eed309d32eccea707bc088e4c8eee26eee15d3c96c49ab23a5acb77d84398",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N405.json",
+      "sha256": "b9b16b09c3800582f71e9e21ecf04f4fd95040598cbdccf84d1790c55de56e77",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N406.json",
+      "sha256": "26c7035041278792e1214154474918769c12f45621aeca7695a87e32bced086d",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N407.json",
+      "sha256": "161f46df166c892e40ae1aa705838cca7daa3a7b679f3c66f2ec2bfb86b2bdad",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N408.json",
+      "sha256": "54333f3d08fc0220edf0d0c794bb35768f3be2d497655f52a645348200c35eb0",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N409.json",
+      "sha256": "219fb824ff62798f9478ee5562c33792e93966cba0f661ea67a86f2020e67465",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N410.json",
+      "sha256": "c048c226d7b18a3eab8e798604ff7106b60b064ad0245105a776fbcb354986b2",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N411.json",
+      "sha256": "ea9d9ad8da3ee6ab56d12d6e198c4f04aa40b927da3f2182a41c447c8b4f7625",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N412.json",
+      "sha256": "59208c3d9be0426b02af1bd4853bf3ba04015e6572c0fe65307d470c9e5e0e67",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N413.json",
+      "sha256": "08819159ba3c281ae9b2d7eb10dc954b530ae59a89fafd886b96bf31ed9d96bf",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N414.json",
+      "sha256": "8cf29518cc665a8a4b5ef501195509298538c58476c1dde4b01d71bc78dcc5c2",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N415.json",
+      "sha256": "e3d6a1ab25d1006692f2682d2c6d26de8bfd6e1a616aed1d9f9a6cfa38945553",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N416.json",
+      "sha256": "05d2d57a607b27dcc2b7504cf4c1a77a961f2c80be27127a62c80a6395684142",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N417.json",
+      "sha256": "2561179c46cefb1baca0e5dd1e3f7381722fa2927508ba9a788743f6cc9d9e1a",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N418.json",
+      "sha256": "ac81299292be1a1b4e8ce2333ed42ce80bd464c68b829241735dfd307eec2a78",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N419.json",
+      "sha256": "691ed4527637f54b3addadcd4796dc1e3c2be910bf6758be66301fe4bbd52acb",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N420.json",
+      "sha256": "66602e28761f9252d3cfc9fe35a27e0e21a8431444452a754db7d1a4a25e5457",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N421.json",
+      "sha256": "3f4b8ab1bedaab33a5529a7f1516211381aeaeb3b72486968e1c0d9d8d2de956",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N422.json",
+      "sha256": "75c2fa2884f7d389f6ba4b8281f6ada09ccdad4a52150b3ef5187d5a6c7b6d4c",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N423.json",
+      "sha256": "395f202bf3db1293c85536a6f890b9ea28b57173180a4ad9c88af4af6d36ae56",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N424.json",
+      "sha256": "b56404885d91430c1056417b4b75c469f78b2d91053c20f1923ad2cee2783110",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N425.json",
+      "sha256": "e052296d06cca8d49705cfafdec0a869d45234393f6979a5c2e2b2c2db7d4c8e",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N426.json",
+      "sha256": "7353f3c44bd145dde9c6d6caa924ad5af78b25d551290788910a77f070084c22",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N427.json",
+      "sha256": "6b64d009f058763ec64cfbb3e21f0feb1c7e06d4dbf9742a81d54d3065132b81",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N428.json",
+      "sha256": "974dc517ea7dbf8d58830a1fca06b05a111f0933207bd586026fbbdea5a7f616",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N429.json",
+      "sha256": "460fb471775b0e61177a4ef03757870c2d8ac428a5a27de09fcbaf87f0d1070f",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N430.json",
+      "sha256": "35cd9c54e6aa851ade2f01cc429307f3d5fe61012adc67023ef3ef6a63d00f19",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N431.json",
+      "sha256": "8dadbca9f91dca4d1963e291777d9a7e5a339f2c512c571d740cde686dff90b2",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N432.json",
+      "sha256": "7818d331d5bc266572b7c34e6ced3536e3c05c1ca018017ee8840bc52ba82cdd",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N433.json",
+      "sha256": "ea72e08b6ffae2ae30b11d56eb0216521245910fe60f2987980774df8248363a",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N434.json",
+      "sha256": "fda16560c48de36bcad11cd4f46f556b2fd4ce98f55b817148d02135f7a393f6",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N435.json",
+      "sha256": "11ece6778567df9747fe60f4b74d7bdbb72f52519e18e162706486d55d7555dd",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N436.json",
+      "sha256": "0436216e5d4c683234cc7a1637af5c3a881b631ce85374a220e0a8306146516c",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N438.json",
+      "sha256": "29b046ceedcb0246dd54087f8acc8d8e80f0a641090c69d8940dd10ae0c63276",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N439.json",
+      "sha256": "7b0e1f61a98467b34a4eff22ea1b4477a7846ef4fedc1d1f6e583a646bd236fa",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N440.json",
+      "sha256": "0782013afdc71ad1d7ef4c57dded1f1d34297c8eb9681487fd3ae47517183158",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N441.json",
+      "sha256": "397ca0b94dc0fc59b6326092fac4898166c99c66e6572c2260d940f9b7052cc5",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N442.json",
+      "sha256": "7d9bd4dbe727c1aafd3105c01fcbef8e796204bb9fa594c035c3f9b4992f0104",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N443.json",
+      "sha256": "6474553927c8e7413dcd25197c5302ec138ff146042256744254f9719a662410",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N444.json",
+      "sha256": "ca1a266538010b50e4d35c752d9876e729d6eddc6ef07a4c1a7f680efd352935",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N445.json",
+      "sha256": "9942b1727b0f34d50732d3ed47cb58cf4739a891d6ffdfb8e05deedefdaba805",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N446.json",
+      "sha256": "fd875235c8a4885fd2f21633413c96ad45c197c02357afcc056e6a3d4b8e2139",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N447.json",
+      "sha256": "21ba9b55aeedfea5feec055774ee6f83d35334f1b14956b528ecca0b35faa398",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N448.json",
+      "sha256": "443b8328d11cf2012a4ea321350886134afc9e11264d18202263ff2559644c30",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N449.json",
+      "sha256": "98f786aa3b5bd843b0cfbc604101312ebf272624df5faaf87ac8e750dba99d98",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N450.json",
+      "sha256": "9ef026cfe7623955be0f6b6ac3157ccd5dc21c6c4b0e3fd13b80ffa414ea379a",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N451.json",
+      "sha256": "618b4bfb81073b19894ff45bce586ecc85fbce802d145971d61909d115dbeef8",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N452.json",
+      "sha256": "53a21289110351bcecab674ed75a29bfd880fb99d85e87d71ba5f449b628436d",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N453.json",
+      "sha256": "3b7d4bddee2629ef0c28767c1f090babd790d8acde547c22f3e75dd478f6fa89",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N454.json",
+      "sha256": "ede4ab2a4f0e7b1a75a97365ddec5ad0590f845818c9f775abb5adcf7a981d3d",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N455.json",
+      "sha256": "e0a4fb4dce0e3bf5e3e6fa8722be33c887c282b47eed772ec0aaadf18b0be87e",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N456.json",
+      "sha256": "c90fd80e22de1bb04369f5895d0d2389a6a378ea0ac678259d5ba0a2a7cd3721",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N457.json",
+      "sha256": "5145e9ab9deee5d9bc1dfe0eb56722926d8149394e406683836f43d7c3a16d80",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N458.json",
+      "sha256": "be1cbcb5a2487988462ebec1ba8335d2a59550f235bfc0203691be8f895140b5",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N459.json",
+      "sha256": "6dfce69d4eab7a8a8d363443a0fcada3299f503e816c0fad362915e58123d711",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N460.json",
+      "sha256": "25fb10666c63fa9510c3f3d53072e47ff03802bda8cabd81bcb2602a0985054c",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N461.json",
+      "sha256": "d2beeb595be7658c01b9f7c270481d10741eb3e839f718deca39fe50a333a69a",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N462.json",
+      "sha256": "9872962023e3a6e7546cf2153f976ef7dc9cec80188f1c91bc0b45a36bebec88",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N463.json",
+      "sha256": "f5ea3be8c89b5cfed223e3d30e894777c312c07e83078d03f4b1432c65ef3153",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N464.json",
+      "sha256": "2ad4b3ed8bf3ece1d099d68fa9b1ebb52848ecfc09a7424b398fa77d68275848",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N465.json",
+      "sha256": "7ea1e8fea0967b38e79bacfe37697307f7be7dc5cb3723a38141c387c27df27b",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N466.json",
+      "sha256": "b39bf344e704eb2aede16023d044337a6f1fa62e8a9ac102df91105d8b0d365a",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N467.json",
+      "sha256": "0f48422a08e519c69d0ef55dbcf83a94d53a487fedd4f205c6834e09b7b33df0",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N468.json",
+      "sha256": "aa2ad77fa89536d7408e8c97d036696161e87b2a8210723293c2f9754c637693",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N469.json",
+      "sha256": "9ac6b23a170928ea8adf061625773df51fc007dc6a64958bc287abd3bf0f90b8",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N470.json",
+      "sha256": "92deaf53b2f2b5226e472529dcf6fac61964fb9c6301f38f1df7326f7a81dc8e",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N471.json",
+      "sha256": "dd6c33fd3923c3d1c5fa1099aef6ef04e63e72b442e656e7455d2f22d216a596",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N472.json",
+      "sha256": "a2b3390caa7a3017ee5c37ccead7debbb3baebf68b5263294feeeb87064e9d50",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N473.json",
+      "sha256": "d467ee6dc95ccdc9a2540ca118b1680f19ee9e9d64cad39f8edb7232f705083d",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N474.json",
+      "sha256": "28d1d023cab0c11f9607c57addf7b0a2115958879604a868601bda32b641c6fd",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N475.json",
+      "sha256": "ca64469861b3c7bf5083bf4ffd488b45be91024a78d8a950f4cf27f5e22a8045",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N476.json",
+      "sha256": "9ba629c92c12307086dd03fa7c78e0365f5c80adb54950b6148ad60d41f9717f",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N477.json",
+      "sha256": "66b8f2ec5066d7cd066d1568bc94ef2102e8c09957e6120de2d24d237ed47e19",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/boundaries/N478.json",
+      "sha256": "cb6bd85f71659d0650b20b2072e97896783911e453e170400ce41efa137c9b17",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/force.json",
+      "sha256": "82e918faf126c0944cbd39426df0db1e748c57894a194f30b8f354270a3f33b4",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/neighbourhoods.json",
+      "sha256": "02e81751eba9bdb7ba96d4121dfb7e77658f2baed078e944c9579f2021ad44c7",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/ons-population-0001.csv",
+      "sha256": "5a36d15657ea22751c91d64130d58603b609ce9f483d4d1cb8bc1f16685f37b3",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/ons-population-0002.csv",
+      "sha256": "ab6a11635496977d535498cd0d6bc19941692596e5139d6b16ce346e3b5bf3b3",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    },
+    {
+      "local_filename": "raw/ons-population-0003.csv",
+      "sha256": "ddfd91b5b5bc3fe89228548fc89604a1da9c4965889d6c3fb2793c8e38f411bf",
+      "record_count": null,
+      "processing_status": "complete",
+      "warnings": [],
+      "errors": [],
+      "licence": "Open Government Licence v3.0"
+    }
+  ]
+}

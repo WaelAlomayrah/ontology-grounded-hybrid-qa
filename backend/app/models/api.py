@@ -40,6 +40,12 @@ class IngestionRequest(BaseModel):
     mode: Literal["reset", "append"] = "append"
     load_graph: bool = True
     load_vectors: bool = True
+    embedding_model: Literal["e5-large", "granite-311m-r2", "granite-97m-r2"] = "e5-large"
+    embedding_device: Literal["cpu", "cuda"] = "cpu"
+    embedding_batch_size: Literal[16, 32, 64, 128] = 16
+    incremental: bool = True
+    use_precomputed: bool = True
+    save_precomputed: bool = False
 
 
 class LoginRequest(BaseModel):
@@ -67,7 +73,19 @@ class MappingProfileRequest(BaseModel):
 
 
 class IngestionJobRequest(IngestionRequest):
-    dataset: str = Field(min_length=1, max_length=80, pattern=r"^(sample|kg2qa|northwind|csv:[0-9a-f-]{36})$")
+    dataset: str = Field(
+        min_length=1,
+        max_length=80,
+        pattern=r"^(sample|kg2qa|northwind|arabic_enterprise|policeuk|csv:[0-9a-f-]{36})$",
+    )
+    download: bool | None = None
+    force: str | None = Field(default=None, max_length=120)
+    months: int | None = Field(default=None, ge=1, le=36)
+
+
+class EvaluationRunRequest(BaseModel):
+    dataset: Literal["sample", "kg2qa", "arabic_enterprise", "policeuk"]
+    embedding_model: Literal["e5-large", "granite-311m-r2", "granite-97m-r2"]
 
 
 class IngestionReport(BaseModel):
@@ -76,11 +94,16 @@ class IngestionReport(BaseModel):
     entities_processed: int = 0
     relationships_processed: int = 0
     vectors_generated: int = 0
+    vectors_reused: int = 0
+    embedding_model: str = ""
+    embedding_device: str = ""
+    collection: str = ""
     failed_records: int = 0
     skipped_records: int = 0
     elapsed_time: float = 0
     errors: list[str] = Field(default_factory=list)
     warnings: list[str] = Field(default_factory=list)
+    details: dict[str, Any] = Field(default_factory=dict)
 
 
 class ErrorBody(BaseModel):
